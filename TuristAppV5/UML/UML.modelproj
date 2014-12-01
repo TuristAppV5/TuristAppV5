@@ -5,7 +5,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
+<<<<<<< HEAD
     <ProjectGuid>{479b88d5-52a9-4660-b584-d1baecdc03a9}</ProjectGuid>
+=======
+    <ProjectGuid>{2de279ef-3297-475e-86bc-78dfa022ac10}</ProjectGuid>
+>>>>>>> 2d972878b1647951698eb79d6e8501c43f493807
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
     <Name>UML</Name>
     <RootNamespace>UML</RootNamespace>
