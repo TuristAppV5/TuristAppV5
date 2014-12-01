@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristAppV5.Viewmodel
 {
-    class MainViewmodel
+    public class MainViewmodel
     {
     }
 }
