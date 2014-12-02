@@ -1,20 +1,134 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="7074197b-8fe3-4f42-91e3-aadf32721886" name="UseCase" linkedPackageId="d392053a-1b36-40a9-9e93-e16f6d37dd41" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="5eee91c4-626b-4c94-949f-7cd49c9344f6">
-      <profileInstance Id="c8ae86e3-f02f-41db-94ea-b2986f982aad" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="9f98dbcc-2ebc-4cd4-ab50-f6e6e4b70292">
-      <profileInstance Id="4031ffcd-9cf1-4a99-9856-d683c5b052fe" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="7074197b-8fe3-4f42-91e3-aadf32721886" name="UseCase" linkedPackageId="d392053a-1b36-40a9-9e93-e16f6d37dd41" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="e33884c1-a0f9-4f39-885b-79a83afeb77b" name="Bruger" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="def09dab-d70f-4543-b10e-084ef850b39b" />
+        <targetEnds>
+          <association Id="24c46b38-a59d-4e19-bdc9-07e0891b1497" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Logger ind" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a63eef44-6b8c-4dba-8e6b-da70b3f6f48a" LastKnownName="Logger ind" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ba7c4e2-0ea3-49cf-8c65-a2570332a46c" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2c628bb4-1e78-4505-ab48-d64eb42467a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4b649862-913f-4310-853f-7d1f5581058b" name="Logger ind" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4c1a6afa-4e5e-416a-80f7-6a652d0d995f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d6a8c375-83f0-4dbd-ba70-d64abab6a67b" />
+          </association>
+          <association Id="77dd5a3e-6f37-456f-af82-5d062396e914" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Facebook" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="eb600ff6-8099-4ecb-a541-8ec21f91ad03" LastKnownName="Facebook feed" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c0c23e55-6ccb-4570-bfac-1385b11e74e2" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d353b38b-b2a1-44b7-b4e1-322d51579272" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="75239929-1d20-4dad-bbf8-7269ec74e0dc" name="Facebook" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a7cb56cf-9980-421d-8c24-37dfbe3d6948" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="12bd166d-8c33-4c77-b5bf-2d01a4d21065" />
+          </association>
+          <association Id="15a586b9-1c45-4a8d-8b7b-5fd173e1f5d1" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Vælg kategori" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d99e9251-8681-4672-abd7-dbd0a17556e0" LastKnownName="Vælg kategori" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="df67acb3-1c0e-49fb-a700-83c80302978c" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dd63cb22-8808-4dbe-b885-be32e4b57060" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fda401de-5ca8-4cac-919c-0fc5f29c31cc" name="Vælg kategori" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b53600db-b357-45b2-a0e6-bfec94ccbd6e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="addbb70a-aa16-41d5-858d-45aa75f43295" />
+          </association>
+          <association Id="125cabe5-4e9e-4c78-905d-5a8b0b69e0b9" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Læs om det valgte" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="02abf5ce-6516-484c-93b3-31388af852e7" LastKnownName="Læs om det valgte" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0ced938-4dbe-4148-9acf-c2e7ebad1a5e" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="74c0ece6-742f-427a-8b6a-609dbebd4b9c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5a76cd8d-7264-4b75-8ec0-9e052e7792f9" name="Læs om det valgte" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="eb36c1a7-f922-46f5-8487-7d0e254338d3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b613bffd-9411-4560-94d0-609e8317a2f4" />
+          </association>
+          <association Id="5803e148-2a65-498a-8994-88dfc6e2e4c1" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Tilføj kommentar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8626a6b9-77a3-43d5-b449-0f90a3f0d182" LastKnownName="Tilføj kommentar" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f753afc-57c9-4a0c-988e-0da284792a66" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c73414c7-f5c1-485b-9637-baeac9fb2e5d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fed55235-9317-431f-8abf-80a48952dbb5" name="Tilføj kommentar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="20c10df7-0916-4630-998d-fc0e57f2086a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="84689afe-49e9-49f7-a672-01d0d6badcaf" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a63eef44-6b8c-4dba-8e6b-da70b3f6f48a" name="Logger ind" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="110fdea3-cd89-4072-ad6c-fc0148367b06" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eb600ff6-8099-4ecb-a541-8ec21f91ad03" name="Facebook feed" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="74afa226-0098-4c6f-b6cc-f6dcbd492b5f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d99e9251-8681-4672-abd7-dbd0a17556e0" name="Vælg kategori" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="05581404-bdcb-4dff-8d24-a7a447385c4f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="02abf5ce-6516-484c-93b3-31388af852e7" name="Læs om det valgte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3c775964-0c46-4873-a0fe-d5f5a8783d69" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8626a6b9-77a3-43d5-b449-0f90a3f0d182" name="Tilføj kommentar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="33032041-da39-4c49-a0bb-ba4d61f42115" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
   <package Id="d392053a-1b36-40a9-9e93-e16f6d37dd41" name="UML">
     <elementDefinition Id="d10d0e00-f8f1-46d8-9f4c-c94875d0a0ae" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5eee91c4-626b-4c94-949f-7cd49c9344f6">
+        <profileInstance Id="c8ae86e3-f02f-41db-94ea-b2986f982aad" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9f98dbcc-2ebc-4cd4-ab50-f6e6e4b70292">
+        <profileInstance Id="4031ffcd-9cf1-4a99-9856-d683c5b052fe" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
