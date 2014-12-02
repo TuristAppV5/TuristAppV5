@@ -18,7 +18,7 @@
       <class Id="d7bf1ff3-6374-4cc8-a657-6ad38119ce3a" name="Kategorilister" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="78b697e7-da43-426b-9a9d-4a01da49af3f" />
         <targetEnds>
-          <association Id="6ddd5571-6d30-4ff3-b092-4f359b82b83d" isDerived="false" sourceEndRoleName="Kategorilister" targetEndRoleName="Kategori" isLeaf="false" isAbstract="false">
+          <association Id="6ddd5571-6d30-4ff3-b092-4f359b82b83d" isDerived="false" sourceEndRoleName="Kategorilister" targetEndRoleName="Kategori" isLeaf="false" name="Knytter liste til kategori" isAbstract="false">
             <classMoniker Id="3d50ff8f-847b-4119-be6c-83ad5df40809" LastKnownName="Kategori" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -77,7 +77,7 @@
       <class Id="e1ded2bd-401d-4eed-ab61-6b4eff1bb0f9" name="Kommentar" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="4cc8c523-44a1-4d65-a815-90f1922dc48b" />
         <targetEnds>
-          <association Id="1529bbce-370c-41a9-bf4e-a20d991d1d12" isDerived="false" sourceEndRoleName="Kommentar" targetEndRoleName="Kategorilister" isLeaf="false" isAbstract="false">
+          <association Id="1529bbce-370c-41a9-bf4e-a20d991d1d12" isDerived="false" sourceEndRoleName="Kommentar" targetEndRoleName="Kategorilister" isLeaf="false" name="Knytter kommentar til liste" isAbstract="false">
             <classMoniker Id="d7bf1ff3-6374-4cc8-a657-6ad38119ce3a" LastKnownName="Kategorilister" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
