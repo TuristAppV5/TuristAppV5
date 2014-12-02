@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+=======
 <modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+>>>>>>> 5f52e8253341ced50a484ee014bb24cbb13add0c
   dslVersion="1.0.0.0"
   Id="d10d0e00-f8f1-46d8-9f4c-c94875d0a0ae"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -19,6 +23,59 @@
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
+<<<<<<< HEAD
+      <class
+        Id="457d66c5-1ebb-46ed-b7c2-87aa4f4f3379"
+        name="Kategori"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ed93f7e3-a0d7-4644-b21e-1314a9bc884a"
+            name="Kategorinavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="77c5fa5d-6fbe-43bc-9cd8-c35bbd3f2cad"
+            name="Billede"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="51c29b9e-8a4e-4ca9-b7b3-8f184fd6cd36"
+        name="Kategoriliste"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="7b988590-1e91-4c10-b4db-08bfd1298681"
+            isDerived="false"
+            sourceEndRoleName="Kategoriliste"
+            targetEndRoleName="Kategori"
+            isLeaf="false"
+            name="Knytter liste til kategori"
+            isAbstract="false">
+            <classMoniker
+              Id="457d66c5-1ebb-46ed-b7c2-87aa4f4f3379"
+              LastKnownName="Kategori"
+=======
       <actor
         Id="e59aa9ff-b6ba-42fe-873f-e2686619253c"
         name="henrik"
@@ -98,12 +155,18 @@
             <useCaseMoniker
               Id="4c67a94d-c473-4d62-9236-b6d0d1bc21ac"
               LastKnownName="Logger ind med brugernavn og kode"
+>>>>>>> 5f52e8253341ced50a484ee014bb24cbb13add0c
               LastKnownLocation="UML.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
+<<<<<<< HEAD
+                  Id="e2d6b922-75ab-4634-86a9-21d8dcb50c47"
+                  name="Kategoriliste"
+=======
                   Id="361c01a8-1cc5-419b-9aa1-d96f8780081b"
                   name="Brruger"
+>>>>>>> 5f52e8253341ced50a484ee014bb24cbb13add0c
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -111,6 +174,27 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
+<<<<<<< HEAD
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="26a70def-e5e7-422b-901f-9ebf9458d8df"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8fbecdcc-42ce-40f3-98df-1f923f5cbd80"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="67d7a801-ff5a-424c-b1b7-fa8de33ac42a"
+                  name="Kategori"
+=======
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
@@ -143,6 +227,7 @@
                 <memberEnd
                   Id="413c7b3b-1527-4663-a3ec-eb14b5cdb8d3"
                   name="Brruger"
+>>>>>>> 5f52e8253341ced50a484ee014bb24cbb13add0c
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -152,6 +237,110 @@
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
+<<<<<<< HEAD
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="b61b65bd-7750-4b3c-8254-9adf99b8a940"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b9ff9453-ff37-4f89-b80f-eab8616522a5"
+            name="Beskrivelse"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="34d5c9bd-fef0-4a24-80cf-ca5d204f3548"
+            name="Telefon"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f6aeef60-bbff-4763-826a-d22ef6200001"
+            name="Book"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a8752494-b40c-4377-be07-4b44a754f147"
+            name="Billede"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f7d3981f-5fa8-4fff-b13e-d078699be604"
+            name="Længdegrad"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9d2ff728-26a3-49d6-8f12-daf98bdcdfde"
+            name="Breddegrad"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8520ab6d-6237-414f-a1bd-d98b814ce43a"
+        name="Kommentar"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="5542b992-6c96-4289-bb08-432f1b6c025f"
+            isDerived="false"
+            sourceEndRoleName="Kommentar"
+            targetEndRoleName="Kategoriliste"
+            isLeaf="false"
+            name="Knytter kommentar til liste"
+            isAbstract="false">
+            <classMoniker
+              Id="51c29b9e-8a4e-4ca9-b7b3-8f184fd6cd36"
+              LastKnownName="Kategoriliste"
+=======
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="c4c28c99-c623-4d90-8071-1c78861a4600"
@@ -410,12 +599,18 @@
             <useCaseMoniker
               Id="110fdea3-cd89-4072-ad6c-fc0148367b06"
               LastKnownName="Logger ind"
+>>>>>>> 5f52e8253341ced50a484ee014bb24cbb13add0c
               LastKnownLocation="UML.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
+<<<<<<< HEAD
+                  Id="7446a660-3ed6-47e9-8a58-a05529ebf2b6"
+                  name="Kommentar"
+=======
                   Id="2c628bb4-1e78-4505-ab48-d64eb42467a7"
                   name="Bruger"
+>>>>>>> 5f52e8253341ced50a484ee014bb24cbb13add0c
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -423,6 +618,27 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
+<<<<<<< HEAD
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="89dd04e5-0c14-4618-975d-36da209d7665"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7d6185c6-1852-4a9b-b45e-059947ca1497"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="784dacaa-da88-4bb0-aa25-22201b4abf41"
+                  name="Kategoriliste"
+=======
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
@@ -455,6 +671,7 @@
                 <memberEnd
                   Id="d353b38b-b2a1-44b7-b4e1-322d51579272"
                   name="Bruger"
+>>>>>>> 5f52e8253341ced50a484ee014bb24cbb13add0c
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -464,6 +681,47 @@
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
+<<<<<<< HEAD
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="9dc261ba-0ebc-4b5d-a499-f718dddd8346"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="cdefcc56-c1b8-4a89-ba3b-2aba85c47983"
+            name="Dato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1aed2b7c-29f5-471f-8e74-dde76503a6d6"
+            name="Tekst"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+=======
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="a7cb56cf-9980-421d-8c24-37dfbe3d6948"
@@ -696,6 +954,7 @@
         name="Tilføj kommentar"
         isAbstract="false"
         isLeaf="false" />
+>>>>>>> 5f52e8253341ced50a484ee014bb24cbb13add0c
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
