@@ -103,7 +103,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -111,6 +110,17 @@
     </Compile>
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
+    <Compile Include="Model\Kategori.cs" />
+    <Compile Include="Model\Kategoriliste.cs" />
+    <Compile Include="Model\Kommentar.cs" />
+    <Compile Include="obj\Debug\App.g.cs" />
+    <Compile Include="obj\Debug\App.g.i.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Debug\View\MainPage.g.cs" />
+    <Compile Include="obj\Debug\View\MainPage.g.i.cs" />
+    <Compile Include="obj\Debug\XamlTypeInfo.g.cs" />
     <Compile Include="Viewmodel\MainViewmodel.cs" />
     <Compile Include="Viewmodel\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
