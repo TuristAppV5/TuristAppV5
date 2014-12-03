@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristAppV5.Model
 {
-    class Kategori
+    public class Kategori
     {
         private string _kategorinavn;
         private string _billede;
@@ -22,6 +22,10 @@ namespace TuristAppV5.Model
             set { _billede = value; }
         }
 
+        public Kategori()
+        {
+            
+        }
         public Kategori(string kategorinavn, string billede)
         {
             _kategorinavn = kategorinavn;

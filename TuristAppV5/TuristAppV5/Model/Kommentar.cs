@@ -36,5 +36,23 @@ namespace TuristAppV5.Model
             _navn = navn;
             _tekst = tekst;
         }
+        public void CheckKommentarName(string name)
+        {
+            if (name.Length < 1 || name.Length > 30)
+            {
+                throw new ArgumentException("Navnet skal indeholde tegn og må højst være 30 tegn");
+            }
+        }
+        public void CheckKommentarTekst(string tekst)
+        {
+            if (tekst.Length < 1 || tekst.Length > 500)
+            {
+                throw new ArgumentException("Beskrivelsen skal indeholde tegn og må højst være 500 tegn");
+            }
+        }
+        public void CheckKommentarDate()
+        {
+
+        }
     }
 }
