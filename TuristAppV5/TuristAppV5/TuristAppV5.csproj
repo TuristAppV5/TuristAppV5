@@ -140,8 +140,10 @@
     <None Include="TuristAppV5_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bg.jpg" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\splash.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="bin\x86\Debug\TuristAppV5.exe" />
@@ -153,16 +155,26 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="View\ItemDetailPage.xaml">
+<<<<<<< HEAD
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+=======
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+>>>>>>> ee3e927360e8803582826f929e45e8250f17d2dc
     </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\TilfoejKommentar.xaml">
+<<<<<<< HEAD
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+=======
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+>>>>>>> ee3e927360e8803582826f929e45e8250f17d2dc
     </Page>
   </ItemGroup>
   <ItemGroup>
