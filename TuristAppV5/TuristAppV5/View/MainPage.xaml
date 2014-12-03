@@ -8,6 +8,13 @@
     xmlns:Viewmodel="using:TuristAppV5.Viewmodel"
     x:Class="TuristAppV5.MainPage"
     mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="View" Label="Vælg"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
     <Page.DataContext>
         <Viewmodel:MainViewmodel/>
     </Page.DataContext>

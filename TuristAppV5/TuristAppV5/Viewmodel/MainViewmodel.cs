@@ -45,6 +45,8 @@ namespace TuristAppV5.Viewmodel
             _feelOrangeCollection = new ObservableCollection<Kategoriliste>();
             _feelOrangeCollection.Add(new Kategoriliste("Navn(Feel Orange)", "12345678", "Book", "Længdegrad", "Breddegrad", "Billede", "Beskrivelse", "Åbningstider"));
 
+
+
             //Kategorilisten i toppen af MainPage
             _kategoriCollection = new ObservableCollection<Kategori>();
             _kategoriCollection.Add(new Kategori("Min Profil",billedetest, _minProfilCollection));
