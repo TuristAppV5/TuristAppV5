@@ -97,5 +97,10 @@ namespace TuristAppV5.View
         }
 
         #endregion
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TilfoejKommentar));
+        }
     }
 }

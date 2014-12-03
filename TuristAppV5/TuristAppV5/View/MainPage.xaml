@@ -23,13 +23,13 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/bg.jpg"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Left" Height="750" Margin="10,10,0,0" VerticalAlignment="Top" Width="900">
-        	<Grid.RowDefinitions>
-        		<RowDefinition Height="100*"/>
-        		<RowDefinition Height="200*"/>
-        		<RowDefinition Height="456*"/>
-        	</Grid.RowDefinitions>
-            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="70" TextWrapping="Wrap" Text="#VisitRoskilde" VerticalAlignment="Top" Foreground="White"/>
+        <Grid HorizontalAlignment="Left" Height="750" Margin="10,10,0,0" VerticalAlignment="Top" Width="988">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="200*"/>
+                <RowDefinition Height="456*"/>
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="60" TextWrapping="Wrap" Text="#VisitRoskilde" VerticalAlignment="Top" Foreground="White"/>
             <GridView Margin="10,25,0,0" VerticalAlignment="Top" Foreground="White" Height="150" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}" Grid.Row="1">
                 <GridView.ItemTemplate>
                     <DataTemplate>
@@ -53,15 +53,15 @@
                 </GridView.ItemTemplate>
             </GridView>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="748" Margin="915,10,0,0" VerticalAlignment="Top" Width="441">
-        	<Grid.RowDefinitions>
-        		<RowDefinition Height="40*"/>
-        		<RowDefinition Height="337*"/>
-        	</Grid.RowDefinitions>
-            <TextBlock FontSize="70" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Facebook Feed" VerticalAlignment="Top" RenderTransformOrigin="0.518,1.25" Width="421"/>
+        <Grid HorizontalAlignment="Left" Height="748" Margin="1003,10,0,0" VerticalAlignment="Top" Width="353">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="337*"/>
+            </Grid.RowDefinitions>
+            <TextBlock FontSize="40" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" Text="Facebook Feed" Width="343" VerticalAlignment="Top" Height="49"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="748" Margin="10,10,0,0" VerticalAlignment="Top" Width="1346"/>
-        
-        
+
+
     </Grid>
 </Page>

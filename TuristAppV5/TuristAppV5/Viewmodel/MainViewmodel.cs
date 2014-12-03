@@ -26,40 +26,40 @@ namespace TuristAppV5.Viewmodel
         {
             //Første kategori "Min Profil"
             _minProfilCollection = new ObservableCollection<Kategoriliste>();
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
+            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
 
 
             //Anden Kategori "Eat Orange" (Restauranter)
             _eatOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _eatOrangeCollection.Add(new Kategoriliste("Navn(Eat Orange)", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
+            _eatOrangeCollection.Add(new Kategoriliste("Navn(Eat Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
 
             //Tredje Kategori "See Orange" (Seværdigheder)
             _seeOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _seeOrangeCollection.Add(new Kategoriliste("Navn(See Orange)", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
+            _seeOrangeCollection.Add(new Kategoriliste("Navn(See Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
 
             //Anden Kategori "Eat Orange" (Restauranter)
             _eatOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _eatOrangeCollection.Add(new Kategoriliste("Navn(Eat Orange)", "12345678", "Book", "Længdegrad", "Breddegrad", "Billede", "Beskrivelse", "Åbningstider"));
+            _eatOrangeCollection.Add(new Kategoriliste("Navn(Eat Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "Billede", "Beskrivelse", "Aabningstider"));
 
             //Tredje Kategori "See Orange" (Seværdigheder)
             _seeOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _seeOrangeCollection.Add(new Kategoriliste("Navn(See Orange)", "12345678", "Book", "Længdegrad", "Breddegrad", "Billede", "Beskrivelse", "Åbningstider"));
+            _seeOrangeCollection.Add(new Kategoriliste("Navn(See Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "Billede", "Beskrivelse", "Aabningstider"));
 
             //Fjerde Kategori "Shop Orange" (Shops)
             _shopOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _shopOrangeCollection.Add(new Kategoriliste("Navn(Shop Orange)", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
+            _shopOrangeCollection.Add(new Kategoriliste("Navn(Shop Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
 
             //Femte Kategori "Feel Orange" (Aktiviteter)
             _feelOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _feelOrangeCollection.Add(new Kategoriliste("Navn(Feel Orange)", "12345678", "Book", "Længdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Åbningstider"));
+            _feelOrangeCollection.Add(new Kategoriliste("Navn(Feel Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
 
 
             //Kategorilisten i toppen af MainPage
