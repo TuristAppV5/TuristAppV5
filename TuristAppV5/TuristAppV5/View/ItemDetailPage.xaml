@@ -50,7 +50,7 @@
             <TextBlock HorizontalAlignment="Left" Height="23" Margin="472,373,0,0" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="104" FontSize="24"/>
             <TextBlock HorizontalAlignment="Left" Height="23" Margin="581,429,0,0" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" Width="45" FontSize="20"/>
             <TextBlock HorizontalAlignment="Left" Margin="581,380,0,0" TextWrapping="Wrap" Text="Telefon" VerticalAlignment="Top" FontSize="20"/>
-            <CommandBar Margin="10,0,-10,0" Opened="CommandBar_Opened">
+            <CommandBar Margin="5,0,-5,0" Opened="CommandBar_Opened">
                 <AppBarButton Icon="Accept" Label="AppBarButton"/>
                 <AppBarButton Icon="Cancel" Label="AppBarButton"/>
             </CommandBar>
