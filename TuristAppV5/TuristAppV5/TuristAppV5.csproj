@@ -155,26 +155,20 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="View\ItemDetailPage.xaml">
-<<<<<<< HEAD
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-=======
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
->>>>>>> ee3e927360e8803582826f929e45e8250f17d2dc
     </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\TilfoejKommentar.xaml">
-<<<<<<< HEAD
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-=======
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
->>>>>>> ee3e927360e8803582826f929e45e8250f17d2dc
     </Page>
   </ItemGroup>
   <ItemGroup>
