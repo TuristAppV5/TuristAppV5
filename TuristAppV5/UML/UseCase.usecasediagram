@@ -1,26 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9c66ffe4-466d-44bc-844d-08731444e316" name="UseCase" linkedPackageId="763278da-c5c4-4117-a73a-cbea6b5e6b48" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9c66ffe4-466d-44bc-844d-08731444e316" name="UseCase" linkedPackageId="763278da-c5c4-4117-a73a-cbea6b5e6b48" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="22e5624d-6485-4869-803d-dcf8c191ee16" name="Bruger" isAbstract="false" isLeaf="false">
         <elementDefinition Id="e8578da9-ac3a-4c57-806b-33f808212078" />
         <targetEnds>
-          <association Id="e7d95170-2913-47f6-bc1d-b9899058c42e" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Logger ind" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="862ecda2-f4a3-43f6-a1db-876c664c8110" LastKnownName="Logger ind" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="5b0ee2ae-00cd-4cf7-becd-ae869693a3f9" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="8d821b80-7068-4ab8-a63c-93b26385a346" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="c966ffa0-5c00-4d3b-8bb8-56b270a37330" name="Logger ind" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="4193e85d-9165-4b49-a79a-0eda6696a344" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="8f0cf743-fb2f-404b-9814-84da462c86a2" />
-          </association>
           <association Id="c9d5a6a0-39d5-49ce-82a9-c9540607885d" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Facebook feed" isLeaf="false" isAbstract="false">
             <useCaseMoniker Id="18c5b167-adc0-426b-a628-926f5d57c532" LastKnownName="Facebook feed" />
             <relationshipOwnedElementsInternal>
@@ -87,11 +71,6 @@
           </association>
         </targetEnds>
       </actor>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="862ecda2-f4a3-43f6-a1db-876c664c8110" name="Logger ind" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="05de56cf-a8ac-4c83-8572-f4d1046f51ee" />
-      </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="18c5b167-adc0-426b-a628-926f5d57c532" name="Facebook feed" isAbstract="false" isLeaf="false">
