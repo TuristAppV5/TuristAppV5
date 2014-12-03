@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="419a1996-95ec-4669-9932-6a9e72a7014f" name="Designklassediagram" linkedPackageId="6de5bce1-1c77-4c3d-a88d-97cf79ca3246" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="419a1996-95ec-4669-9932-6a9e72a7014f" name="Designklassediagram" linkedPackageId="6de5bce1-1c77-4c3d-a88d-97cf79ca3246" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="fc103502-73d9-4fce-ac23-92db002ac52d" name="View">
@@ -11,12 +11,12 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="7e7f844e-6a63-45c8-9a67-5e08d47947e1" name="DetailPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="7e7f844e-6a63-45c8-9a67-5e08d47947e1" name="ItemDetailPage" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="e70c94cb-21b4-4c47-8fb1-326dc679bfdc" />
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="7bd3887f-ee36-4db1-84ea-439813b612b4" name="Kommentar" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="7bd3887f-ee36-4db1-84ea-439813b612b4" name="TilfoejKommentar" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="a7b29d1d-88ac-417f-996c-bbbcf9ce7ef2" />
             </class>
           </packageHasNamedElement>
