@@ -9,13 +9,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Delete" Label="Slet Kommentar"/>
+            </CommandBar.SecondaryCommands>
+            <AppBarButton Icon="Add" Label="Tilføj Kommentar"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,681,0">
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -30,8 +38,18 @@
             TODO: Content should be placed within the following grid 
                   to show details for the current item
         -->
-        <Grid Grid.Row="1" x:Name="contentRegion">
-            <Button Content="Button" HorizontalAlignment="Left" Height="160" Margin="413,376,0,0" VerticalAlignment="Top" Width="354"/>
+        <Grid Grid.Row="1" x:Name="contentRegion" Margin="0,10,0,-10">
+            <Button Content="Book" HorizontalAlignment="Left" Height="68" Margin="43,520,0,0" VerticalAlignment="Top" Width="177" Foreground="White" Background="#FF9B0D07" BorderBrush="White"/>
+            <Button Content="hjemmeside" HorizontalAlignment="Left" Height="68" Margin="244,520,0,0" VerticalAlignment="Top" Width="184" Background="#FFEA5721"/>
+            <Rectangle Fill="#FFE88916" HorizontalAlignment="Left" Height="100" Margin="155,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="227"/>
+            <TextBlock HorizontalAlignment="Left" Height="61" Margin="178,31,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="204" FontSize="36" Foreground="#FFFFF4F4" FontFamily="Impact"/>
+            <Image HorizontalAlignment="Left" Height="304" Margin="419,69,0,0" VerticalAlignment="Top" Width="278" Source="ms-appx:///Assets/StoreLogo.png"/>
+            <Image HorizontalAlignment="Left" Height="127" Margin="461,470,0,0" VerticalAlignment="Top" Width="165" Source="ms-appx:///Assets/SplashScreen.png"/>
+            <TextBlock HorizontalAlignment="Left" Height="95" Margin="46,120,0,0" TextWrapping="Wrap" Text="Hej jeg er en nice restaurant........" VerticalAlignment="Top" Width="326" FontSize="36" Foreground="#FFF76613"/>
+            <TextBlock HorizontalAlignment="Left" Height="94" Margin="112,310,0,0" TextWrapping="Wrap" Text="Skal vi ikke dele en Kebab(think)" VerticalAlignment="Top" Width="288" FontSize="36" Foreground="#FFEE6111"/>
+            <TextBlock HorizontalAlignment="Left" Height="23" Margin="472,373,0,0" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="104" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Height="23" Margin="581,429,0,0" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" Width="45" FontSize="20"/>
+            <TextBlock HorizontalAlignment="Left" Margin="581,380,0,0" TextWrapping="Wrap" Text="Telefon" VerticalAlignment="Top" FontSize="20"/>
         </Grid>
 
         <!-- Back button and page title -->
@@ -48,6 +66,19 @@
                         AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="558" Margin="685,70,-680,0" Grid.Row="1" VerticalAlignment="Top" Width="680">
+            <GridView HorizontalAlignment="Left" Height="548" VerticalAlignment="Top" Width="670" Margin="10,0,0,0">
+                <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
+                <Button Content="Button"/>
+                <Image Height="167.67" Width="114.028" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="180.485" SkewX="1.363" TranslateX="523.41" TranslateY="-164.568" SkewY="0.342" ScaleX="1.001"/>
+                    </Image.RenderTransform>
+                </Image>
+            </GridView>
         </Grid>
     </Grid>
 </Page>
