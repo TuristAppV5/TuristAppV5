@@ -45,24 +45,31 @@
                   to show details for the current item
         -->
         <Grid Grid.Row="1" x:Name="contentRegion">
+            <Grid.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/bg.jpg"/>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10*"/>
-                <ColumnDefinition Width="608*"/>
-                <ColumnDefinition Width="607*"/>
+                <ColumnDefinition Width="11*"/>
+                <ColumnDefinition Width="1100*"/>
+                <ColumnDefinition Width="340*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-        	<StackPanel Grid.Column="1" Margin="10">
-        		<TextBox TextWrapping="Wrap" PlaceholderText="Headertekst"/>
-        		<ComboBox Margin="0,10,0,0" PlaceholderText="Vælg Aktivitet"/>
-        		<TextBox TextWrapping="Wrap" Margin="0,10,0,0" Height="252" PlaceholderText="Beskrivelsestekst"/>
-        	</StackPanel>
+            <StackPanel Grid.Column="1" Margin="10">
+                <TextBox TextWrapping="Wrap" PlaceholderText="Navn"/>
+                <ComboBox Margin="0,10,0,0" PlaceholderText="Vælg"/>
+                <TextBox TextWrapping="Wrap" Margin="0,10,0,0" Height="252" PlaceholderText="Beskrivelse"/>
+                <Button Content="Tilføj kommentar" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="80"/>
+            </StackPanel>
 
         </Grid>
 
         <!-- Back button and page title -->
         <Grid>
+            <Grid.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/bg.jpg"/>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
@@ -73,7 +80,7 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="Tilføj Kommentar" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+            <TextBlock x:Name="pageTitle" Text="Tilføj kommentar" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
     </Grid>

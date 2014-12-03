@@ -11,11 +11,11 @@ namespace TuristAppV5.Model
             private string _navn;
             private string _telefon;
             private string _book;
-            private string _længdegrad;
+            private string _laengdegrad;
             private string _breddegrad;
             private string _billede;
             private string _beskrivelse;
-            private string _åbningstider;
+            private string _aabningstider;
 
             public string Navn
             {
@@ -35,10 +35,10 @@ namespace TuristAppV5.Model
                 set { _book = value; }
             }
 
-            public string Længdegrad
+            public string Laengdegrad
             {
-                get { return _længdegrad; }
-                set { _længdegrad = value; }
+                get { return _laengdegrad; }
+                set { _laengdegrad = value; }
             }
 
             public string Breddegrad
@@ -53,10 +53,10 @@ namespace TuristAppV5.Model
                 set { _billede = value; }
             }
 
-            public string Åbningstider
+            public string Aabningstider
             {
-                get { return _åbningstider; }
-                set { _åbningstider = value; }
+                get { return _aabningstider; }
+                set { _aabningstider = value; }
             }
 
             public string Beskrivelse
@@ -69,16 +69,16 @@ namespace TuristAppV5.Model
             {
                 
             }
-            public Kategoriliste(string navn, string telefon, string book, string længdegrad, string breddegrad, string billede, string beskrivelse, string åbningstider)
+            public Kategoriliste(string navn, string telefon, string book, string laengdegrad, string breddegrad, string billede, string beskrivelse, string aabningstider)
             {
                 _navn = navn;
                 _telefon = telefon;
                 _book = book;
-                _længdegrad = længdegrad;
+                _laengdegrad = laengdegrad;
                 _breddegrad = breddegrad;
                 _billede = billede;
                 _beskrivelse = beskrivelse;
-                _åbningstider = åbningstider;
+                _aabningstider = aabningstider;
             }
         }
 }
