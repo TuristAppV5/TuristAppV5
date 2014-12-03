@@ -9,7 +9,5 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button Content="Button" HorizontalAlignment="Left" Margin="715,224,0,0" VerticalAlignment="Top"/>
         <Button Content="jacob was here" HorizontalAlignment="Left" Margin="1000,224,0,0" VerticalAlignment="Top"/>
-        <Button Content="daniel was here" HorizontalAlignment="Left" Margin="0,224,0,0" VerticalAlignment="Top"/>
-        <Button Content="jari was here" HorizontalAlignment="Left" Margin="250,224,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
