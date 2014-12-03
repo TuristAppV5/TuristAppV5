@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristAppV5.Model
 {
-        class Kategoriliste
+        public class Kategoriliste
         {
             private string _navn;
             private string _telefon;
@@ -65,7 +65,10 @@ namespace TuristAppV5.Model
                 set { _beskrivelse = value; }
             }
 
-
+            public Kategoriliste()
+            {
+                
+            }
             public Kategoriliste(string navn, string telefon, string book, string længdegrad, string breddegrad, string billede, string beskrivelse, string åbningstider)
             {
                 _navn = navn;
