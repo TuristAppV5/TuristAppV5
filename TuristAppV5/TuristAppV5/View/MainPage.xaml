@@ -31,7 +31,7 @@
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <Image Height="100" Width="100" Source="http://ggp.dk/visit/SeeOrange_rgb.png"/>
+                            <Image Height="100" Width="100" Source="{Binding Billede}"/>
                             <TextBlock Text="{Binding Navn}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
                         </StackPanel>
                     </DataTemplate>
