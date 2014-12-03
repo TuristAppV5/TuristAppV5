@@ -67,6 +67,7 @@
             <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
+
         <Grid HorizontalAlignment="Left" Height="558" Margin="685,70,-680,0" Grid.Row="1" VerticalAlignment="Top" Width="680">
             <GridView HorizontalAlignment="Left" Height="548" VerticalAlignment="Top" Width="670" Margin="10,0,0,0">
                 <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>

@@ -8,6 +8,7 @@
     xmlns:Viewmodel="using:TuristAppV5.Viewmodel"
     x:Class="TuristAppV5.MainPage"
     mc:Ignorable="d">
+<<<<<<< HEAD
     <Page.BottomAppBar>
         <CommandBar>
             <CommandBar.PrimaryCommands>
@@ -15,6 +16,8 @@
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
+=======
+>>>>>>> 09246fe00c7dff8601ba0c914ebe05dbdfb3a125
     <Page.DataContext>
         <Viewmodel:MainViewmodel/>
     </Page.DataContext>
@@ -29,6 +32,7 @@
         		<RowDefinition Height="456*"/>
         	</Grid.RowDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="70" TextWrapping="Wrap" Text="#VisitRoskilde" VerticalAlignment="Top" Foreground="White"/>
+<<<<<<< HEAD
             <GridView Margin="10,25,0,0" VerticalAlignment="Top" Foreground="White" Height="150" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}" Grid.Row="1">
                 <GridView.ItemTemplate>
                     <DataTemplate>
@@ -48,10 +52,32 @@
                             <Border Margin="-180 130 0 0" Height="50" Background="#ed6b06" Opacity="0.8">
                                 <TextBlock FontSize="20" HorizontalAlignment="Center" Margin="0 10 0 0" Text="{Binding Navn}"/>
                             </Border>
+=======
+            <GridView Margin="10,125,0,0" VerticalAlignment="Top" Foreground="White" Height="150" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical" Margin="20,0">
+                            <Image Height="100" Width="100" Source="http://ggp.dk/visit/SeeOrange_rgb.png"/>
+                            <TextBlock Text="{Binding Kategorinavn}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+>>>>>>> 09246fe00c7dff8601ba0c914ebe05dbdfb3a125
                         </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
+<<<<<<< HEAD
+=======
+            <GridView Margin="10,320,0,0" ItemsSource="{Binding SelectedKategori.Kategoriliste}" SelectedItem="{Binding SelectedKategoriliste, Mode=TwoWay}">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Image Height="100" Width="100" Source="{Binding Billede}"/>
+                            <TextBlock Text="{Binding Navn}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+                
+            </GridView>
+>>>>>>> 09246fe00c7dff8601ba0c914ebe05dbdfb3a125
         </Grid>
         <Grid HorizontalAlignment="Left" Height="748" Margin="915,10,0,0" VerticalAlignment="Top" Width="441">
         	<Grid.RowDefinitions>
