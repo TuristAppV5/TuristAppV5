@@ -118,6 +118,7 @@
     <Compile Include="obj\x86\Debug\View\MainPage.g.cs" />
     <Compile Include="obj\x86\Debug\View\MainPage.g.i.cs" />
     <Compile Include="obj\x86\Debug\XamlTypeInfo.g.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Viewmodel\MainViewmodel.cs" />
     <Compile Include="Viewmodel\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
