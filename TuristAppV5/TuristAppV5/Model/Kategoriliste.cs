@@ -72,10 +72,10 @@ namespace TuristAppV5.Model
                 set { _kommentarList = value; }
             }
 
-            public Kategoriliste()
-            {
-                
-            }
+              public override string ToString()
+              {
+                  return _navn;
+              }
             public Kategoriliste(string navn, string telefon, string book, string laengdegrad, string breddegrad, string billede, string beskrivelse, string aabningstider)
             {
                 _navn = navn;

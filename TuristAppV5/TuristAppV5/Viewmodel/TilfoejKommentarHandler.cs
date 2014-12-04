@@ -19,10 +19,12 @@ namespace TuristAppV5.Viewmodel
         private string _tekst;
         private MainViewmodel _mainViewmodel;
 
-
         public void TilfoejToDoListe()
         {
             _mainViewmodel.MinProfilCollection.Add(_mainViewmodel.SelectedKategoriliste);
+            MessageDialog kval = new MessageDialog("Tilføjet til To-Do liste");
+            kval.ShowAsync();
+            SaveKategorilisteAsync();
         }
 
         public async void SaveKategorilisteAsync()
@@ -38,13 +40,12 @@ namespace TuristAppV5.Viewmodel
             {
                 _mainViewmodel.MinProfilCollection.Clear();
 
-                foreach (var kategoriliste in _kategorilisteCollection)
+                foreach (Kategoriliste kategoriliste in _kategorilisteCollection)
                 {
                     _mainViewmodel.MinProfilCollection.Add(kategoriliste);
                 }
             }
         }
-
 
         public void TilfoejKommentar()
         {
@@ -78,18 +79,14 @@ namespace TuristAppV5.Viewmodel
             {
                 Kommentar k = new Kommentar(_dato, _navn, _tekst);
                 _mainViewmodel.SelectedKategoriliste.KommentarList.Add(k);
-
-                
-                
-            }
-
+                SaveKategorilisteAsync();
 
                 val.Title = "";
                 val.Content = "Kommentaren blev tilføjet";
 
             }
-            //val.ShowAsync();
-
+            val.ShowAsync();
+        }
         public DateTime Dato
         {
             get { return _dato; }
@@ -106,14 +103,6 @@ namespace TuristAppV5.Viewmodel
         {
             get { return _tekst; }
             set { _tekst = value; }
-        }
-
-
-        public TilfoejKommentarHandler(DateTime dato, string navn, string tekst)
-        {
-            _dato = dato;
-            _navn = navn;
-            _tekst = tekst;
         }
 
         public TilfoejKommentarHandler(MainViewmodel mainViewmodel)

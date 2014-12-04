@@ -115,6 +115,7 @@
     <Compile Include="Viewmodel\PersistenceFacade.cs" />
     <Compile Include="Viewmodel\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Viewmodel\SingletonViewmodel.cs" />
     <Compile Include="Viewmodel\TilfoejKommentarHandler.cs" />
     <Compile Include="View\ItemDetailPage.xaml.cs">
       <DependentUpon>ItemDetailPage.xaml</DependentUpon>
@@ -172,6 +173,10 @@
     </Reference>
     <Reference Include="Facebook.Client">
       <HintPath>..\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
