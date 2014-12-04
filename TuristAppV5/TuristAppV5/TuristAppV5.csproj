@@ -114,6 +114,7 @@
     <Compile Include="Viewmodel\MainViewmodel.cs" />
     <Compile Include="Viewmodel\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Viewmodel\TilfoejKommentarHandler.cs" />
     <Compile Include="View\ItemDetailPage.xaml.cs">
       <DependentUpon>ItemDetailPage.xaml</DependentUpon>
     </Compile>

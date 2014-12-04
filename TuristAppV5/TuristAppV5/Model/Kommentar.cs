@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristAppV5.Model
 {
-    class Kommentar
+    public class Kommentar
     {
         private DateTime _dato;
         private string _navn;
@@ -36,23 +36,28 @@ namespace TuristAppV5.Model
             _navn = navn;
             _tekst = tekst;
         }
-        public void CheckKommentarName(string name)
+        public static void CheckKommentarName(string name)
         {
             if (name.Length < 1 || name.Length > 30)
             {
                 throw new ArgumentException("Navnet skal indeholde tegn og må højst være 30 tegn");
             }
         }
-        public void CheckKommentarTekst(string tekst)
+        public static void CheckKommentarTekst(string tekst)
         {
             if (tekst.Length < 1 || tekst.Length > 500)
             {
                 throw new ArgumentException("Beskrivelsen skal indeholde tegn og må højst være 500 tegn");
             }
         }
-        public void CheckKommentarDate()
+        public static void CheckKommentarDate()
         {
 
+        }
+
+        public override string ToString()
+        {
+            return _navn;
         }
     }
 }
