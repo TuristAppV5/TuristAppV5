@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< HEAD
-=======
 using System.Collections.ObjectModel;
->>>>>>> 18f5a122eecb97d456e6e3610423bf0d46880833
 using System.Linq;
 using System.ServiceModel.Channels;
 using System.Text;
@@ -11,22 +8,18 @@ using System.Threading.Tasks;
 using Windows.UI.Popups;
 using TuristAppV5.Model;
 using TuristAppV5.View;
+using TuristAppV5.Viewmodel;
 
 namespace TuristAppV5.Viewmodel
 {
-<<<<<<< HEAD
     class TilfoejKommentarHandler
-=======
-    public class TilfoejKommentarHandler
->>>>>>> 18f5a122eecb97d456e6e3610423bf0d46880833
     {
         private DateTime _dato;
         private string _navn;
         private string _tekst;
         private MainViewmodel _mainViewmodel;
 
-<<<<<<< HEAD
-=======
+
         public void TilfoejToDoListe()
         {
             _mainViewmodel.MinProfilCollection.Add(_mainViewmodel.SelectedKategoriliste);
@@ -52,7 +45,7 @@ namespace TuristAppV5.Viewmodel
             }
         }
 
->>>>>>> 18f5a122eecb97d456e6e3610423bf0d46880833
+
         public void TilfoejKommentar()
         {
             MessageDialog val = new MessageDialog("", "Fejl");
@@ -85,18 +78,18 @@ namespace TuristAppV5.Viewmodel
             {
                 Kommentar k = new Kommentar(_dato, _navn, _tekst);
                 _mainViewmodel.SelectedKategoriliste.KommentarList.Add(k);
-<<<<<<< HEAD
+
                 
                 
             }
-=======
+
 
                 val.Title = "";
                 val.Content = "Kommentaren blev tilføjet";
 
             }
             val.ShowAsync();
->>>>>>> 18f5a122eecb97d456e6e3610423bf0d46880833
+
         }
         public DateTime Dato
         {
@@ -116,17 +109,16 @@ namespace TuristAppV5.Viewmodel
             set { _tekst = value; }
         }
 
-<<<<<<< HEAD
+
         public TilfoejKommentarHandler(DateTime dato, string navn, string tekst)
         {
             _dato = dato;
             _navn = navn;
             _tekst = tekst;
-=======
+
         public TilfoejKommentarHandler(MainViewmodel mainViewmodel)
         {
             _mainViewmodel = mainViewmodel;
->>>>>>> 18f5a122eecb97d456e6e3610423bf0d46880833
         }
     }
 }
