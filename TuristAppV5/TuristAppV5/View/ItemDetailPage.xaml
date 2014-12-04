@@ -13,7 +13,7 @@
     <Page.BottomAppBar>
         <CommandBar>
             <AppBarButton Icon="Add" Label="Tilføj Kommentar" Click="AppBarButton_Click"/>
-            <AppBarButton Icon="Add" Label="Tilføj til to-do liste" Command="{Binding TilfoejToDoListe}"/>
+            <AppBarButton Icon="Add" Label="Tilføj til to-do liste" Command="{Binding TilfoejToDoListeCommand}"/>
         </CommandBar>
     </Page.BottomAppBar>
 

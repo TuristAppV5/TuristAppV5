@@ -21,11 +21,11 @@ namespace TuristAppV5.Viewmodel
             SerializePersonsFileAsync(kategorilisteJsonString, jsonFileName);
         }
 
-        public static async void SaveKommentarlisteAsJsonAsync(List<Kommentar> _kommentarListe )
-        {
-            string kommentarlisteJsonString = JsonConvert.SerializeObject(_kommentarListe);
-            SerializePersonsFileAsync(kommentarlisteJsonString, jsonFileName);
-        }
+        //public static async void SaveKommentarlisteAsJsonAsync(List<Kommentar> _kommentarListe )
+        //{
+        //    string kommentarlisteJsonString = JsonConvert.SerializeObject(_kommentarListe);
+        //    SerializePersonsFileAsync(kommentarlisteJsonString, jsonFileName);
+        //}
 
         public static async Task<ObservableCollection<Kategoriliste>> LoadKategorilisteFromJsonAsync()
         {
@@ -34,21 +34,21 @@ namespace TuristAppV5.Viewmodel
             if (personsJsonString != null)
             {
                 return
-                    (ObservableCollection<Kategoriliste>) JsonConvert.DeserializeObject(personsJsonString, typeof(ObservableCollection<Kategoriliste>));
+                    (ObservableCollection<Kategoriliste>)JsonConvert.DeserializeObject(personsJsonString, typeof(ObservableCollection<Kategoriliste>));
             }
             return null;
         }
 
-        public static async Task<List<Kommentar>> LoadKommentarlisteFromJsonAsync()
-        {
-            string kommentarlisteJsonString = await DeSerializePersonsFileAsync(jsonFileName);
-            if (kommentarlisteJsonString != null)
-            {
-                return
-                    (List<Kommentar>) JsonConvert.DeserializeObject(kommentarlisteJsonString, typeof (List<Kommentar>));
-            }
-            return null;
-        }
+        //public static async Task<List<Kommentar>> LoadKommentarlisteFromJsonAsync()
+        //{
+        //    string kommentarlisteJsonString = await DeSerializePersonsFileAsync(jsonFileName);
+        //    if (kommentarlisteJsonString != null)
+        //    {
+        //        return
+        //            (List<Kommentar>) JsonConvert.DeserializeObject(kommentarlisteJsonString, typeof (List<Kommentar>));
+        //    }
+        //    return null;
+        //}
 
         public static async void SerializePersonsFileAsync(string PersonsString, string fileName)
         {
