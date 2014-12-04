@@ -40,7 +40,7 @@
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
-            <GridView ItemsSource="{Binding SelectedKategori.Kategoriliste}" SelectedItem="{Binding SelectedKategoriliste, Mode=TwoWay}" Grid.Row="2" Margin="10,0,0,0">
+            <GridView x:Name="kategoriListeGridView" ItemsSource="{Binding SelectedKategori.Kategoriliste}" SelectedItem="{Binding SelectedKategoriliste, Mode=TwoWay}" Grid.Row="2" Margin="10,0,0,0">
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.ServiceModel.Channels;
 using System.Text;
@@ -10,12 +11,37 @@ using TuristAppV5.View;
 
 namespace TuristAppV5.Viewmodel
 {
-    class TilfoejKommentarHandler
+    public class TilfoejKommentarHandler
     {
         private DateTime _dato;
         private string _navn;
         private string _tekst;
         private MainViewmodel _mainViewmodel;
+
+        public void TilfoejToDoListe()
+        {
+            _mainViewmodel.MinProfilCollection.Add(_mainViewmodel.SelectedKategoriliste);
+        }
+
+        public async void SaveKategorilisteAsync()
+        {
+            PersistenceFacade.SaveKategorilisteAsJsonAsync(_mainViewmodel.MinProfilCollection);
+        }
+        public async void LoadKategorilisteAsync()
+        {
+            ObservableCollection<Kategoriliste> _kategorilisteCollection =
+                await PersistenceFacade.LoadKategorilisteFromJsonAsync();
+
+            if (_kategorilisteCollection != null)
+            {
+                _mainViewmodel.MinProfilCollection.Clear();
+
+                foreach (var kategoriliste in _kategorilisteCollection)
+                {
+                    _mainViewmodel.MinProfilCollection.Add(kategoriliste);
+                }
+            }
+        }
 
         public void TilfoejKommentar()
         {
@@ -49,9 +75,12 @@ namespace TuristAppV5.Viewmodel
             {
                 Kommentar k = new Kommentar(_dato, _navn, _tekst);
                 _mainViewmodel.SelectedKategoriliste.KommentarList.Add(k);
-                
-                
+
+                val.Title = "";
+                val.Content = "Kommentaren blev tilføjet";
+
             }
+            val.ShowAsync();
         }
         public DateTime Dato
         {
@@ -71,11 +100,9 @@ namespace TuristAppV5.Viewmodel
             set { _tekst = value; }
         }
 
-        public TilfoejKommentarHandler(DateTime dato, string navn, string tekst)
+        public TilfoejKommentarHandler(MainViewmodel mainViewmodel)
         {
-            _dato = dato;
-            _navn = navn;
-            _tekst = tekst;
+            _mainViewmodel = mainViewmodel;
         }
     }
 }
