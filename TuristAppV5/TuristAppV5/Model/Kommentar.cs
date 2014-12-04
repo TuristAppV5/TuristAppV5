@@ -17,7 +17,10 @@ namespace TuristAppV5.Model
             get { return _dato; }
             set { _dato = value; }
         }
-
+        public string Dato1
+        {
+            get { return _dato.ToString("dd/MM-yyyy"); }
+        }
         public string Navn
         {
             get { return _navn; }
