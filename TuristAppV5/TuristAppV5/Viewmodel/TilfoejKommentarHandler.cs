@@ -67,14 +67,6 @@ namespace TuristAppV5.Viewmodel
             {
                 val.Content += ex.Message + "\n";
             }
-            try
-            {
-                Kommentar.CheckKommentarDate();
-            }
-            catch (ArgumentException ex)
-            {
-                val.Content += ex.Message + "\n";
-            }
             if (val.Content == "")
             {
                 Kommentar k = new Kommentar(_dato, _navn, _tekst);
