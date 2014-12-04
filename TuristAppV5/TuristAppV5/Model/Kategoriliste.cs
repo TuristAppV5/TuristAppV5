@@ -16,6 +16,7 @@ namespace TuristAppV5.Model
             private string _billede;
             private string _beskrivelse;
             private string _aabningstider;
+            private List<Kommentar> _kommentarList;
 
             public string Navn
             {
@@ -65,6 +66,12 @@ namespace TuristAppV5.Model
                 set { _beskrivelse = value; }
             }
 
+            public List<Kommentar> KommentarList
+            {
+                get { return _kommentarList; }
+                set { _kommentarList = value; }
+            }
+
             public Kategoriliste()
             {
                 
@@ -79,6 +86,9 @@ namespace TuristAppV5.Model
                 _billede = billede;
                 _beskrivelse = beskrivelse;
                 _aabningstider = aabningstider;
+                _kommentarList = new List<Kommentar>();
+                _kommentarList.Add(new Kommentar(new DateTime(), "Navn", "teksttekstteksttekst"));
             }
+
         }
 }
