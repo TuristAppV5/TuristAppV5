@@ -15,19 +15,19 @@ namespace TuristAppV5.Model
         public DateTime Dato
         {
             get { return _dato; }
-            set { _dato = value; }
+            set { _dato = value; CheckKommentarDate(); }
         }
 
         public string Navn
         {
             get { return _navn; }
-            set { _navn = value; }
+            set { _navn = value; CheckKommentarName(value); }
         }
 
         public string Tekst
         {
             get { return _tekst; }
-            set { _tekst = value; }
+            set { _tekst = value; CheckKommentarTekst(value); }
         }
 
         public Kommentar(DateTime dato, string navn, string tekst)

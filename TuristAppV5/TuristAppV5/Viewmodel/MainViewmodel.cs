@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using TuristAppV5.Annotations;
+using TuristAppV5.Common;
 using TuristAppV5.Model;
 
 namespace TuristAppV5.Viewmodel
@@ -21,6 +22,12 @@ namespace TuristAppV5.Viewmodel
         private ObservableCollection<Kategoriliste> _feelOrangeCollection;
         private Kategori _selectedKategori;
         private static Kategoriliste _selectedKategoriliste;
+<<<<<<< HEAD
+=======
+        private RelayCommand _tilfoejKommentarCommand;
+        private TilfoejKommentarHandler _tilfoejKommentarHandler;
+        private RelayCommand _tilfoejToDoListe;
+>>>>>>> 18f5a122eecb97d456e6e3610423bf0d46880833
 
         public MainViewmodel()
         {
@@ -34,8 +41,12 @@ namespace TuristAppV5.Viewmodel
             _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
             _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
             _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+<<<<<<< HEAD
             _minProfilCollection.Add(new Kategoriliste("Prindsen", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Familien Rosted overtog Prindsen. Carl Christian Rosted døde i 1787 kun 46 år gammel. Hans enke Anne Marie besluttede at drive gæstgivergården videre. Hun var en arbejdsom kvinde, som samtidig med at hun opfostrede tre børn formåede at give Prindsen ry for at være et godt spisested. Madam Rosted overlevede alle sine tre børn, så i sine sidste år havde hun sin datters kusine Agathe Johanne Hansen i huset til oplæring som sin efterfølger. Agathe giftede sig med kaptajn Niels Christian Sveistrup, som i 1825 blev ejer af Prindsen efter Madam Rosteds død. Kaptajn Sveistrup var en prominent borger i Roskilde og havde adskillige tillidshverv. Han lod opføre en ny stor festsal hvor borgerne i det lille Roskilde, kunne få brudt ensformigheden med baller, spisegilder, koncerter og teater. Kaptajn Sveistrup døde i 1874 som æresborger i Roskilde.", "Man-Fre: 15-22, Lør 12-18"));
 
+=======
+            _minProfilCollection.Add(new Kategoriliste("Prindsen", "12345678", "Book", "Laengdegrad", "Breddegrad","../Assets/restaurant.jpeg","Familien Rosted overtog Prindsen. Carl Christian Rosted døde i 1787 kun 46 år gammel. Hans enke Anne Marie besluttede at drive gæstgivergården videre. Hun var en arbejdsom kvinde, som samtidig med at hun opfostrede tre børn formåede at give Prindsen ry for at være et godt spisested. Madam Rosted overlevede alle sine tre børn, så i sine sidste år havde hun sin datters kusine Agathe Johanne Hansen i huset til oplæring som sin efterfølger. Agathe giftede sig med kaptajn Niels Christian Sveistrup, som i 1825 blev ejer af Prindsen efter Madam Rosteds død. Kaptajn Sveistrup var en prominent borger i Roskilde og havde adskillige tillidshverv. Han lod opføre en ny stor festsal hvor borgerne i det lille Roskilde, kunne få brudt ensformigheden med baller, spisegilder, koncerter og teater. Kaptajn Sveistrup døde i 1874 som æresborger i Roskilde.","Man-Fre: 15-22, Lør 12-18"));
+>>>>>>> 18f5a122eecb97d456e6e3610423bf0d46880833
 
             //Anden Kategori "Eat Orange" (Restauranter)
             _eatOrangeCollection = new ObservableCollection<Kategoriliste>();
@@ -70,6 +81,9 @@ namespace TuristAppV5.Viewmodel
             _kategoriCollection.Add(new Kategori("Shop Orange", "../Assets/visitroskilde.png", _shopOrangeCollection));
             _kategoriCollection.Add(new Kategori("Feel Orange", "../Assets/visitroskilde.png", _feelOrangeCollection));
            
+            _tilfoejKommentarHandler = new TilfoejKommentarHandler(this);
+            _tilfoejKommentarCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejKommentar);
+            _tilfoejKommentarCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejToDoListe);
         }
 
         #region GetSet Metoder
@@ -126,6 +140,24 @@ namespace TuristAppV5.Viewmodel
             {
                 _selectedKategoriliste = value; 
             }
+        }
+
+        public RelayCommand TilfoejKommentarCommand
+        {
+            get { return _tilfoejKommentarCommand; }
+            set { _tilfoejKommentarCommand = value; }
+        }
+
+        public TilfoejKommentarHandler TilfoejKommentarHandler
+        {
+            get { return _tilfoejKommentarHandler; }
+            set { _tilfoejKommentarHandler = value; }
+        }
+
+        public RelayCommand TilfoejToDoListe
+        {
+            get { return _tilfoejToDoListe; }
+            set { _tilfoejToDoListe = value; }
         }
 
         #endregion

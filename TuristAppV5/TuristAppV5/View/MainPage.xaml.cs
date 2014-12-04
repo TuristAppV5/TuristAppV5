@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,9 +29,18 @@ namespace TuristAppV5
             this.InitializeComponent();
         }
 
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        private async void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ItemDetailPage));
+            if (kategoriListeGridView.SelectedIndex == -1)
+            {
+                MessageDialog telefonfejl = new MessageDialog("Vælg venligst en restaurant", "Ups! Der skete en fejl!");
+                await telefonfejl.ShowAsync();
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(ItemDetailPage));        
+            }
+            
         }
     }
 }
