@@ -12,7 +12,7 @@ using TuristAppV5.Viewmodel;
 
 namespace TuristAppV5.Viewmodel
 {
-    class TilfoejKommentarHandler
+    public class TilfoejKommentarHandler
     {
         private DateTime _dato;
         private string _navn;
@@ -88,9 +88,8 @@ namespace TuristAppV5.Viewmodel
                 val.Content = "Kommentaren blev tilføjet";
 
             }
-            val.ShowAsync();
+            //val.ShowAsync();
 
-        }
         public DateTime Dato
         {
             get { return _dato; }
@@ -115,6 +114,7 @@ namespace TuristAppV5.Viewmodel
             _dato = dato;
             _navn = navn;
             _tekst = tekst;
+        }
 
         public TilfoejKommentarHandler(MainViewmodel mainViewmodel)
         {

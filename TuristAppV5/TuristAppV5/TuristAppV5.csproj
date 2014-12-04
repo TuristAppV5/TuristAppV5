@@ -112,6 +112,7 @@
     <Compile Include="Model\Kommentar.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Viewmodel\MainViewmodel.cs" />
+    <Compile Include="Viewmodel\PersistenceFacade.cs" />
     <Compile Include="Viewmodel\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Viewmodel\TilfoejKommentarHandler.cs" />
