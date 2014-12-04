@@ -30,11 +30,11 @@
                 <RowDefinition Height="456*"/>
             </Grid.RowDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="60" TextWrapping="Wrap" Text="#VisitRoskilde" VerticalAlignment="Top" Foreground="White"/>
-            <GridView Margin="10,25,0,0" VerticalAlignment="Top" Foreground="White" Height="150" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}" Grid.Row="1">
+            <GridView Margin="0,0,0,0" VerticalAlignment="Top" Foreground="White" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}" Grid.Row="1">
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Vertical" Margin="20,0">
-                            <Image Height="100" Width="100" Source="{Binding Billede}"/>
+                        <StackPanel Orientation="Vertical" Margin="15,0">
+                            <Image Height="150" Width="150" Source="{Binding Billede}"/>
                             <TextBlock Text="{Binding Kategorinavn}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
                         </StackPanel>
                     </DataTemplate>

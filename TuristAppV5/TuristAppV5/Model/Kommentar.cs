@@ -15,7 +15,7 @@ namespace TuristAppV5.Model
         public DateTime Dato
         {
             get { return _dato; }
-            set { _dato = value; CheckKommentarDate(); }
+            set { _dato = value; }
         }
 
         public string Navn
@@ -38,21 +38,22 @@ namespace TuristAppV5.Model
         }
         public static void CheckKommentarName(string name)
         {
-            if (name.Length < 1 || name.Length > 30)
+            if (string.IsNullOrEmpty(name) || name.Length < 1 || name.Length > 30)
             {
                 throw new ArgumentException("Navnet skal indeholde tegn og må højst være 30 tegn");
             }
         }
         public static void CheckKommentarTekst(string tekst)
         {
-            if (tekst.Length < 1 || tekst.Length > 500)
+            if (string.IsNullOrEmpty(tekst) || tekst.Length < 20 || tekst.Length > 500)
             {
                 throw new ArgumentException("Beskrivelsen skal indeholde tegn og må højst være 500 tegn");
             }
         }
-        public static void CheckKommentarDate()
-        {
 
+        public Kommentar()
+        {
+            
         }
 
         public override string ToString()
