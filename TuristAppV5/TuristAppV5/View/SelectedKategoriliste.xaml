@@ -75,7 +75,6 @@
             <TextBlock Margin="10,0,0,10" TextWrapping="Wrap" FontSize="16" Text="{Binding SelectedKategoriliste.Beskrivelse}"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding SelectedKategoriliste.Telefon}" VerticalAlignment="Top" FontSize="20"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="{Binding SelectedKategoriliste.Aabningstider}" VerticalAlignment="Top" FontSize="20"/>
-            <Button Content="Book via hjemmeside" HorizontalAlignment="Stretch" Margin="10,7,7,0" Grid.Row="3" VerticalAlignment="Stretch"/>
             <Button Content="Gå til hjemmeside" HorizontalAlignment="Stretch" Margin="10,7,7,0" Grid.Row="3" VerticalAlignment="Stretch" />
 
         </Grid>
