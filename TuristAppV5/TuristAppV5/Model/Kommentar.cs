@@ -34,7 +34,7 @@ namespace TuristAppV5.Model
             get { return _tekst; }
             set { 
                 _tekst = value; 
-               // CheckKommentarTekst(value);
+               CheckKommentarTekst(value);
                 }
         }
 
