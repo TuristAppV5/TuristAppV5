@@ -23,14 +23,14 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/bg.jpg"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Left" Height="750" Margin="10,10,0,0" VerticalAlignment="Top" Width="988">
+        <Grid HorizontalAlignment="Left" Margin="10,10,0,0" Width="988">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100*"/>
-                <RowDefinition Height="200*"/>
+                <RowDefinition Height="190*"/>
                 <RowDefinition Height="456*"/>
             </Grid.RowDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="60" TextWrapping="Wrap" Text="#VisitRoskilde" VerticalAlignment="Top" Foreground="White"/>
-            <GridView Margin="0,0,0,0" VerticalAlignment="Top" Foreground="White" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}" Grid.Row="1">
+            <GridView Foreground="White" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}" Grid.Row="1">
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical" Margin="15,0">
@@ -60,7 +60,6 @@
             </Grid.RowDefinitions>
             <TextBlock FontSize="40" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" Text="Facebook Feed" Width="343" VerticalAlignment="Top" Height="49"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="748" Margin="10,10,0,0" VerticalAlignment="Top" Width="1346"/>
 
 
     </Grid>
