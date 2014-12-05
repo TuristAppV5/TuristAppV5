@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using TuristAppV5.Annotations;
 
 namespace TuristAppV5.Model
 {
@@ -26,11 +29,13 @@ namespace TuristAppV5.Model
             get { return _navn; }
             set { _navn = value; CheckKommentarName(value); }
         }
-
         public string Tekst
         {
             get { return _tekst; }
-            set { _tekst = value; CheckKommentarTekst(value); }
+            set { 
+                _tekst = value; 
+               // CheckKommentarTekst(value);
+                }
         }
 
         public Kommentar(DateTime dato, string navn, string tekst)
@@ -45,6 +50,7 @@ namespace TuristAppV5.Model
             {
                 throw new ArgumentException("Navnet skal indeholde tegn og må højst være 30 tegn");
             }
+
         }
         public static void CheckKommentarTekst(string tekst)
         {
@@ -52,8 +58,18 @@ namespace TuristAppV5.Model
             {
                 throw new ArgumentException("Beskrivelsen skal indeholde tegn og må højst være 500 tegn");
             }
+
         }
 
+        public static void CheckKommentarKategoriValg(Kategoriliste kategorilisteItem)
+        {
+            if (kategorilisteItem == null)
+            {
+                throw new ArgumentException("Item er ikke valgt");
+            }
+
+        }
+        
         public Kommentar()
         {
             
@@ -63,5 +79,6 @@ namespace TuristAppV5.Model
         {
             return _navn;
         }
+
     }
 }
