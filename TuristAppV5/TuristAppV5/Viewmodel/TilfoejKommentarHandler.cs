@@ -24,6 +24,7 @@ namespace TuristAppV5.Viewmodel
         private string _testNavnText = "";
         private string _testKategori = "";
         private string _testBeskrivelseText = "";
+        private string _succesText = "";
             
 
         public void TilfoejToDoListe()
@@ -56,10 +57,10 @@ namespace TuristAppV5.Viewmodel
 
         public void TilfoejKommentar()
         {
-            MessageDialog val = new MessageDialog("", "");
             TestNavnText = "";
             TestBeskrivelseText = "";
             TestKategori = "";
+            SuccesText = "";
             try
             {
                 Kommentar.CheckKommentarName(_navn);
@@ -82,12 +83,9 @@ namespace TuristAppV5.Viewmodel
                 Kommentar k = new Kommentar(_dato, _navn, _tekst);
                 _mainViewmodel.SelectedKategoriliste.KommentarList.Add(k);
                 SaveKategorilisteAsync();
-
-                val.Title = "";
-                val.Content = "Kommentaren blev tilføjet";
+                SuccesText = "Kommentaren blev tilføjet";
 
             }
-            val.ShowAsync();
         }
         public DateTime Dato
         {
@@ -135,6 +133,13 @@ namespace TuristAppV5.Viewmodel
                 OnPropertyChanged("TestBeskrivelseText");
             }
         }
+
+        public string SuccesText
+        {
+            get { return _succesText; }
+            set { _succesText = value; OnPropertyChanged("SuccesText"); }
+        }
+
         public TilfoejKommentarHandler(MainViewmodel mainViewmodel)
         {
             _mainViewmodel = mainViewmodel;
