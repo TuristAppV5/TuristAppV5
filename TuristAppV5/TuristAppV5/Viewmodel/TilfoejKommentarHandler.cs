@@ -32,7 +32,7 @@ namespace TuristAppV5.Viewmodel
             _mainViewmodel.MinProfilCollection.Add(_mainViewmodel.SelectedKategoriliste);
             MessageDialog kval = new MessageDialog("Tilføjet til To-Do liste");
             kval.ShowAsync();
-            SaveKategorilisteAsync();
+            //SaveKategorilisteAsync();
         }
 
         public async void SaveKategorilisteAsync()
