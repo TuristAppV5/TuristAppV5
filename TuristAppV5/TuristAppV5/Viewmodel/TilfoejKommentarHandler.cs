@@ -1,23 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using TuristAppV5.Annotations;
 using TuristAppV5.Model;
 using TuristAppV5.View;
 using TuristAppV5.Viewmodel;
 
 namespace TuristAppV5.Viewmodel
 {
-    public class TilfoejKommentarHandler
+    public class TilfoejKommentarHandler : INotifyPropertyChanged
     {
         private DateTime _dato;
         private string _navn;
         private string _tekst;
         private MainViewmodel _mainViewmodel;
+        private string _testNavnText = "";
+        private string _testKategori = "";
+        private string _testBeskrivelseText = "";
+            
 
         public void TilfoejToDoListe()
         {
@@ -49,14 +56,17 @@ namespace TuristAppV5.Viewmodel
 
         public void TilfoejKommentar()
         {
-            MessageDialog val = new MessageDialog("", "Fejl");
+            MessageDialog val = new MessageDialog("", "");
+            TestNavnText = "";
+            TestBeskrivelseText = "";
+            TestKategori = "";
             try
             {
                 Kommentar.CheckKommentarName(_navn);
             }
             catch (ArgumentException ex)
             {
-                val.Content += ex.Message + "\n";
+                TestNavnText = "*";       
             }
 
             try
@@ -65,9 +75,9 @@ namespace TuristAppV5.Viewmodel
             }
             catch (ArgumentException ex)
             {
-                val.Content += ex.Message + "\n";
+                TestBeskrivelseText = "*";
             }
-            if (val.Content == "")
+            if (TestBeskrivelseText == "" & TestNavnText == "")
             {
                 Kommentar k = new Kommentar(_dato, _navn, _tekst);
                 _mainViewmodel.SelectedKategoriliste.KommentarList.Add(k);
@@ -96,10 +106,47 @@ namespace TuristAppV5.Viewmodel
             get { return _tekst; }
             set { _tekst = value; }
         }
+        public string TestNavnText
+        {
+            get { return _testNavnText; }
+            set
+            {
+                _testNavnText = value;
+                OnPropertyChanged("TestNavnText");
+            }
+        }
 
+        public string TestKategori
+        {
+            get { return _testKategori; }
+            set
+            {
+                _testKategori = value;
+                OnPropertyChanged("TestKategori");
+            }
+        }
+
+        public string TestBeskrivelseText
+        {
+            get { return _testBeskrivelseText; }
+            set
+            {
+                _testBeskrivelseText = value;
+                OnPropertyChanged("TestBeskrivelseText");
+            }
+        }
         public TilfoejKommentarHandler(MainViewmodel mainViewmodel)
         {
             _mainViewmodel = mainViewmodel;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

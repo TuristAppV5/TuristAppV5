@@ -27,6 +27,7 @@ namespace TuristAppV5.Viewmodel
             _tilfoejKommentarHandler = new TilfoejKommentarHandler(this);
             _tilfoejKommentarCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejKommentar);
             _tilfoejToDoListeCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejToDoListe);
+           // _tilfoejKommentarHandler.SaveKategorilisteAsync();
             _tilfoejKommentarHandler.LoadKategorilisteAsync();
         }
 
