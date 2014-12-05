@@ -38,7 +38,7 @@ namespace TuristAppV5
             }
             else
             {
-                this.Frame.Navigate(typeof(ItemDetailPage));        
+                this.Frame.Navigate(typeof(SelectedKategoriliste));        
             }
             
         }
