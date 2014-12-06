@@ -33,7 +33,7 @@ namespace TuristAppV5
         {
             if (kategoriListeGridView.SelectedIndex == -1)
             {
-                MessageDialog telefonfejl = new MessageDialog("Vælg venligst en restaurant", "Ups! Der skete en fejl!");
+                MessageDialog telefonfejl = new MessageDialog("Vælg venligst et item", "Ups! Der skete en fejl!");
                 await telefonfejl.ShowAsync();
             }
             else
