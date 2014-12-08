@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="7f4294de-db40-495f-a4f6-a5cc7fbb92db"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -11,6 +11,60 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="9f47a818-33bd-4d39-9378-92a530de5edd"
+            isDerived="false"
+            sourceEndRoleName="Kategori"
+            targetEndRoleName="Kategoriliste"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ea89e621-555b-4110-98b6-a67d2994dd70"
+              LastKnownName="Kategoriliste"
+              LastKnownLocation="Package2_0958.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a86c1f3b-8689-4897-b84a-d89a3f0ae1dc"
+                  name="Kategori"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6dce4135-5727-46a2-aa88-68f7c4f420f0"
+                  name="Kategoriliste"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="619a3110-9100-4b80-8873-d9326c255057"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a33fe891-6dd4-49a6-8fa1-9fb502403fb3"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="4c1e0b84-886d-4811-80bc-83e35ff277b2"
@@ -58,6 +112,60 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="55c27a11-1614-4680-8f8f-83a26c37af6a"
+            isDerived="false"
+            sourceEndRoleName="Kategoriliste"
+            targetEndRoleName="Kommentar"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2a867b3c-ba3d-434a-bee0-4d693455dc97"
+              LastKnownName="Kommentar"
+              LastKnownLocation="Package2_0958.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7814383b-6ecb-40ea-8ff4-698b43377219"
+                  name="Kategoriliste"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="858f0202-63cd-4070-ae0a-48917deff4eb"
+                  name="Kommentar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="dec34ddb-a4de-4c50-a359-6e0ba843f948"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2ba24c5b-b0b7-4de8-b619-338628be611a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="4be8e915-3a83-43d4-aa54-5984637514f8"
@@ -281,8 +389,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="d5ab8932-6624-4abe-bf41-2d5fee78de57"
-                LastKnownName="Datetime"
+                Id="129edc27-e540-41da-9edd-ba93ae08ba7b"
+                LastKnownName="DateTime"
                 LastKnownLocation="Package1_0958.uml" />
             </type_NamedElement>
           </property>

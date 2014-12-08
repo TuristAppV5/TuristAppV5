@@ -25,14 +25,14 @@ namespace TuristAppV5.Viewmodel
         private string _testKategori = "";
         private string _testBeskrivelseText = "";
         private string _succesText = "";
-            
+
 
         public void TilfoejToDoListe()
         {
             _mainViewmodel.MinProfilCollection.Add(_mainViewmodel.SelectedKategoriliste);
             MessageDialog kval = new MessageDialog("Tilføjet til To-Do liste");
             kval.ShowAsync();
-            //SaveKategorilisteAsync();
+            SaveKategorilisteAsync();
         }
 
         public async void SaveKategorilisteAsync()
@@ -41,6 +41,7 @@ namespace TuristAppV5.Viewmodel
         }
         public async void LoadKategorilisteAsync()
         {
+
             ObservableCollection<Kategoriliste> _kategorilisteCollection =
                 await PersistenceFacade.LoadKategorilisteFromJsonAsync();
 
@@ -67,7 +68,7 @@ namespace TuristAppV5.Viewmodel
             }
             catch (ArgumentException ex)
             {
-                TestNavnText = "*";       
+                TestNavnText = "*";
             }
 
             try

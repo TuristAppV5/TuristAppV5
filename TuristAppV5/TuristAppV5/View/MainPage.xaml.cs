@@ -57,14 +57,14 @@ namespace TuristAppV5
         private async void facebook_Click(object sender, RoutedEventArgs e)
         {
             //string json = "https://graph.facebook.com/visitroskilde/posts?limit=3&access_token=722191401190090|zV8YHfAogIsAsGHsE8TOZWIY_0g";
-            //dynamic dynJson = JsonConvert.DeserializeObject(json, typeof(ObservableCollection<FacebookData>));
+            //dynamic dynJson = JsonConvert.DeserializeObject(json);
             //foreach (var item in dynJson)
             //{
             //    Debug.WriteLine("{0}", item.message);
             //}
 
 
-            var fb = new FacebookClient("CAACEdEose0cBABdJW0hjA0hzlU1DAHw30YQwfuSewPQrfI6V7Qgxa8pawGqgdgJDd8O7FuSh5ByLHx725mxYD07cbur1p02kLoekiApRNdKgQfxNTxmBtlqTjvqGbLWZAYPYvVOHBrZCkiFGrcWIY92JSKNGBmPihhKkC2ZCMdy6aZBvVlNYZCb5ML5GTTwPoXg9NYQ0HlkD5LAmE6GxZA");
+            var fb = new FacebookClient("CAACEdEose0cBAOQAcLf1mIalNfhhKZB2zA6DwoIVZCnIanFIyVpQYiu022h19VoetuzN0xeIPIA7qxyH1OT4SWwuubIRxey0zf173WDcVL4z7t83QdLZCAaUCPGhumZBwBJXaJYNCMnvUoqjduZAwZCAL4hcmUYly3FNfmtYuQGjUVV9WOEdw7Ne4NQpRGmPrUda65IjmFaxA6FJoKLh0a");
             var result = await fb.GetTaskAsync("fql",
                 new
                 {

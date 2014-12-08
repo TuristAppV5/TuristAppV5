@@ -13,15 +13,14 @@ namespace TuristAppV5.Viewmodel
 {
      public class SingletonViewmodel : INotifyPropertyChanged
     {
-        private static SingletonViewmodel instance;
+        private static SingletonViewmodel _instance;
         private ObservableCollection<Kategori> _kategoriCollection;
         private ObservableCollection<Kategoriliste> _minProfilCollection;
         private ObservableCollection<Kategoriliste> _eatOrangeCollection;
         private ObservableCollection<Kategoriliste> _seeOrangeCollection;
         private ObservableCollection<Kategoriliste> _shopOrangeCollection;
         private ObservableCollection<Kategoriliste> _feelOrangeCollection;
-
-         private const string Beskrivelse = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui sapien, ullamcorper vel volutpat ac, elementum vitae erat. Nam in est eu erat ornare pulvinar. Suspendisse potenti. \n\n Nam et rhoncus diam. Aliquam pretium nibh ut rutrum dictum. Aliquam quis fringilla nulla. Integer a magna tempor, eleifend nunc ut, blandit eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In viverra venenatis nibh at placerat.";
+        private const string Beskrivelse = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui sapien, ullamcorper vel volutpat ac, elementum vitae erat. Nam in est eu erat ornare pulvinar. Suspendisse potenti. \n\n Nam et rhoncus diam. Aliquam pretium nibh ut rutrum dictum. Aliquam quis fringilla nulla. Integer a magna tempor, eleifend nunc ut, blandit eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In viverra venenatis nibh at placerat.";
 
         protected SingletonViewmodel()
         {
@@ -60,7 +59,6 @@ namespace TuristAppV5.Viewmodel
             {
                 _feelOrangeCollection.Add(new Kategoriliste("Vikingeskibsmuseet", "46300200", "http://www.vikingeskibsmuseet.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00"));
             }
-           
 
             //Kategorilisten i toppen af MainPage
             _kategoriCollection = new ObservableCollection<Kategori>();
@@ -69,10 +67,6 @@ namespace TuristAppV5.Viewmodel
             _kategoriCollection.Add(new Kategori("See Orange", "../Assets/visitroskilde.png", _seeOrangeCollection));
             _kategoriCollection.Add(new Kategori("Shop Orange", "../Assets/visitroskilde.png", _shopOrangeCollection));
             _kategoriCollection.Add(new Kategori("Feel Orange", "../Assets/visitroskilde.png", _feelOrangeCollection));
-
-
-
-
         }
         public ObservableCollection<Kategori> KategoriCollection
         {
@@ -114,11 +108,11 @@ namespace TuristAppV5.Viewmodel
         {
             get
             {
-                if (instance == null)
+                if (_instance == null)
                 {
-                    instance = new SingletonViewmodel();
+                    _instance = new SingletonViewmodel();
                 }
-                return instance;
+                return _instance;
             }
         }
 
