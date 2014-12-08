@@ -2,15 +2,15 @@
 <useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UseCase">
   <useCaseModelRootMoniker Id="9c66ffe4-466d-44bc-844d-08731444e316" />
   <nestedChildShapes>
-    <actorShape Id="59f50660-720a-4c29-85f0-29f45710bc84" absoluteBounds="0.875, 2.625, 0.5, 0.5" isReference="false" heightOffset="0">
+    <actorShape Id="59f50660-720a-4c29-85f0-29f45710bc84" absoluteBounds="3.375, 3.125, 0.5, 0.5" isReference="false" heightOffset="0">
       <actorMoniker Id="22e5624d-6485-4869-803d-dcf8c191ee16" LastKnownName="Bruger" />
       <relativeChildShapes />
     </actorShape>
-    <useCaseShape Id="954f6918-3813-4867-bd3c-d2f761a1d3b1" absoluteBounds="3.5, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+    <useCaseShape Id="954f6918-3813-4867-bd3c-d2f761a1d3b1" absoluteBounds="6.125, 2.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
       <useCaseMoniker Id="18c5b167-adc0-426b-a628-926f5d57c532" LastKnownName="Facebook feed" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseAssociationConnector edgePoints="[(1.375 : 2.82065217391304); (3.54146497187338 : 2.34968152785361)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(3.875 : 3.29166666666667); (6.20897485283108 : 2.51367504905631)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="c9d5a6a0-39d5-49ce-82a9-c9540607885d" />
       <relativeChildShapes />
       <nodes>
@@ -18,11 +18,11 @@
         <useCaseShapeMoniker Id="954f6918-3813-4867-bd3c-d2f761a1d3b1" />
       </nodes>
     </useCaseAssociationConnector>
-    <useCaseShape Id="94d75d6f-7d8a-452f-a10e-b6657771785e" absoluteBounds="3.5, 2.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+    <useCaseShape Id="94d75d6f-7d8a-452f-a10e-b6657771785e" absoluteBounds="6.125, 2.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
       <useCaseMoniker Id="549e35bc-9127-4643-a042-b0fbaf013ca7" LastKnownName="Vælg kategori" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseAssociationConnector edgePoints="[(1.375 : 2.88586956521739); (3.50187970590216 : 2.97834259590879)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(3.875 : 3.35416666666667); (6.13180303808393 : 3.16609974682634)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="7f074a23-e76f-415e-9016-8d74be86b2b8" />
       <relativeChildShapes />
       <nodes>
@@ -30,11 +30,11 @@
         <useCaseShapeMoniker Id="94d75d6f-7d8a-452f-a10e-b6657771785e" />
       </nodes>
     </useCaseAssociationConnector>
-    <useCaseShape Id="5ff1d8e2-1e00-4d4c-bb89-d43219096ab3" absoluteBounds="3.5, 3.5, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+    <useCaseShape Id="5ff1d8e2-1e00-4d4c-bb89-d43219096ab3" absoluteBounds="6.125, 3.625, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
       <useCaseMoniker Id="0cd0077b-75d7-41aa-b9f2-7bc687a4bbb7" LastKnownName="Læs mere om det valgte" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseAssociationConnector edgePoints="[(1.375 : 2.96195652173913); (3.54640588279459 : 3.71722813314594)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(3.875 : 3.42708333333333); (6.14324104518503 : 3.89963355108021)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="f37c8e0f-9c29-492f-81a8-41195da5660d" />
       <relativeChildShapes />
       <nodes>
@@ -42,16 +42,38 @@
         <useCaseShapeMoniker Id="5ff1d8e2-1e00-4d4c-bb89-d43219096ab3" />
       </nodes>
     </useCaseAssociationConnector>
-    <useCaseShape Id="a2ee41ac-264e-4573-a3b0-57b1b5aea124" absoluteBounds="3.5, 4.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+    <useCaseShape Id="a2ee41ac-264e-4573-a3b0-57b1b5aea124" absoluteBounds="6.125, 4.625, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
       <useCaseMoniker Id="b73e6b73-9b55-4203-a1f5-2daff90f3af6" LastKnownName="Tilføj kommentar" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseAssociationConnector edgePoints="[(1.375 : 3.03804347826087); (3.69578422817143 : 4.55159840967702)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(3.875 : 3.5); (6.27144660940673 : 4.69822330470336)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="21cda25b-0040-4eea-a406-8ab5c65e94f1" />
       <relativeChildShapes />
       <nodes>
         <actorShapeMoniker Id="59f50660-720a-4c29-85f0-29f45710bc84" />
         <useCaseShapeMoniker Id="a2ee41ac-264e-4573-a3b0-57b1b5aea124" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="397c7edf-4801-417f-933b-267cef02c04d" absoluteBounds="8.5, 1.875, 1.5, 1" customColor="White">
+      <subsystemMoniker Id="010c505b-6d0a-463c-8e3d-0e1d4da35f30" LastKnownName="Facebook API" />
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(8.5 : 2.375); (7.125 : 2.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="43fa126b-e8ef-4a27-8562-930eef079140" />
+      <relativeChildShapes />
+      <nodes>
+        <SubsystemShapeMoniker Id="397c7edf-4801-417f-933b-267cef02c04d" />
+        <useCaseShapeMoniker Id="954f6918-3813-4867-bd3c-d2f761a1d3b1" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="5b2bbcc2-9139-4499-a509-ef89ef4d3482" absoluteBounds="8.5, 3.5, 1.5, 1" customColor="White">
+      <subsystemMoniker Id="ce89eee5-33be-4c12-9059-9cd1c49dfba6" LastKnownName="Bing Maps" />
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(8.5 : 4); (7.125 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="9e825dbd-d498-4f59-b0fb-3559daed6314" />
+      <relativeChildShapes />
+      <nodes>
+        <SubsystemShapeMoniker Id="5b2bbcc2-9139-4499-a509-ef89ef4d3482" />
+        <useCaseShapeMoniker Id="5ff1d8e2-1e00-4d4c-bb89-d43219096ab3" />
       </nodes>
     </useCaseAssociationConnector>
   </nestedChildShapes>

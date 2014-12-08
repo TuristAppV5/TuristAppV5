@@ -11,7 +11,7 @@ namespace TuristAppV5.Model
     {
         private string _kategorinavn;
         private string _billede;
-        private ObservableCollection<Kategoriliste> _kategoriliste; 
+        private ObservableCollection<Kategoriliste> _kategoriliste;
 
         public string Kategorinavn
         {
@@ -31,14 +31,13 @@ namespace TuristAppV5.Model
 
         public Kategori()
         {
-            
+
         }
-        public Kategori(string kategorinavn, string billede, ObservableCollection<Kategoriliste> kategoriliste )
+        public Kategori(string kategorinavn, string billede, ObservableCollection<Kategoriliste> kategoriliste)
         {
             _kategorinavn = kategorinavn;
             _billede = billede;
             _kategoriliste = kategoriliste;
         }
-
     }
 }

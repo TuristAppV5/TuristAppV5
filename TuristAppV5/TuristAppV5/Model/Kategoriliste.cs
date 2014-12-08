@@ -10,9 +10,9 @@ namespace TuristAppV5.Model
         {
             private string _navn;
             private string _telefon;
-            private string _hjemmeside;
-            private double _laengdegrad;
+            private string _book;
             private double _breddegrad;
+            private double _laengdegrad;
             private string _billede;
             private string _beskrivelse;
             private string _aabningstider;
@@ -30,10 +30,10 @@ namespace TuristAppV5.Model
                 set { _telefon = value; }
             }
 
-            public string Hjemmeside
+            public string Book
             {
-                get { return _hjemmeside; }
-                set { _hjemmeside = value; }
+                get { return _book; }
+                set { _book = value; }
             }
 
             public double Laengdegrad
@@ -72,17 +72,17 @@ namespace TuristAppV5.Model
                 set { _kommentarList = value; }
             }
 
-              public override string ToString()
-              {
-                  return _navn;
-              }
-              public Kategoriliste(string navn, string telefon, string hjemmeside, double laengdegrad, double breddegrad, string billede, string beskrivelse, string aabningstider)
+            public override string ToString()
+            {
+                return _navn;
+            }
+            public Kategoriliste(string navn, string telefon, string book, double breddegrad, double laengdegrad, string billede, string beskrivelse, string aabningstider)
             {
                 _navn = navn;
                 _telefon = telefon;
-                _hjemmeside = hjemmeside;
-                _laengdegrad = laengdegrad;
+                _book = book;
                 _breddegrad = breddegrad;
+                _laengdegrad = laengdegrad;
                 _billede = billede;
                 _beskrivelse = beskrivelse;
                 _aabningstider = aabningstider;

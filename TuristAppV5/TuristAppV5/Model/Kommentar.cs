@@ -27,15 +27,21 @@ namespace TuristAppV5.Model
         public string Navn
         {
             get { return _navn; }
-            set { _navn = value; CheckKommentarName(value); }
+            set
+            {
+                CheckKommentarName(value);
+                _navn = value;
+            }
         }
         public string Tekst
         {
             get { return _tekst; }
-            set { 
-                _tekst = value; 
-               CheckKommentarTekst(value);
-                }
+            set
+            {
+                CheckKommentarTekst(value);
+                _tekst = value;
+
+            }
         }
 
         public Kommentar(DateTime dato, string navn, string tekst)
@@ -69,10 +75,10 @@ namespace TuristAppV5.Model
             }
 
         }
-        
+
         public Kommentar()
         {
-            
+
         }
 
         public override string ToString()
