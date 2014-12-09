@@ -53,15 +53,31 @@
                 </GridView.ItemTemplate>
             </GridView>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="748" Margin="998,0,0,0" VerticalAlignment="Top" Width="353">
+        <Grid HorizontalAlignment="Left" Height="704" Margin="998,44,0,0" VerticalAlignment="Top" Width="353">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="177*"/>
+                <ColumnDefinition Width="176*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40*"/>
-                <RowDefinition Height="337*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock FontSize="40" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" Text="Facebook Feed" Width="343" VerticalAlignment="Top" Height="49"/>
-            <Button Background="#FF3B3B89" x:Name="facebook" Content="Facebook" HorizontalAlignment="Stretch" Margin="1,7,3,0" Grid.Row="1" VerticalAlignment="Top" Height="71" Width="349" Click="facebook_Click"/>
-            <!--<TextBlock x:Name="facebookData1" Margin="4,89,6,0" Grid.Row="1" TextWrapping="Wrap" Text=""/>-->
-            <ListView x:Name="listView1"  HorizontalAlignment="Left" Height="313" Margin="10,90,0,0" Grid.Row="1" VerticalAlignment="Top" Width="333"/>
+            <TextBlock FontSize="40" TextWrapping="Wrap" Text="Facebook Info" Grid.ColumnSpan="2" Margin="0,-5,0,0"/>
+            <!--<Button Background="#FF3B3B89" x:Name="facebook" Content="Facebook" HorizontalAlignment="Stretch" Margin="1,7,3,0" Grid.Row="1" VerticalAlignment="Top" Height="71" Width="349" Click="facebook_Click"/>-->
+
+
+            <TextBlock x:Name="facebookName" Grid.Row="1" TextWrapping="Wrap" FontSize="30" Text="name" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="facebookAbout" Grid.Row="2" TextWrapping="Wrap" FontSize="14" Text="about" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="facebookPhone" Grid.Row="3" TextWrapping="Wrap" FontSize="14" Text="phone" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="facebookWebsite" Grid.Row="3" TextWrapping="Wrap" FontSize="14" Text="website" Grid.Column="1"/>
+            <TextBlock x:Name="facebookLikes" Grid.Row="4" FontSize="30" TextWrapping="Wrap" Text="test"/>
+            <!--<Button x:Name="facebook" Content="Button" HorizontalAlignment="Left" Margin="-3,2,0,0" Grid.Row="5" VerticalAlignment="Top" Height="49" Width="173" Click="facebook_Click_1"/>-->
+
         </Grid>
     </Grid>
 </Page>
