@@ -18,6 +18,7 @@ namespace TuristAppV5.Model
             private string _aabningstider;
             private List<Kommentar> _kommentarList;
 
+            #region GetSet Metoder
             public string Navn
             {
                 get { return _navn; }
@@ -72,6 +73,7 @@ namespace TuristAppV5.Model
                 set { _kommentarList = value; }
             }
 
+            #endregion
             public override string ToString()
             {
                 return _navn;

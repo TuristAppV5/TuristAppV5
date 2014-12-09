@@ -15,24 +15,22 @@ namespace TuristAppV5.Viewmodel
     {
         private static string jsonFileName = "SavedVariablesAsJson.dat";
 
-        public static async void SaveKategorilisteAsJsonAsync(ObservableCollection<Kategoriliste> _collectionOfKategoriliste)
+        public static async void SaveKategorilisteAsJsonAsync(ObservableCollection<ObservableCollection<Kategoriliste>> _collectionOfKategoriliste)
         {
             string kategorilisteJsonString = JsonConvert.SerializeObject(_collectionOfKategoriliste);
             SerializeKategorilisteFileAsync(kategorilisteJsonString, jsonFileName);
         }
-
-        public static async Task<ObservableCollection<Kategoriliste>> LoadKategorilisteFromJsonAsync()
+        public static async Task<ObservableCollection<ObservableCollection<Kategoriliste>>> LoadKategorilisteFromJsonAsync()
         {
 
             string kategorilisteJsonString = await DeSerializeKategorilisteFileAsync(jsonFileName);
             if (kategorilisteJsonString != null)
             {
                 return
-                    (ObservableCollection<Kategoriliste>)JsonConvert.DeserializeObject(kategorilisteJsonString, typeof(ObservableCollection<Kategoriliste>));
+                    (ObservableCollection<ObservableCollection<Kategoriliste>>)JsonConvert.DeserializeObject(kategorilisteJsonString, typeof(ObservableCollection<ObservableCollection<Kategoriliste>>));
             }
             return null;
         }
-
         public static async void SerializeKategorilisteFileAsync(string KategorilisteString, string fileName)
         {
             StorageFile localFile =
@@ -41,7 +39,6 @@ namespace TuristAppV5.Viewmodel
                         CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(localFile, KategorilisteString);
         }
-
         public static async Task<string> DeSerializeKategorilisteFileAsync(String fileName)
         {
             try
@@ -49,7 +46,7 @@ namespace TuristAppV5.Viewmodel
                 StorageFile localFile = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
                 return await FileIO.ReadTextAsync(localFile);
             }
-            catch (FileNotFoundException ex)
+            catch (FileNotFoundException)
             {
                 return null;
             }

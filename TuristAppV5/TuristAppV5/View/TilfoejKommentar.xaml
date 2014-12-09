@@ -9,21 +9,6 @@
     x:Name="pageRoot"
     x:Class="TuristAppV5.View.TilfoejKommentar"
     mc:Ignorable="d">
-    <Page.BottomAppBar>
-        <AppBar>
-            <AppBarButton Icon="Add" Label="Tilføj" HorizontalAlignment="Right">
-                <Grid Margin="0,0,-1326,-24">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Orientation="Horizontal"/>
-                    <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
-                </Grid>
-            </AppBarButton>
-        </AppBar>
-    </Page.BottomAppBar>
-
     <Page.DataContext>
         <Viewmodel:MainViewmodel/>
     </Page.DataContext>
