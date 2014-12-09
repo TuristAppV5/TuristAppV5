@@ -37,10 +37,9 @@ namespace TuristAppV5
             LoadFacebookData();
 
         }
-
         private async void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (kategoriListeGridView.SelectedIndex == -1)
+            if (kategoriListeGridView2.SelectedIndex == -1)
             {
                 MessageDialog fejl = new MessageDialog("Vælg venligst et item", "Ups! Der skete en fejl!");
                 await fejl.ShowAsync();
@@ -71,8 +70,7 @@ namespace TuristAppV5
                 facebookWebsite.Text = "Hjemmeside: " + website;
                 facebookLikes.Text = "Likes: " + likes;
 
-                dynamic result1 =
-                    await fb.GetTaskAsync("visitroskilde/feed?fields=message, created_time&limit=3&offset=3");
+                dynamic result1 = await fb.GetTaskAsync("visitroskilde/feed?fields=message, created_time&limit=3&offset=3");
                 dynamic data = result1["data"];
 
                 foreach (dynamic item in data)
@@ -85,13 +83,17 @@ namespace TuristAppV5
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                //throw new Exception(ex.Message);
                 string error = "N/A";
                 facebookName.Text = error;
                 facebookAbout.Text = error;
                 facebookPhone.Text = "Telefon: " + error;
                 facebookWebsite.Text = "Hjemmeside: " + error;
                 facebookLikes.Text = "Likes: " + error;
+                if (facebookMessage.Items != null)
+                {
+                    facebookMessage.Items.Add("Ingen feeds tilgængelig");
+                }
             }
         }
     }

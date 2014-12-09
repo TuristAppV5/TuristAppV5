@@ -88,7 +88,6 @@
 				<Run Text="{Binding SelectedKategoriliste.Aabningstider}"/>
             </TextBlock>
             <HyperlinkButton Background="#ed6b06" Foreground="White" FontSize="20" NavigateUri="{Binding SelectedKategoriliste.Hjemmeside}" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Gå til website"/>
-            <TextBlock HorizontalAlignment="Left" Margin="112,46,0,0" Grid.Row="4" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
         </Grid>
         <Grid Margin="10,10,0,10" Grid.Row="1" Grid.Column="1">
             <Grid.ColumnDefinitions>
