@@ -13,22 +13,27 @@ namespace TuristAppV5.Model
         private string _billede;
         private ObservableCollection<Kategoriliste> _kategoriliste;
 
+        #region GetSet Metoder
+
         public string Kategorinavn
         {
             get { return _kategorinavn; }
             set { _kategorinavn = value; }
         }
+
         public string Billede
         {
             get { return _billede; }
             set { _billede = value; }
         }
+
         public ObservableCollection<Kategoriliste> Kategoriliste
         {
             get { return _kategoriliste; }
             set { _kategoriliste = value; }
         }
 
+        #endregion
         public Kategori()
         {
 

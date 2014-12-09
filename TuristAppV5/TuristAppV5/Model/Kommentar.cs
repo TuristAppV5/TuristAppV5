@@ -15,15 +15,19 @@ namespace TuristAppV5.Model
         private string _navn;
         private string _tekst;
 
+        #region GetSet Metoder
+
         public DateTime Dato
         {
             get { return _dato; }
             set { _dato = value; }
         }
+
         public string Dato1
         {
             get { return _dato.ToString("dd/MM-yyyy"); }
         }
+
         public string Navn
         {
             get { return _navn; }
@@ -33,6 +37,7 @@ namespace TuristAppV5.Model
                 _navn = value;
             }
         }
+
         public string Tekst
         {
             get { return _tekst; }
@@ -44,6 +49,7 @@ namespace TuristAppV5.Model
             }
         }
 
+        #endregion
         public Kommentar(DateTime dato, string navn, string tekst)
         {
             _dato = dato;
@@ -75,12 +81,10 @@ namespace TuristAppV5.Model
             }
 
         }
-
         public Kommentar()
         {
 
         }
-
         public override string ToString()
         {
             return _navn;

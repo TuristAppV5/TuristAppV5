@@ -29,33 +29,63 @@ namespace TuristAppV5.Viewmodel
 
         public void TilfoejToDoListe()
         {
-            _mainViewmodel.MinProfilCollection.Add(_mainViewmodel.SelectedKategoriliste);
+            _mainViewmodel.MinProfilCollection.Add(MainViewmodel.SelectedKategoriliste);
             MessageDialog kval = new MessageDialog("Tilføjet til To-Do liste");
             kval.ShowAsync();
-            SaveKategorilisteAsync();
+            SaveKategoriAsync();
         }
-
-        public async void SaveKategorilisteAsync()
+        public async void SaveKategoriAsync()
         {
-            PersistenceFacade.SaveKategorilisteAsJsonAsync(_mainViewmodel.MinProfilCollection);
+            PersistenceFacade.SaveKategorilisteAsJsonAsync(_mainViewmodel.CollectionOfCollectionForJson);
         }
-        public async void LoadKategorilisteAsync()
+        public async void LoadKategoriAsync()
         {
 
-            ObservableCollection<Kategoriliste> _kategorilisteCollection =
-                await PersistenceFacade.LoadKategorilisteFromJsonAsync();
+            ObservableCollection<ObservableCollection<Kategoriliste>> _kategorilisteCollection = await PersistenceFacade.LoadKategorilisteFromJsonAsync();
 
             if (_kategorilisteCollection != null)
             {
+                #region Clear();
                 _mainViewmodel.MinProfilCollection.Clear();
+                _mainViewmodel.EatOrangeCollection.Clear();
+                _mainViewmodel.SeeOrangeCollection.Clear();
+                _mainViewmodel.ShopOrangeCollection.Clear();
+                _mainViewmodel.FeelOrangeCollection.Clear();
+                #endregion
+                #region CollectionAssignment
+                ObservableCollection<Kategoriliste> _minProfilCollection = _kategorilisteCollection[0];
+                ObservableCollection<Kategoriliste> _eatOrangeCollection = _kategorilisteCollection[1];
+                ObservableCollection<Kategoriliste> _seeOrangeCollection = _kategorilisteCollection[2];
+                ObservableCollection<Kategoriliste> _shopOrangeCollection = _kategorilisteCollection[3];
+                ObservableCollection<Kategoriliste> _feelOrangeCollection = _kategorilisteCollection[4];
+                #endregion
 
-                foreach (Kategoriliste kategoriliste in _kategorilisteCollection)
+                foreach (Kategoriliste kategoriliste in _minProfilCollection)
                 {
                     _mainViewmodel.MinProfilCollection.Add(kategoriliste);
                 }
+
+                foreach (Kategoriliste kategoriliste in _eatOrangeCollection)
+                {
+                    _mainViewmodel.EatOrangeCollection.Add(kategoriliste);
+                }
+
+                foreach (Kategoriliste kategoriliste in _seeOrangeCollection)
+                {
+                    _mainViewmodel.SeeOrangeCollection.Add(kategoriliste);
+                }
+
+                foreach (Kategoriliste kategoriliste in _shopOrangeCollection)
+                {
+                    _mainViewmodel.ShopOrangeCollection.Add(kategoriliste);
+                }
+
+                foreach (Kategoriliste kategoriliste in _feelOrangeCollection)
+                {
+                    _mainViewmodel.FeelOrangeCollection.Add(kategoriliste);
+                }
             }
         }
-
         public void TilfoejKommentar()
         {
             TestNavnText = "";
@@ -66,7 +96,7 @@ namespace TuristAppV5.Viewmodel
             {
                 Kommentar.CheckKommentarName(_navn);
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException)
             {
                 TestNavnText = "*";
             }
@@ -75,19 +105,22 @@ namespace TuristAppV5.Viewmodel
             {
                 Kommentar.CheckKommentarTekst(_tekst);
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException)
             {
                 TestBeskrivelseText = "*";
             }
             if (TestBeskrivelseText == "" & TestNavnText == "")
             {
                 Kommentar k = new Kommentar(_dato, _navn, _tekst);
-                _mainViewmodel.SelectedKategoriliste.KommentarList.Add(k);
-                SaveKategorilisteAsync();
+                MainViewmodel.SelectedKategoriliste.KommentarList.Add(k);
+                SaveKategoriAsync();
                 SuccesText = "Kommentaren blev tilføjet";
+
 
             }
         }
+
+        #region GetSet Metoder
         public DateTime Dato
         {
             get { return _dato; }
@@ -140,11 +173,13 @@ namespace TuristAppV5.Viewmodel
             get { return _succesText; }
             set { _succesText = value; OnPropertyChanged("SuccesText"); }
         }
-
+        #endregion
         public TilfoejKommentarHandler(MainViewmodel mainViewmodel)
         {
             _mainViewmodel = mainViewmodel;
         }
+
+        #region OnPropertyChanged();
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -154,5 +189,8 @@ namespace TuristAppV5.Viewmodel
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        #endregion
+
     }
 }
