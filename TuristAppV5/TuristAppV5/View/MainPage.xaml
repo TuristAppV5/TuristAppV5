@@ -15,7 +15,6 @@
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
-
     <Page.DataContext>
         <Viewmodel:MainViewmodel/>
     </Page.DataContext>

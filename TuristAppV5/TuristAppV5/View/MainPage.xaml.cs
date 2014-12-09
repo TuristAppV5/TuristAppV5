@@ -37,7 +37,6 @@ namespace TuristAppV5
             LoadFacebookData();
 
         }
-
         private async void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             if (kategoriListeGridView2.SelectedIndex == -1)
