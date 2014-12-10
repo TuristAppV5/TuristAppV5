@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace TuristAppV5.Model
 {
-    class Kategori
+    public class Kategori
     {
         private string _kategorinavn;
         private string _billede;
+        private ObservableCollection<Kategoriliste> _kategoriliste; 
 
         public string Kategorinavn
         {
@@ -21,11 +23,22 @@ namespace TuristAppV5.Model
             get { return _billede; }
             set { _billede = value; }
         }
+        public ObservableCollection<Kategoriliste> Kategoriliste
+        {
+            get { return _kategoriliste; }
+            set { _kategoriliste = value; }
+        }
 
-        public Kategori(string kategorinavn, string billede)
+        public Kategori()
+        {
+            
+        }
+        public Kategori(string kategorinavn, string billede, ObservableCollection<Kategoriliste> kategoriliste )
         {
             _kategorinavn = kategorinavn;
             _billede = billede;
+            _kategoriliste = kategoriliste;
         }
+
     }
 }
