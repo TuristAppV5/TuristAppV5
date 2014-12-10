@@ -12,6 +12,7 @@
         <CommandBar>
             <CommandBar.PrimaryCommands>
                 <AppBarButton Icon="View" Label="Vælg" Click="AppBarButton_Click"/>
+                <AppBarButton Icon="Clear" Label="Clear" Command="{Binding SletToDoListeCommand}"/>
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
@@ -39,7 +40,7 @@
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
-            <GridView x:Name="kategoriListeGridView2" ItemsSource="{Binding SelectedKategori.Kategoriliste}" Grid.Row="2" Margin="10,0,0,0" Width="940" HorizontalAlignment="Left">
+            <GridView x:FieldModifier="public" x:Name="kategoriListeGridView2" ItemsSource="{Binding SelectedKategori.Kategoriliste}" Grid.Row="2" Margin="10,0,0,0" Width="940" HorizontalAlignment="Left">
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">

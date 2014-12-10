@@ -29,10 +29,19 @@ namespace TuristAppV5.Viewmodel
 
         public void TilfoejToDoListe()
         {
-            _mainViewmodel.MinProfilCollection.Add(MainViewmodel.SelectedKategoriliste);
-            MessageDialog kval = new MessageDialog("Tilføjet til To-Do liste");
-            kval.ShowAsync();
-            SaveKategoriAsync();
+            if (_mainViewmodel.MinProfilCollection.Contains(MainViewmodel.SelectedKategoriliste))
+            {
+                MessageDialog fejl = new MessageDialog("Du kan ikke tilføje to af de samme items til To-Do listen");
+                fejl.ShowAsync();
+            }
+            else
+            {
+                _mainViewmodel.MinProfilCollection.Add(MainViewmodel.SelectedKategoriliste);
+                MessageDialog val = new MessageDialog("Tilføjet til To-Do liste");
+                val.ShowAsync();
+                SaveKategoriAsync();
+            }
+            
         }
         public async void SaveKategoriAsync()
         {
@@ -109,14 +118,21 @@ namespace TuristAppV5.Viewmodel
             {
                 TestBeskrivelseText = "*";
             }
-            if (TestBeskrivelseText == "" & TestNavnText == "")
+
+            try
             {
-                Kommentar k = new Kommentar(_dato, _navn, _tekst);
+                Kommentar.CheckKommentarKategoriValg(MainViewmodel.SelectedKategoriliste);
+            }
+            catch (ArgumentException)
+            {
+                TestKategori = "*";
+            }
+            if (TestBeskrivelseText == "" & TestNavnText == "" & TestKategori == "")
+            {
+                Kommentar k = new Kommentar() {Dato = DateTime.Now, Navn = _navn, Tekst = _tekst};
                 MainViewmodel.SelectedKategoriliste.KommentarList.Add(k);
                 SaveKategoriAsync();
                 SuccesText = "Kommentaren blev tilføjet";
-
-
             }
         }
 
