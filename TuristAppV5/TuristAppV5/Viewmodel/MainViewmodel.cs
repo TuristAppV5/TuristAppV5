@@ -59,21 +59,12 @@ namespace TuristAppV5.Viewmodel
         {
             try
             {
-                var fb = new FacebookClient("722191401190090|zV8YHfAogIsAsGHsE8TOZWIY_0g");
-                dynamic result = await fb.GetTaskAsync("visitroskilde");
-                dynamic navn = result["name"];
-                dynamic om = result["about"];
-                dynamic kilde = result["cover"]["source"];
-                dynamic telefon = result["phone"];
-                dynamic hjemmeside = result["website"];
-                dynamic likes = result["likes"].ToString();
+                FacebookClient accessToken = new FacebookClient("722191401190090|zV8YHfAogIsAsGHsE8TOZWIY_0g");
+                dynamic infoData = await accessToken.GetTaskAsync("visitroskilde");
+                InfoData.Add(new FacebookData { Navn = infoData["name"], Om = infoData["about"], Kilde = infoData["cover"]["source"], Telefon = infoData["phone"], Hjemmeside = infoData["website"], Likes = infoData["likes"].ToString() });
 
-                InfoData.Add(new FacebookData { Navn = navn, Om = om, Kilde = kilde, Telefon = telefon, Hjemmeside = hjemmeside, Likes = likes });
-
-                dynamic result1 = await fb.GetTaskAsync("visitroskilde/feed?limit=6&offset=3");
-                dynamic data = result1["data"];
-
-                foreach (dynamic item in data)
+                dynamic feedData = await accessToken.GetTaskAsync("visitroskilde/feed?limit=6&offset=3");
+                foreach (dynamic item in feedData["data"])
                 {
                     FeedData.Add(new FacebookData { Billede = item["picture"], Besked = item["message"], Dato = "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") });
                 }
@@ -81,7 +72,7 @@ namespace TuristAppV5.Viewmodel
             catch (Exception ex)
             {
                 //throw new Exception(ex.Message);
-                MessageDialog fbError = new MessageDialog("Ups! Der skete en fejl", "Kunne ikke connecte til Facebook API");
+                MessageDialog fbError = new MessageDialog("Kunne ikke connecte til Facebook API", "Ups! Der skete en fejl");
                 fbError.ShowAsync();
             }
         }

@@ -31,7 +31,7 @@ namespace TuristAppV5.Viewmodel
         {
             if (_mainViewmodel.MinProfilCollection.Contains(MainViewmodel.SelectedKategoriliste))
             {
-                MessageDialog fejl = new MessageDialog("Du kan ikke tilføje to af de samme items til To-Do listen");
+                MessageDialog fejl = new MessageDialog("Ups! Der skete en fejl!", "Du kan ikke tilføje to af de samme items til To-Do listen");
                 fejl.ShowAsync();
             }
             else
