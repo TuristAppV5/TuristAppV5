@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TuristAppV5.Model;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-namespace TuristAppV5.Model.Tests
+namespace TuristAppV5.Tests
 {
     [TestClass()]
     public class KommentarTests
