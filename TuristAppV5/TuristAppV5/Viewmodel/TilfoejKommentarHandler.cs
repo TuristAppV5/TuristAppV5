@@ -43,6 +43,11 @@ namespace TuristAppV5.Viewmodel
             }
             
         }
+        public void SletToDoListe()
+        {
+            _mainViewmodel.MinProfilCollection.Clear();
+            SaveKategoriAsync();
+        }
         public async void SaveKategoriAsync()
         {
             PersistenceFacade.SaveKategorilisteAsJsonAsync(_mainViewmodel.CollectionOfCollectionForJson);

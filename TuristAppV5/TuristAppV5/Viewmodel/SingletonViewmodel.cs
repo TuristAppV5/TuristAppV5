@@ -78,10 +78,10 @@ namespace TuristAppV5.Viewmodel
             //Kategorilisten i toppen af MainPage
             _kategoriCollection = new ObservableCollection<Kategori>();
             _kategoriCollection.Add(new Kategori("Min profil", "../Assets/profile.png", _minProfilCollection));
-            _kategoriCollection.Add(new Kategori("Eat Orange", "../Assets/visitroskilde.png", _eatOrangeCollection));
-            _kategoriCollection.Add(new Kategori("See Orange", "../Assets/visitroskilde.png", _seeOrangeCollection));
-            _kategoriCollection.Add(new Kategori("Shop Orange", "../Assets/visitroskilde.png", _shopOrangeCollection));
-            _kategoriCollection.Add(new Kategori("Feel Orange", "../Assets/visitroskilde.png", _feelOrangeCollection));
+            _kategoriCollection.Add(new Kategori("Eat Orange", "../Assets/eat.png", _eatOrangeCollection));
+            _kategoriCollection.Add(new Kategori("See Orange", "../Assets/see.png", _seeOrangeCollection));
+            _kategoriCollection.Add(new Kategori("Shop Orange", "../Assets/shop.png", _shopOrangeCollection));
+            _kategoriCollection.Add(new Kategori("Feel Orange", "../Assets/feel.png", _feelOrangeCollection));
 
             // Collection til Json filen
             _collectionOfCollectionForJson = new ObservableCollection<ObservableCollection<Kategoriliste>>();
