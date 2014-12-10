@@ -15,58 +15,38 @@ namespace TuristAppV5.Viewmodel
     {
         private static string jsonFileName = "SavedVariablesAsJson.dat";
 
-        public static async void SaveKategorilisteAsJsonAsync(ObservableCollection<Kategoriliste> _collectionOfKategoriliste)
+        public static async void SaveKategorilisteAsJsonAsync(ObservableCollection<ObservableCollection<Kategoriliste>> _collectionOfKategoriliste)
         {
             string kategorilisteJsonString = JsonConvert.SerializeObject(_collectionOfKategoriliste);
-            SerializePersonsFileAsync(kategorilisteJsonString, jsonFileName);
+            SerializeKategorilisteFileAsync(kategorilisteJsonString, jsonFileName);
         }
-
-        //public static async void SaveKommentarlisteAsJsonAsync(List<Kommentar> _kommentarListe )
-        //{
-        //    string kommentarlisteJsonString = JsonConvert.SerializeObject(_kommentarListe);
-        //    SerializePersonsFileAsync(kommentarlisteJsonString, jsonFileName);
-        //}
-
-        public static async Task<ObservableCollection<Kategoriliste>> LoadKategorilisteFromJsonAsync()
+        public static async Task<ObservableCollection<ObservableCollection<Kategoriliste>>> LoadKategorilisteFromJsonAsync()
         {
 
-            string personsJsonString = await DeSerializePersonsFileAsync(jsonFileName);
-            if (personsJsonString != null)
+            string kategorilisteJsonString = await DeSerializeKategorilisteFileAsync(jsonFileName);
+            if (kategorilisteJsonString != null)
             {
                 return
-                    (ObservableCollection<Kategoriliste>)JsonConvert.DeserializeObject(personsJsonString, typeof(ObservableCollection<Kategoriliste>));
+                    (ObservableCollection<ObservableCollection<Kategoriliste>>)JsonConvert.DeserializeObject(kategorilisteJsonString, typeof(ObservableCollection<ObservableCollection<Kategoriliste>>));
             }
             return null;
         }
-
-        //public static async Task<List<Kommentar>> LoadKommentarlisteFromJsonAsync()
-        //{
-        //    string kommentarlisteJsonString = await DeSerializePersonsFileAsync(jsonFileName);
-        //    if (kommentarlisteJsonString != null)
-        //    {
-        //        return
-        //            (List<Kommentar>) JsonConvert.DeserializeObject(kommentarlisteJsonString, typeof (List<Kommentar>));
-        //    }
-        //    return null;
-        //}
-
-        public static async void SerializePersonsFileAsync(string PersonsString, string fileName)
+        public static async void SerializeKategorilisteFileAsync(string KategorilisteString, string fileName)
         {
             StorageFile localFile =
                 await
                     ApplicationData.Current.LocalFolder.CreateFileAsync(fileName,
                         CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(localFile, PersonsString);
+            await FileIO.WriteTextAsync(localFile, KategorilisteString);
         }
-
-        public static async Task<string> DeSerializePersonsFileAsync(String fileName)
+        public static async Task<string> DeSerializeKategorilisteFileAsync(String fileName)
         {
             try
             {
                 StorageFile localFile = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
                 return await FileIO.ReadTextAsync(localFile);
             }
-            catch (FileNotFoundException ex)
+            catch (FileNotFoundException)
             {
                 return null;
             }

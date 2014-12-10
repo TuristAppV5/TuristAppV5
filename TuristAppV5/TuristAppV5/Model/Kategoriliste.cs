@@ -11,13 +11,14 @@ namespace TuristAppV5.Model
             private string _navn;
             private string _telefon;
             private string _book;
-            private string _laengdegrad;
-            private string _breddegrad;
+            private double _breddegrad;
+            private double _laengdegrad;
             private string _billede;
             private string _beskrivelse;
             private string _aabningstider;
             private List<Kommentar> _kommentarList;
 
+            #region GetSet Metoder
             public string Navn
             {
                 get { return _navn; }
@@ -36,13 +37,13 @@ namespace TuristAppV5.Model
                 set { _book = value; }
             }
 
-            public string Laengdegrad
+            public double Laengdegrad
             {
                 get { return _laengdegrad; }
                 set { _laengdegrad = value; }
             }
 
-            public string Breddegrad
+            public double Breddegrad
             {
                 get { return _breddegrad; }
                 set { _breddegrad = value; }
@@ -72,22 +73,23 @@ namespace TuristAppV5.Model
                 set { _kommentarList = value; }
             }
 
-              public override string ToString()
-              {
-                  return _navn;
-              }
-            public Kategoriliste(string navn, string telefon, string book, string laengdegrad, string breddegrad, string billede, string beskrivelse, string aabningstider)
+            #endregion
+            public override string ToString()
+            {
+                return _navn;
+            }
+            public Kategoriliste(string navn, string telefon, string book, double breddegrad, double laengdegrad, string billede, string beskrivelse, string aabningstider)
             {
                 _navn = navn;
                 _telefon = telefon;
                 _book = book;
-                _laengdegrad = laengdegrad;
                 _breddegrad = breddegrad;
+                _laengdegrad = laengdegrad;
                 _billede = billede;
                 _beskrivelse = beskrivelse;
                 _aabningstider = aabningstider;
                 _kommentarList = new List<Kommentar>();
-                _kommentarList.Add(new Kommentar(new DateTime(2014, 9, 10), "Daniel Winther", "Dette er en kommentartekst"));
+                _kommentarList.Add(new Kommentar(new DateTime(2014, 9, 10), "Daniel Winther", "Dette er en kommentartekssdjfnsdkfnskjfnksjdfnsdsdkfsdt"));
             }
 
         }

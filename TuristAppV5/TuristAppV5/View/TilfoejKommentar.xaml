@@ -9,21 +9,6 @@
     x:Name="pageRoot"
     x:Class="TuristAppV5.View.TilfoejKommentar"
     mc:Ignorable="d">
-    <Page.BottomAppBar>
-        <AppBar>
-            <AppBarButton Icon="Add" Label="Tilføj" HorizontalAlignment="Right">
-                <Grid Margin="0,0,-1326,-24">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Orientation="Horizontal"/>
-                    <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
-                </Grid>
-            </AppBarButton>
-        </AppBar>
-    </Page.BottomAppBar>
-
     <Page.DataContext>
         <Viewmodel:MainViewmodel/>
     </Page.DataContext>
@@ -33,7 +18,10 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/bg.jpg"/>
+        </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -50,7 +38,7 @@
         -->
         <Grid Grid.Row="1" x:Name="contentRegion">
             <Grid.Background>
-                <ImageBrush ImageSource="ms-appx:///Assets/bg.jpg"/>
+                <ImageBrush/>
             </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="11*"/>
@@ -62,11 +50,15 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Column="1" Margin="10">
                 <TextBox TextWrapping="Wrap" PlaceholderText="Navn" Text="{Binding TilfoejKommentarHandler.Navn, Mode=TwoWay}"/>
-                <TextBox TextWrapping="Wrap" Margin="0,10,0,0" Height="252" PlaceholderText="Beskrivelse" Text="{Binding TilfoejKommentarHandler.Tekst, Mode=TwoWay}"/>
-                <Button Content="Tilføj kommentar" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="80" Command="{Binding TilfoejKommentarCommand}"/>
-
-                <ListView ItemsSource="{Binding Testliste}" Height="100" Margin="0,0,775,0"/>
-                <ListView ItemsSource="{Binding SelectedKategoriliste.KommentarList}" Height="100" Margin="0,0,700,0"/>
+                <ComboBox Margin="0,10,0,0" ItemsSource="{Binding SelectedKategori.Kategoriliste}" SelectedItem="{Binding SelectedKategoriliste, Mode=TwoWay}" />
+                <TextBox TextWrapping="Wrap" Margin="0,10,0,0" Padding="10,5,0,0" Height="252" PlaceholderText="Beskrivelse" Text="{Binding TilfoejKommentarHandler.Tekst, Mode=TwoWay}"/>
+                <Button Content="Tilføj kommentar" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="80" Command="{Binding TilfoejKommentarCommand}" Margin="0,10,0,0"/>
+                <TextBlock x:Name="succestext" TextWrapping="Wrap" Text="{Binding TilfoejKommentarHandler.SuccesText}" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Left" Height="336" VerticalAlignment="Top" Width="310" Margin="0,10,0,0">
+                <TextBlock x:Name="textTestNavn" TextWrapping="Wrap" FontSize="50" Foreground="Red" Height="32" Text="{Binding TilfoejKommentarHandler.TestNavnText, Mode=TwoWay}" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="textTestValgtKategori" TextWrapping="Wrap" Foreground="Red" FontSize="50" Height="32" Text="{Binding TilfoejKommentarHandler.TestKategori, Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+                <TextBlock x:Name="textTestBeskrivelse" TextWrapping="Wrap" Foreground="Red" FontSize="50" Height="32"  Text="{Binding TilfoejKommentarHandler.TestBeskrivelseText, Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,10,0,0"/>
             </StackPanel>
 
         </Grid>
@@ -74,7 +66,7 @@
         <!-- Back button and page title -->
         <Grid>
             <Grid.Background>
-                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/bg.jpg"/>
+                <ImageBrush Stretch="Fill"/>
             </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>

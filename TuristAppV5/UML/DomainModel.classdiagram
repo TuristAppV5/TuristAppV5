@@ -52,7 +52,7 @@
           <property Id="f7a53f58-9ec2-4750-a9dd-5e34fcd3a79b" name="Beskrivelse" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="85477fc8-3829-475a-ba4f-49e8431846cc" />
           </property>
-          <property Id="6b11d5eb-d92d-4e26-a5de-0f99c3f2050a" name="Book" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="6b11d5eb-d92d-4e26-a5de-0f99c3f2050a" name="Hjemmeside" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="69180a4c-2ba6-47be-9ef3-8a058335a4bf" />
           </property>
           <property Id="02fb1f49-4e34-4298-ab48-697b44acfb4d" name="Telefon" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">

@@ -121,14 +121,20 @@
 =======
     <Compile Include="Viewmodel\SingletonViewmodel.cs" />
     <Compile Include="Viewmodel\TilfoejKommentarHandler.cs" />
+<<<<<<< HEAD
     <Compile Include="View\SelectedKategoriliste.xaml.cs">
       <DependentUpon>SelectedKategoriliste.xaml</DependentUpon>
 >>>>>>> a73e35c53b0bd24c5552ccea0cf509d120b0f145
     </Compile>
+=======
+>>>>>>> 0796b1ffd604e5ca2f1829e55bc0c6254ee2fb2a
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\SelectedKategoriliste.xaml.cs">
+      <DependentUpon>SelectedKategoriliste.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TilfoejKommentar.xaml.cs">
       <DependentUpon>TilfoejKommentar.xaml</DependentUpon>
     </Compile>
@@ -143,6 +149,7 @@
   <ItemGroup>
     <Content Include="Assets\bg.jpg" />
     <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\profile.png" />
     <Content Include="Assets\restaurant.jpeg" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\splash.png" />
@@ -156,18 +163,22 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Page Include="View\ItemDetailPage.xaml">
 =======
     <Page Include="View\SelectedKategoriliste.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
 >>>>>>> a73e35c53b0bd24c5552ccea0cf509d120b0f145
+=======
+    <Page Include="View\MainPage.xaml">
+>>>>>>> 0796b1ffd604e5ca2f1829e55bc0c6254ee2fb2a
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="View\SelectedKategoriliste.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TilfoejKommentar.xaml">
 <<<<<<< HEAD

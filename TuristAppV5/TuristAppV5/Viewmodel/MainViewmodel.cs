@@ -27,7 +27,8 @@ namespace TuristAppV5.Viewmodel
             _tilfoejKommentarHandler = new TilfoejKommentarHandler(this);
             _tilfoejKommentarCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejKommentar);
             _tilfoejToDoListeCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejToDoListe);
-            _tilfoejKommentarHandler.LoadKategorilisteAsync();
+            //_tilfoejKommentarHandler.SaveKategoriAsync();
+            _tilfoejKommentarHandler.LoadKategoriAsync();
         }
 
         #region GetSet Metoder
@@ -68,6 +69,16 @@ namespace TuristAppV5.Viewmodel
             set { _singletonViewmodel.FeelOrangeCollection = value; OnPropertyChanged("FeelOrangeCollection"); }
         }
 
+        public ObservableCollection<ObservableCollection<Kategoriliste>> CollectionOfCollectionForJson
+        {
+            get { return _singletonViewmodel.CollectionOfCollectionForJson; }
+            set
+            {
+                _singletonViewmodel.CollectionOfCollectionForJson = value; 
+                OnPropertyChanged("CollectionOfCollectionForJson");
+            }
+        }
+
         public Kategori SelectedKategori
         {
             get { return _selectedKategori; }
@@ -77,11 +88,11 @@ namespace TuristAppV5.Viewmodel
                 OnPropertyChanged("SelectedKategori");
             }
         }
-        public Kategoriliste SelectedKategoriliste
+        public static Kategoriliste SelectedKategoriliste
         {
             get { return _selectedKategoriliste; }
             set
-            {
+            {   
                 _selectedKategoriliste = value;
             }
         }

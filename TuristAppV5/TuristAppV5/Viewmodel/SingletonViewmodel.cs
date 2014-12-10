@@ -11,59 +11,74 @@ using TuristAppV5.Model;
 
 namespace TuristAppV5.Viewmodel
 {
-    class SingletonViewmodel : INotifyPropertyChanged
+     public class SingletonViewmodel : INotifyPropertyChanged
     {
-        private static SingletonViewmodel instance;
+        private static SingletonViewmodel _instance;
         private ObservableCollection<Kategori> _kategoriCollection;
         private ObservableCollection<Kategoriliste> _minProfilCollection;
         private ObservableCollection<Kategoriliste> _eatOrangeCollection;
         private ObservableCollection<Kategoriliste> _seeOrangeCollection;
         private ObservableCollection<Kategoriliste> _shopOrangeCollection;
         private ObservableCollection<Kategoriliste> _feelOrangeCollection;
+        private ObservableCollection<ObservableCollection<Kategoriliste>> _collectionOfCollectionForJson; 
+        private const string Beskrivelse = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui sapien, ullamcorper vel volutpat ac, elementum vitae erat. Nam in est eu erat ornare pulvinar. Suspendisse potenti. \n\n Nam et rhoncus diam. Aliquam pretium nibh ut rutrum dictum. Aliquam quis fringilla nulla. Integer a magna tempor, eleifend nunc ut, blandit eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In viverra venenatis nibh at placerat.";
 
-        public SingletonViewmodel()
+        protected SingletonViewmodel()
         {
             //Første kategori "Min Profil"
             _minProfilCollection = new ObservableCollection<Kategoriliste>();
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
-            _minProfilCollection.Add(new Kategoriliste("test", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
-            _minProfilCollection.Add(new Kategoriliste("Prindsen", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Familien Rosted overtog Prindsen. Carl Christian Rosted døde i 1787 kun 46 år gammel. Hans enke Anne Marie besluttede at drive gæstgivergården videre. Hun var en arbejdsom kvinde, som samtidig med at hun opfostrede tre børn formåede at give Prindsen ry for at være et godt spisested. Madam Rosted overlevede alle sine tre børn, så i sine sidste år havde hun sin datters kusine Agathe Johanne Hansen i huset til oplæring som sin efterfølger. Agathe giftede sig med kaptajn Niels Christian Sveistrup, som i 1825 blev ejer af Prindsen efter Madam Rosteds død. Kaptajn Sveistrup var en prominent borger i Roskilde og havde adskillige tillidshverv. Han lod opføre en ny stor festsal hvor borgerne i det lille Roskilde, kunne få brudt ensformigheden med baller, spisegilder, koncerter og teater. Kaptajn Sveistrup døde i 1874 som æresborger i Roskilde.", "Man-Fre: 15-22, Lør 12-18"));
+            //_minProfilCollection.Add(new Kategoriliste("Prindsen", "12345678", "Hjemmeside", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Familien Rosted overtog Prindsen. de hun sin datters ku", "17:30-73:92"));
 
             //Anden Kategori "Eat Orange" (Restauranter)
             _eatOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _eatOrangeCollection.Add(new Kategoriliste("Navn(Eat Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
-
+            for (int eat = 0; eat < 2; eat++)
+            {
+                _eatOrangeCollection.Add(new Kategoriliste("Restaurant Vigen", "46755008", "http://www.vigen.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00"));
+                _eatOrangeCollection.Add(new Kategoriliste("Restaurant Herthadalen", "46480157", "http://herthadalen.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00"));
+            }
+           
             //Tredje Kategori "See Orange" (Seværdigheder)
             _seeOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _seeOrangeCollection.Add(new Kategoriliste("Navn(See Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
-
-            //Anden Kategori "Eat Orange" (Restauranter)
-            _eatOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _eatOrangeCollection.Add(new Kategoriliste("Navn(Eat Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "Billede", "Beskrivelse", "Aabningstider"));
-
-            //Tredje Kategori "See Orange" (Seværdigheder)
-            _seeOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _seeOrangeCollection.Add(new Kategoriliste("Navn(See Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "Billede", "Beskrivelse", "Aabningstider"));
-
+            for (int see = 0; see < 2; see++)
+            {
+                _seeOrangeCollection.Add(new Kategoriliste("Roskilde Kloster", "46350219", "http://www.roskildekloster.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00"));
+                _seeOrangeCollection.Add(new Kategoriliste("Roskilde Museum", "46316529", "http://www.roskildemuseum.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00"));
+            }
+            
             //Fjerde Kategori "Shop Orange" (Shops)
             _shopOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _shopOrangeCollection.Add(new Kategoriliste("Navn(Shop Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
+            for (int shop = 0; shop < 2; shop++)
+            {
+                _shopOrangeCollection.Add(new Kategoriliste("Ro's Torv", "46380680", "http://www.rostorv.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00"));
+                _shopOrangeCollection.Add(new Kategoriliste("Elgiganten", "46380697", "http://www.elgiganten.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00"));
+            }
+            
 
             //Femte Kategori "Feel Orange" (Aktiviteter)
             _feelOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _feelOrangeCollection.Add(new Kategoriliste("Navn(Feel Orange)", "12345678", "Book", "Laengdegrad", "Breddegrad", "../Assets/restaurant.jpeg", "Beskrivelse", "Aabningstider"));
-
+            for (int feel = 0; feel < 4; feel++)
+            {
+                _feelOrangeCollection.Add(new Kategoriliste("Vikingeskibsmuseet", "46300200", "http://www.vikingeskibsmuseet.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00"));
+            }
 
             //Kategorilisten i toppen af MainPage
             _kategoriCollection = new ObservableCollection<Kategori>();
-            _kategoriCollection.Add(new Kategori("Min profil", "../Assets/visitroskilde.png", _minProfilCollection));
+            _kategoriCollection.Add(new Kategori("Min profil", "../Assets/profile.png", _minProfilCollection));
             _kategoriCollection.Add(new Kategori("Eat Orange", "../Assets/visitroskilde.png", _eatOrangeCollection));
             _kategoriCollection.Add(new Kategori("See Orange", "../Assets/visitroskilde.png", _seeOrangeCollection));
             _kategoriCollection.Add(new Kategori("Shop Orange", "../Assets/visitroskilde.png", _shopOrangeCollection));
             _kategoriCollection.Add(new Kategori("Feel Orange", "../Assets/visitroskilde.png", _feelOrangeCollection));
 
-
+            // Collection til Json filen
+            _collectionOfCollectionForJson = new ObservableCollection<ObservableCollection<Kategoriliste>>();
+            _collectionOfCollectionForJson.Add(_minProfilCollection);
+            _collectionOfCollectionForJson.Add(_eatOrangeCollection);
+            _collectionOfCollectionForJson.Add(_seeOrangeCollection);
+            _collectionOfCollectionForJson.Add(_shopOrangeCollection);
+            _collectionOfCollectionForJson.Add(_feelOrangeCollection);
         }
+
+        #region GetSet Metoder
         public ObservableCollection<Kategori> KategoriCollection
         {
             get { return _kategoriCollection; }
@@ -100,25 +115,36 @@ namespace TuristAppV5.Viewmodel
             set { _feelOrangeCollection = value; OnPropertyChanged("FeelOrangeCollection"); }
         }
 
-        public static SingletonViewmodel Instance
+         public ObservableCollection<ObservableCollection<Kategoriliste>> CollectionOfCollectionForJson
+         {
+             get { return _collectionOfCollectionForJson; }
+             set { _collectionOfCollectionForJson = value; }
+         }
+        #endregion
+         public static SingletonViewmodel Instance
         {
             get
             {
-                if (instance == null)
+                if (_instance == null)
                 {
-                    instance = new SingletonViewmodel();
+                    _instance = new SingletonViewmodel();
                 }
-                return instance;
+                return _instance;
             }
         }
+         
+         #region OnPropertyChanged();
 
-        public event PropertyChangedEventHandler PropertyChanged;
+         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
-        }
+         [NotifyPropertyChangedInvocator]
+         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+         {
+             PropertyChangedEventHandler handler = PropertyChanged;
+             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+         }
+
+         #endregion
+
     }
 }
