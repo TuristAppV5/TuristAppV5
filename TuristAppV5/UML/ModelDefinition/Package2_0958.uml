@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="7f4294de-db40-495f-a4f6-a5cc7fbb92db"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -406,6 +406,179 @@
       <undefinedType
         Id="874f5090-9b1b-4ba2-9da0-b30e1bf81e96"
         name="double" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b16dcc78-ac96-4e23-9680-950077b3f945"
+        name="FacebookData"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="3c94d915-6ed4-42dc-a6b0-dab5abeb44fc"
+            name="_navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
+                LastKnownName="string"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="13d4590a-e8a2-464f-8684-44a53019cdf6"
+            name="_om"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
+                LastKnownName="string"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f289e9ae-be0f-43c5-9c90-b5ccc8b17f45"
+            name="_kilde"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
+                LastKnownName="string"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ab3d50f9-4c01-43f3-a3c6-1244b8cebc99"
+            name="_telefon"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
+                LastKnownName="string"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="93397d6b-298e-4081-b96d-27c2f3f1da6f"
+            name="_hjemmeside"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
+                LastKnownName="string"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ca675dc9-0420-4793-b84a-b5490e88c21a"
+            name="_likes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
+                LastKnownName="string"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0a862b62-9ed1-4983-a887-608eb3b37403"
+            name="_billede"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
+                LastKnownName="string"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="773fdc0f-e08c-4412-ba34-81040858fbc5"
+            name="_besked"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
+                LastKnownName="string"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8f372c0e-145f-49cf-9894-94293250586f"
+            name="_dato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
+                LastKnownName="string"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
 </package>

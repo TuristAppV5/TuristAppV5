@@ -107,6 +107,7 @@
     </Compile>
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
+    <Compile Include="Model\FacebookData.cs" />
     <Compile Include="Model\Kategori.cs" />
     <Compile Include="Model\Kategoriliste.cs" />
     <Compile Include="Model\Kommentar.cs" />

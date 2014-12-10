@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Networking.Sockets;
 using Windows.UI.Popups;
+using Windows.UI.Xaml.Media.Imaging;
+using Facebook;
 using TuristAppV5.Annotations;
 using TuristAppV5.Common;
 using TuristAppV5.Model;
@@ -26,6 +28,9 @@ namespace TuristAppV5.Viewmodel
         private RelayCommand _tilfoejKommentarCommand;
         private RelayCommand _tilfoejToDoListeCommand;
         private RelayCommand _sletToDoListeCommand;
+
+        private static ObservableCollection<FacebookData> _infoData = new ObservableCollection<FacebookData>();
+        private static ObservableCollection<FacebookData> _feedData = new ObservableCollection<FacebookData>();
 
         public MainViewmodel()
         {
@@ -46,11 +51,55 @@ namespace TuristAppV5.Viewmodel
             {
                 _tilfoejKommentarHandler.SaveKategoriAsync();
             }
+
+            LoadFacebookData();
+
+        }
+        private async void LoadFacebookData()
+        {
+            try
+            {
+                var fb = new FacebookClient("722191401190090|zV8YHfAogIsAsGHsE8TOZWIY_0g");
+                dynamic result = await fb.GetTaskAsync("visitroskilde");
+                dynamic navn = result["name"];
+                dynamic om = result["about"];
+                dynamic kilde = result["cover"]["source"];
+                dynamic telefon = result["phone"];
+                dynamic hjemmeside = result["website"];
+                dynamic likes = result["likes"].ToString();
+
+                InfoData.Add(new FacebookData { Navn = navn, Om = om, Kilde = kilde, Telefon = telefon, Hjemmeside = hjemmeside, Likes = likes });
+
+                dynamic result1 = await fb.GetTaskAsync("visitroskilde/feed?limit=6&offset=3");
+                dynamic data = result1["data"];
+
+                foreach (dynamic item in data)
+                {
+                    FeedData.Add(new FacebookData { Billede = item["picture"], Besked = item["message"], Dato = "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") });
+                }
+            }
+            catch (Exception ex)
+            {
+                //throw new Exception(ex.Message);
+                MessageDialog fbError = new MessageDialog("Ups! Der skete en fejl", "Kunne ikke connecte til Facebook API");
+                fbError.ShowAsync();
+            }
         }
 
 
 
         #region GetSet Metoder
+        public static ObservableCollection<FacebookData> InfoData
+        {
+            get { return _infoData; }
+            set { _infoData = value; }
+        }
+
+        public static ObservableCollection<FacebookData> FeedData
+        {
+            get { return _feedData; }
+            set { _feedData = value; }
+        }
 
         public RelayCommand SletToDoListeCommand
         {

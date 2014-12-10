@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Windows.Devices.Geolocation;
+using Windows.UI;
 using Windows.UI.Popups;
 using Bing.Maps;
 using TuristAppV5.Common;
@@ -67,7 +68,7 @@ namespace TuristAppV5.View
                 Geoposition pos = await _geolocator.GetGeopositionAsync();
                 Location location = new Location(pos.Coordinate.Latitude, pos.Coordinate.Longitude);
                 Pushpin mylocationPushpin = new Pushpin();
-                mylocationPushpin.Text = "M"; // Viser kun et tegn
+                mylocationPushpin.Background = new SolidColorBrush(Colors.Red);
                 MapLayer.SetPosition(mylocationPushpin, new Location(location));
                 Map.Children.Add(mylocationPushpin);
             }
