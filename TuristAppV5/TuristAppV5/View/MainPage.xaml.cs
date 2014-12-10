@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 using Facebook;
@@ -63,13 +64,14 @@ namespace TuristAppV5
                 dynamic phone = result["phone"];
                 dynamic website = result["website"];
                 dynamic likes = result["likes"].ToString();
+                dynamic source = result["cover"]["source"];
 
                 facebookName.Text = name;
                 facebookAbout.Text = about;
                 facebookPhone.Text = "Telefon: " + phone;
                 facebookWebsite.Text = "Hjemmeside: " + website;
                 facebookLikes.Text = "Likes: " + likes;
-
+                facebookSource.Source = new BitmapImage(new Uri(source));
 
                 dynamic result1 = await fb.GetTaskAsync("visitroskilde/feed?limit=10&offset=3");
                 dynamic data = result1["data"];
@@ -78,6 +80,7 @@ namespace TuristAppV5
                 {
                     if (facebookMessage != null)
                     {
+                        //facebookPicture.Source = new BitmapImage(new Uri(item["picture"]));
                         facebookMessage.Text += name + "\n" + item["message"] + "\n" + "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") +"\n\n\n";
                     }
                 }
