@@ -138,16 +138,24 @@
   <ItemGroup>
     <Content Include="Assets\bg.jpg" />
     <Content Include="Assets\eat.png" />
+    <Content Include="Assets\elgiganten.jpg" />
     <Content Include="Assets\feel.png" />
+    <Content Include="Assets\Herthadalen.jpg" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\profile.png" />
     <Content Include="Assets\restaurant.jpeg" />
+    <Content Include="Assets\RoskildeKloster.jpg" />
+    <Content Include="Assets\RoskildeMuseum.jpg" />
+    <Content Include="Assets\rostorv.jpg" />
     <Content Include="Assets\see.png" />
     <Content Include="Assets\shop.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\splash.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\thumbs_up-100.png" />
+    <Content Include="Assets\Vigen.jpg" />
+    <Content Include="Assets\Vikingeskibsmuseet.jpg" />
     <Content Include="Assets\visitroskilde.png" />
   </ItemGroup>
   <ItemGroup>

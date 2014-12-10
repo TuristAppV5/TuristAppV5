@@ -38,9 +38,9 @@ namespace TuristAppV5.Viewmodel
 
             //Anden Kategori "Eat Orange" (Restauranter)
             _eatOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _restaurantVigen = new Kategoriliste("Restaurant Vigen", "46755008", "http://www.vigen.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00");
-            _restaurantHerthadalen = new Kategoriliste("Restaurant Herthadalen", "46480157", "http://herthadalen.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00");
-            //for (int eat = 0; eat < 2; eat++)
+            _restaurantVigen = new Kategoriliste("Restaurant Vigen", "46755008", "http://www.vigen.dk/", 55.641910, 12.087845, "../Assets/Vigen.jpg", Beskrivelse, "9:30-21:00");
+            _restaurantHerthadalen = new Kategoriliste("Restaurant Herthadalen", "46480157", "http://herthadalen.dk/", 55.641910, 12.087845, "../Assets/Herthadalen.jpg", Beskrivelse, "9:30-21:00");
+            for (int eat = 0; eat < 4; eat++)
             {
                 _eatOrangeCollection.Add(_restaurantVigen);
                 _eatOrangeCollection.Add(_restaurantHerthadalen);
@@ -48,9 +48,9 @@ namespace TuristAppV5.Viewmodel
            
             //Tredje Kategori "See Orange" (Seværdigheder)
             _seeOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _roskildeKloster = new Kategoriliste("Roskilde Kloster", "46350219", "http://www.roskildekloster.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00");
-            _roskildeMuseum = new Kategoriliste("Roskilde Museum", "46316529", "http://www.roskildemuseum.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00");
-           // for (int see = 0; see < 2; see++)
+            _roskildeKloster = new Kategoriliste("Roskilde Kloster", "46350219", "http://www.roskildekloster.dk/", 55.641910, 12.087845, "../Assets/RoskildeKloster.jpg", Beskrivelse, "9:30-21:00");
+            _roskildeMuseum = new Kategoriliste("Roskilde Museum", "46316529", "http://www.roskildemuseum.dk/", 55.641910, 12.087845, "../Assets/RoskildeMuseum.jpg", Beskrivelse, "9:30-21:00");
+            for (int see = 0; see < 5; see++)
             {
                 _seeOrangeCollection.Add(_roskildeKloster);
                 _seeOrangeCollection.Add(_roskildeMuseum);
@@ -58,9 +58,9 @@ namespace TuristAppV5.Viewmodel
             
             //Fjerde Kategori "Shop Orange" (Shops)
             _shopOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _rosTorv = new Kategoriliste("Ro's Torv", "46380680", "http://www.rostorv.dk/", 55.641910, 12.087845,"../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00");
-            _elgiganten = new Kategoriliste("Elgiganten", "46380697", "http://www.elgiganten.dk/", 55.641910, 12.087845,"../Assets/restaurant.jpeg", Beskrivelse, "9:30-21:00");
-           // for (int shop = 0; shop < 2; shop++)
+            _rosTorv = new Kategoriliste("Ro's Torv", "46380680", "http://www.rostorv.dk/", 55.641910, 12.087845, "../Assets/rostorv.jpg", Beskrivelse, "9:30-21:00");
+            _elgiganten = new Kategoriliste("Elgiganten", "46380697", "http://www.elgiganten.dk/", 55.641910, 12.087845, "../Assets/elgiganten.jpg", Beskrivelse, "9:30-21:00");
+            for (int shop = 0; shop < 4; shop++)
             {
                 _shopOrangeCollection.Add(_rosTorv);
                 _shopOrangeCollection.Add(_elgiganten);
@@ -69,8 +69,8 @@ namespace TuristAppV5.Viewmodel
 
             //Femte Kategori "Feel Orange" (Aktiviteter)
             _feelOrangeCollection = new ObservableCollection<Kategoriliste>();
-            _vikingeskibsMuseet = new Kategoriliste("Vikingeskibsmuseet", "46300200","http://www.vikingeskibsmuseet.dk/", 55.641910, 12.087845, "../Assets/restaurant.jpeg", Beskrivelse,"9:30-21:00");
-           // for (int feel = 0; feel < 4; feel++)
+            _vikingeskibsMuseet = new Kategoriliste("Vikingeskibsmuseet", "46300200", "http://www.vikingeskibsmuseet.dk/", 55.641910, 12.087845, "../Assets/Vikingeskibsmuseet.jpg", Beskrivelse, "9:30-21:00");
+            for (int feel = 0; feel < 3; feel++)
             {
                 _feelOrangeCollection.Add(_vikingeskibsMuseet);
             }

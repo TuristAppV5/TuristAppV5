@@ -1,4 +1,8 @@
-﻿using TuristAppV5.Common;
+﻿using System.Threading;
+using Windows.Devices.Geolocation;
+using Windows.UI.Popups;
+using Bing.Maps;
+using TuristAppV5.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,6 +31,8 @@ namespace TuristAppV5.View
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
+        private Geolocator _geolocator = null;
+
         /// <summary>
         /// This can be changed to a strongly typed view model.
         /// </summary>
@@ -51,8 +57,27 @@ namespace TuristAppV5.View
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
+            _geolocator = new Geolocator();
         }
+        
+        private async void Map_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Geoposition pos = await _geolocator.GetGeopositionAsync();
+                Location location = new Location(pos.Coordinate.Latitude, pos.Coordinate.Longitude);
+                Pushpin mylocationPushpin = new Pushpin();
+                mylocationPushpin.Text = "M"; // Viser kun et tegn
+                MapLayer.SetPosition(mylocationPushpin, new Location(location));
+                Map.Children.Add(mylocationPushpin);
+            }
+            catch (Exception)
+            {
+                MessageDialog mapError = new MessageDialog("Ups! Der skete en fejl!", "Kunne ikke finde din placering på kortet");
+                mapError.ShowAsync();
+            }
 
+        }
         /// <summary>
         /// Populates the page with content passed during navigation. Any saved state is also
         /// provided when recreating a page from a prior session.
