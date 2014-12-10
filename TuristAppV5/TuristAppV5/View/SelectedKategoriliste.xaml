@@ -69,7 +69,7 @@
                 <ImageBrush Stretch="Fill"/>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="150"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="70"/>

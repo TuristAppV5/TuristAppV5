@@ -7,9 +7,12 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Networking.Sockets;
+using Windows.UI.Popups;
 using TuristAppV5.Annotations;
 using TuristAppV5.Common;
 using TuristAppV5.Model;
+using TuristAppV5.View;
 
 namespace TuristAppV5.Viewmodel
 {
@@ -29,7 +32,8 @@ namespace TuristAppV5.Viewmodel
             _tilfoejKommentarHandler = new TilfoejKommentarHandler(this);
             _tilfoejKommentarCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejKommentar);
             _tilfoejToDoListeCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejToDoListe);
-            _sletToDoListeCommand = new RelayCommand(_tilfoejKommentarHandler.SletToDoListe);
+            _sletToDoListeCommand = new RelayCommand(SletToDoListe);
+            //_tilfoejKommentarHandler.SaveKategoriAsync();
             try
             {
                 _tilfoejKommentarHandler.LoadKategoriAsync();
@@ -43,11 +47,19 @@ namespace TuristAppV5.Viewmodel
                 _tilfoejKommentarHandler.SaveKategoriAsync();
             }
         }
+
+        public void SletToDoListe()
+        {
+            MinProfilCollection.Clear();
+            _tilfoejKommentarHandler.SaveKategoriAsync();
+        }
+
         #region GetSet Metoder
+
         public RelayCommand SletToDoListeCommand
-        {            
-           get { return _sletToDoListeCommand; }
-           set { _sletToDoListeCommand = value; }
+        {
+            get { return _sletToDoListeCommand; }
+            set { _sletToDoListeCommand = value; }
         }
 
         public ObservableCollection<Kategori> KategoriCollection

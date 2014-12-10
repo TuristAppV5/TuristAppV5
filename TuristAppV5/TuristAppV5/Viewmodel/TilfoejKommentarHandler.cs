@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using TuristAppV5.Annotations;
-using TuristAppV5.Common;
 using TuristAppV5.Model;
 using TuristAppV5.View;
 using TuristAppV5.Viewmodel;
@@ -26,26 +25,23 @@ namespace TuristAppV5.Viewmodel
         private string _testKategori = "";
         private string _testBeskrivelseText = "";
         private string _succesText = "";
-        private string _tilfoejToDo;
+
 
         public void TilfoejToDoListe()
-         {
+        {
             if (_mainViewmodel.MinProfilCollection.Contains(MainViewmodel.SelectedKategoriliste))
             {
                 MessageDialog fejl = new MessageDialog("Du kan ikke tilføje to af de samme items til To-Do listen");
                 fejl.ShowAsync();
-            }            else
-           {
-               _mainViewmodel.MinProfilCollection.Add(MainViewmodel.SelectedKategoriliste);
-               MessageDialog val = new MessageDialog("Tilføjet til To-Do liste");
-               val.ShowAsync();
-               SaveKategoriAsync();
-          }
-         }
-        public void SletToDoListe()
-        {
-            _mainViewmodel.MinProfilCollection.Clear();
-            SaveKategoriAsync();
+            }
+            else
+            {
+                _mainViewmodel.MinProfilCollection.Add(MainViewmodel.SelectedKategoriliste);
+                MessageDialog val = new MessageDialog("Tilføjet til To-Do liste");
+                val.ShowAsync();
+                SaveKategoriAsync();
+            }
+            
         }
         public async void SaveKategoriAsync()
         {
@@ -133,7 +129,7 @@ namespace TuristAppV5.Viewmodel
             }
             if (TestBeskrivelseText == "" & TestNavnText == "" & TestKategori == "")
             {
-                Kommentar k = new Kommentar() { Dato = DateTime.Now, Navn = _navn, Tekst = _tekst };
+                Kommentar k = new Kommentar() {Dato = DateTime.Now, Navn = _navn, Tekst = _tekst};
                 MainViewmodel.SelectedKategoriliste.KommentarList.Add(k);
                 SaveKategoriAsync();
                 SuccesText = "Kommentaren blev tilføjet";

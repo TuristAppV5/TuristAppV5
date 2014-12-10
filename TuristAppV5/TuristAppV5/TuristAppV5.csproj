@@ -137,13 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\bg.jpg" />
-    <Content Include="Assets\eat.png" />
-    <Content Include="Assets\feel.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\profile.png" />
     <Content Include="Assets\restaurant.jpeg" />
-    <Content Include="Assets\see.png" />
-    <Content Include="Assets\shop.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\splash.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
