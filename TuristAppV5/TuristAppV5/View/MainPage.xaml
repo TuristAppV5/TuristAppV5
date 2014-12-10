@@ -26,7 +26,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="100*"/>
                 <RowDefinition Height="190*"/>
-                <RowDefinition Height="456*"/>
+                <RowDefinition Height="455*"/>
             </Grid.RowDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="60" TextWrapping="Wrap" Text="#VisitRoskilde" VerticalAlignment="Top" Foreground="White"/>
             <GridView Foreground="White" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}" Grid.Row="1">
