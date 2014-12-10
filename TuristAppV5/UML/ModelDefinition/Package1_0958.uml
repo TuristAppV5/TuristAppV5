@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="d800172d-39f6-43ea-9245-ce80794c6d13"
   name="Viewmodel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -243,6 +243,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="35c888ff-356b-4901-9c8d-78d1acf7f61e"
+            isDerived="false"
+            sourceEndRoleName="MainViewmodel"
+            targetEndRoleName="FacebookData"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b16dcc78-ac96-4e23-9680-950077b3f945"
+              LastKnownName="FacebookData"
+              LastKnownLocation="Package2_0958.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="22cd8af5-19ea-462f-a584-271ba588050c"
+                  name="MainViewmodel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ead99bb-10f6-4be8-aa1f-1acb5e710de2"
+                  name="FacebookData"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -277,6 +316,41 @@
               <undefinedTypeMoniker
                 Id="42da6d19-a497-4a8c-9819-308e9733d226"
                 LastKnownName="Kategoriliste"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e4e439dc-d529-41c2-b029-4ebf585eab6a"
+            name="_infoData"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="976e4989-b60c-4ebe-bef4-1e09389bfaab"
+                LastKnownName="ObservableCollection&lt;FacebookData&gt;"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bc3944ee-070e-4bbe-a9dc-c4e26c7ddc31"
+            name="_feedData"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="976e4989-b60c-4ebe-bef4-1e09389bfaab"
+                LastKnownName="ObservableCollection&lt;FacebookData&gt;"
                 LastKnownLocation="Package1_0958.uml" />
             </type_NamedElement>
           </property>
@@ -712,6 +786,11 @@
       <undefinedType
         Id="129edc27-e540-41da-9edd-ba93ae08ba7b"
         name="DateTime" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="976e4989-b60c-4ebe-bef4-1e09389bfaab"
+        name="ObservableCollection&lt;FacebookData&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

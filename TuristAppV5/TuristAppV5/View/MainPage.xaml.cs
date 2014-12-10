@@ -35,7 +35,6 @@ namespace TuristAppV5
         public MainPage()
         {
             this.InitializeComponent();
-            LoadFacebookData();
 
         }
         private async void AppBarButton_Click(object sender, RoutedEventArgs e)
@@ -53,7 +52,7 @@ namespace TuristAppV5
 
         }
 
-        private async void LoadFacebookData()
+        /*private async void LoadFacebookData()
         {
             try
             {
@@ -78,27 +77,20 @@ namespace TuristAppV5
 
                 foreach (dynamic item in data)
                 {
-                    if (facebookMessage != null)
-                    {
-                        //facebookPicture.Source = new BitmapImage(new Uri(item["picture"]));
-                        facebookMessage.Text += name + "\n" + item["message"] + "\n" + "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") +"\n\n\n";
-                    }
+                    //facebookPicture.Source = new BitmapImage(new Uri(item["picture"]));
+                    MainViewmodel.GroupData.Add(new FacebookData { Message = item["message"], Picture = item["picture"] }); //+= name + "\n" + item["message"] + "\n" + "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") + "\n\n\n";
+
+
+
+                    //FacebookData.Friends.Add(new Friend { Name = (string)friend["name"], id = (string)friend["id"], PictureUri = new Uri(string.Format("https://graph.facebook.com/{0}/picture?type={1}&access_token={2}", (string)friend["id"], "square", App.AccessToken)) });
                 }
             }
             catch (Exception ex)
             {
                 //throw new Exception(ex.Message);
-                string error = "N/A";
-                facebookName.Text = error;
-                facebookAbout.Text = error;
-                facebookPhone.Text = "Telefon: " + error;
-                facebookWebsite.Text = "Hjemmeside: " + error;
-                facebookLikes.Text = error;
-                if (facebookMessage != null)
-                {
-                    facebookMessage.Text = "Ingen feeds tilgængelig";
-                }
+                MessageDialog fbError = new MessageDialog("Ups! Der skete en fejl", "Kunne ikke connecte til Facebook API");
+                fbError.ShowAsync();
             }
-        }
+        }*/
     }
 }

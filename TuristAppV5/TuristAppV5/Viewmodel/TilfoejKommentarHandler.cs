@@ -37,7 +37,7 @@ namespace TuristAppV5.Viewmodel
             else
             {
                 _mainViewmodel.MinProfilCollection.Add(MainViewmodel.SelectedKategoriliste);
-                MessageDialog val = new MessageDialog("Tilføjet til To-Do liste");
+                MessageDialog val = new MessageDialog("Handlingen blev gennemført", "Det valgte element blev tilføjet til to-do-listen");
                 val.ShowAsync();
                 SaveKategoriAsync();
             }
