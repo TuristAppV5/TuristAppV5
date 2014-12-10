@@ -138,6 +138,7 @@
   <ItemGroup>
     <Content Include="Assets\bg.jpg" />
     <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\profile.png" />
     <Content Include="Assets\restaurant.jpeg" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\splash.png" />

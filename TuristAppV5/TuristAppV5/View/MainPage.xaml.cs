@@ -70,14 +70,15 @@ namespace TuristAppV5
                 facebookWebsite.Text = "Hjemmeside: " + website;
                 facebookLikes.Text = "Likes: " + likes;
 
-                dynamic result1 = await fb.GetTaskAsync("visitroskilde/feed?fields=message, created_time&limit=3&offset=3");
+
+                dynamic result1 = await fb.GetTaskAsync("visitroskilde/feed?limit=10&offset=3");
                 dynamic data = result1["data"];
 
                 foreach (dynamic item in data)
                 {
-                    if (facebookMessage.Items != null)
+                    if (facebookMessage != null)
                     {
-                        facebookMessage.Items.Add(item["message"] + "\n" + DateTime.Parse(item["created_time"]));
+                        facebookMessage.Text += name + "\n" + item["message"] + "\n" + "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") +"\n\n\n";
                     }
                 }
             }
@@ -90,9 +91,9 @@ namespace TuristAppV5
                 facebookPhone.Text = "Telefon: " + error;
                 facebookWebsite.Text = "Hjemmeside: " + error;
                 facebookLikes.Text = "Likes: " + error;
-                if (facebookMessage.Items != null)
+                if (facebookMessage != null)
                 {
-                    facebookMessage.Items.Add("Ingen feeds tilgængelig");
+                    facebookMessage.Text = "Ingen feeds tilgængelig";
                 }
             }
         }
