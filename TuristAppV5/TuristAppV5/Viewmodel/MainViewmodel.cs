@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -21,17 +22,33 @@ namespace TuristAppV5.Viewmodel
         private TilfoejKommentarHandler _tilfoejKommentarHandler;
         private RelayCommand _tilfoejKommentarCommand;
         private RelayCommand _tilfoejToDoListeCommand;
+        private RelayCommand _sletToDoListeCommand;
 
         public MainViewmodel()
         {
             _tilfoejKommentarHandler = new TilfoejKommentarHandler(this);
             _tilfoejKommentarCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejKommentar);
             _tilfoejToDoListeCommand = new RelayCommand(_tilfoejKommentarHandler.TilfoejToDoListe);
-            //_tilfoejKommentarHandler.SaveKategoriAsync();
-            _tilfoejKommentarHandler.LoadKategoriAsync();
+            _sletToDoListeCommand = new RelayCommand(_tilfoejKommentarHandler.SletToDoListe);
+            try
+            {
+                _tilfoejKommentarHandler.LoadKategoriAsync();
+            }
+            catch (FileNotFoundException)
+            {
+                _tilfoejKommentarHandler.SaveKategoriAsync();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                _tilfoejKommentarHandler.SaveKategoriAsync();
+            }
         }
-
         #region GetSet Metoder
+        public RelayCommand SletToDoListeCommand
+        {            
+           get { return _sletToDoListeCommand; }
+           set { _sletToDoListeCommand = value; }
+        }
 
         public ObservableCollection<Kategori> KategoriCollection
         {
