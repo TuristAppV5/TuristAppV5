@@ -70,7 +70,7 @@ namespace TuristAppV5
                 facebookAbout.Text = about;
                 facebookPhone.Text = "Telefon: " + phone;
                 facebookWebsite.Text = "Hjemmeside: " + website;
-                facebookLikes.Text = "Likes: " + likes;
+                facebookLikes.Text = likes + " synes godt om";
                 facebookSource.Source = new BitmapImage(new Uri(source));
 
                 dynamic result1 = await fb.GetTaskAsync("visitroskilde/feed?limit=10&offset=3");
@@ -93,7 +93,7 @@ namespace TuristAppV5
                 facebookAbout.Text = error;
                 facebookPhone.Text = "Telefon: " + error;
                 facebookWebsite.Text = "Hjemmeside: " + error;
-                facebookLikes.Text = "Likes: " + error;
+                facebookLikes.Text = error;
                 if (facebookMessage != null)
                 {
                     facebookMessage.Text = "Ingen feeds tilgængelig";

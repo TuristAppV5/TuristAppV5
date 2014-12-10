@@ -100,7 +100,7 @@
             </Grid.RowDefinitions>
             <TextBlock FontSize="25" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Seneste kommentarer" VerticalAlignment="Top" Height="41" Width="246"/>
 
-            <Image Source="../Assets/restaurant.jpeg" Stretch="UniformToFill" Margin="10,10,10,6" Grid.Column="1"/>
+            <Image Source="{Binding SelectedKategoriliste.Billede}" Stretch="UniformToFill" Margin="10,10,10,6" Grid.Column="1"/>
 
             <ListView Margin="10,41,15,10" ItemsSource="{Binding SelectedKategoriliste.KommentarList}">
                 <ListView.ItemTemplate>
@@ -113,7 +113,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <maps:Map ZoomLevel="13" Credentials="AhVIFAhaFsdkLTO5W_zBuQRA29ly0ZMwfR1mx_jqnW2QVYH4WQEmtWayB25cA7Aq" Margin="0,0,10,0" Grid.Row="1" Culture="da" Grid.ColumnSpan="2" >
+            <maps:Map x:Name="Map" ZoomLevel="13" Credentials="AhVIFAhaFsdkLTO5W_zBuQRA29ly0ZMwfR1mx_jqnW2QVYH4WQEmtWayB25cA7Aq" Margin="0,0,10,0" Grid.Row="1" Culture="da" Grid.ColumnSpan="2" Loaded="Map_Loaded" >
                 <maps:Map.Center>
                     <maps:Location Latitude="55.641910" Longitude="12.087845" />
                 </maps:Map.Center>
