@@ -8,15 +8,75 @@ namespace TuristAppV5.Model
 {
     public class FacebookData
     {
-        public string Navn { get; set; }
-        public string Om { get; set; }
-        public string Kilde { get; set; }
-        public string Telefon { get; set; }
-        public string Hjemmeside { get; set; }
-        public string Likes { get; set; }
+        private string _navn;
+        private string _om;
+        private string _kilde;
+        private string _telefon;
+        private string _hjemmeside;
+        private string _likes;
 
-        public string Billede { get; set; }
-        public string Besked { get; set; }
-        public string Dato { get; set; }
+        private string _billede;
+        private string _besked;
+        private string _dato;
+
+
+        #region GetSet Metoder
+
+        public string Navn
+        {
+            get { return _navn; }
+            set { _navn = value; }
+        }
+
+        public string Om
+        {
+            get { return _om; }
+            set { _om = value; }
+        }
+
+        public string Kilde
+        {
+            get { return _kilde; }
+            set { _kilde = value; }
+        }
+
+        public string Telefon
+        {
+            get { return _telefon; }
+            set { _telefon = value; }
+        }
+
+        public string Hjemmeside
+        {
+            get { return _hjemmeside; }
+            set { _hjemmeside = value; }
+        }
+
+        public string Likes
+        {
+            get { return _likes; }
+            set { _likes = value; }
+        }
+
+        public string Billede
+        {
+            get { return _billede; }
+            set { _billede = value; }
+        }
+
+        public string Besked
+        {
+            get { return _besked; }
+            set { _besked = value; }
+        }
+
+        public string Dato
+        {
+            get { return _dato; }
+            set { _dato = value; }
+        }
+
+        #endregion
+
     }
 }
