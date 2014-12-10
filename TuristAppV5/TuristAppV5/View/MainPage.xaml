@@ -81,7 +81,10 @@
                 <Run Text="Hjemmeside: "/>
                 <Run Text="{Binding InfoData[0].Hjemmeside}"/>
             </TextBlock>
-            <TextBlock Grid.Row="4" FontSize="35" TextWrapping="Wrap" Text="{Binding InfoData[0].Likes}" Margin="43,39,0,1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <TextBlock Grid.Row="4" FontSize="35" TextWrapping="Wrap" Margin="43,39,0,1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <Run Text="{Binding InfoData[0].Likes}"/>
+                <Run Text="synes godt om"/>
+            </TextBlock>
             <Image Source="../Assets/thumbs_up-100.png" HorizontalAlignment="Left" Height="32" Grid.Row="5" VerticalAlignment="Top"/>
 
             <TextBlock FontSize="40" TextWrapping="Wrap" Text="Facebook Feed" Grid.ColumnSpan="2" Margin="0,49,0,0" Grid.Row="5" Grid.RowSpan="2"/>
