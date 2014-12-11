@@ -20,7 +20,7 @@ namespace TuristAppV5.Tests
         }
 
         [TestMethod]
-        public void CheckKommentarNameText()
+        public void CheckKommentarNameTest()
         {
 
             string navn1 = null;
@@ -46,7 +46,7 @@ namespace TuristAppV5.Tests
 
 
         [TestMethod]
-        public void CheckKommentarNameText1()
+        public void CheckKommentarNameTest1()
         {
 
             string navn2 = "";
@@ -74,7 +74,7 @@ namespace TuristAppV5.Tests
         }
 
         [TestMethod]
-        public void CheckKommentarNametext2()
+        public void CheckKommentarNameTest2()
         {
 
 
