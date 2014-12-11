@@ -107,7 +107,10 @@
                     <DataTemplate>
                         <StackPanel>
                             <TextBlock Text="{Binding Navn}" />
-                            <TextBlock Text="{Binding Dato1}"/>
+                            <TextBlock FontStyle="Italic">
+                                <Run Text="Skrevet d."/>
+                                <Run Text="{Binding Dato1}"/>
+                            </TextBlock>
                             <TextBlock Text="{Binding Tekst}"/>
                         </StackPanel>
                     </DataTemplate>
