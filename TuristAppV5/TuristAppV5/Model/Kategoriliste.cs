@@ -89,7 +89,8 @@ namespace TuristAppV5.Model
                 _beskrivelse = beskrivelse;
                 _aabningstider = aabningstider;
                 _kommentarList = new List<Kommentar>();
-                _kommentarList.Add(new Kommentar(new DateTime(2014, 9, 10), "Daniel Winther", "Dette er en kommentar"));
+                _kommentarList.Add(new Kommentar(new DateTime(2014, 9, 10), "Daniel Winther", "Super fedt at være med til!"));
+                _kommentarList.Add(new Kommentar(new DateTime(2014, 12, 12), "Jacob Balling", "Meget skuffet, vil gerne have pengene refunderet..."));
             }
         }
 }
