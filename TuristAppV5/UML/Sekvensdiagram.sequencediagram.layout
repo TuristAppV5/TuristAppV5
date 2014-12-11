@@ -24,7 +24,7 @@
         <lifelineHoverShape Id="ea7d6834-96a9-42e4-bebf-40e6090d6bce" absoluteBounds="8.6145834922790527, 1, 0, 7">
           <lifelineMoniker Id="a479cc0d-0261-47c0-bfdc-7f798df0017d" LastKnownName=": TilfoejKommentarHandler" />
         </lifelineHoverShape>
-        <umlExecutionSpecificationShape Id="4d09f998-2ded-4bc9-bff5-2ae7af4c2385" absoluteBounds="8.6145834922790527, 1.75, 0.15, 3.1187499999999995" customColor="184, 204, 215" visualStyleMode="Modified">
+        <umlExecutionSpecificationShape Id="4d09f998-2ded-4bc9-bff5-2ae7af4c2385" absoluteBounds="8.6145834922790527, 1.75, 0.15, 2.9937499999999995" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="aaeefc37-0276-4636-8133-3d8d30f9030b" LastKnownName="BehaviorExecutionSpecification2" />
         </umlExecutionSpecificationShape>
       </relativeChildShapes>

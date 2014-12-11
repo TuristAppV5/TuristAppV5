@@ -66,10 +66,10 @@
         <useCaseShapeMoniker Id="a238b771-d89a-45b0-9f30-1690d449a8a8" />
       </nodes>
     </useCaseAssociationConnector>
-    <SubsystemShape Id="397c7edf-4801-417f-933b-267cef02c04d" absoluteBounds="8.5, 1.75, 1.5, 1" customColor="White">
+    <SubsystemShape Id="397c7edf-4801-417f-933b-267cef02c04d" absoluteBounds="8.5, 1.875, 1.5, 1" customColor="White">
       <subsystemMoniker Id="010c505b-6d0a-463c-8e3d-0e1d4da35f30" LastKnownName="Facebook API" />
     </SubsystemShape>
-    <useCaseAssociationConnector edgePoints="[(8.5 : 2.25); (7.125 : 2.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(8.5 : 2.33928571428571); (7.12399522631441 : 2.27376167744354)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="43fa126b-e8ef-4a27-8562-930eef079140" />
       <relativeChildShapes />
       <nodes>
