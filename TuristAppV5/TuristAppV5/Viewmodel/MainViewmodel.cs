@@ -63,7 +63,7 @@ namespace TuristAppV5.Viewmodel
                 dynamic infoData = await accessToken.GetTaskAsync("visitroskilde");
                 InfoData.Add(new FacebookData { Navn = infoData["name"], Om = infoData["about"], Kilde = infoData["cover"]["source"], Telefon = infoData["phone"], Hjemmeside = infoData["website"], Likes = infoData["likes"].ToString() });
 
-                dynamic feedData = await accessToken.GetTaskAsync("visitroskilde/feed?limit=3");
+                dynamic feedData = await accessToken.GetTaskAsync("visitroskilde/feed?limit=3&fields=message, picture, created_time");
                 foreach (dynamic item in feedData["data"])
                 {
                     FeedData.Add(new FacebookData { Billede = item["picture"], Besked = item["message"], Dato = "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") });
@@ -71,8 +71,8 @@ namespace TuristAppV5.Viewmodel
             }
             catch (Exception ex)
             {
-                /*throw new Exception(ex.Message);
-                MessageDialog fbError = new MessageDialog("Kunne ikke connecte til Facebook API", "Ups! Der skete en fejl");
+                throw new Exception(ex.Message);
+                /*MessageDialog fbError = new MessageDialog("Kunne ikke connecte til Facebook API", "Ups! Der skete en fejl");
                 fbError.ShowAsync();*/
             }
         }
