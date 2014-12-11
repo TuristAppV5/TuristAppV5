@@ -29,6 +29,7 @@ namespace TuristAppV5.Viewmodel
         private RelayCommand _tilfoejToDoListeCommand;
         private RelayCommand _sletToDoListeCommand;
 
+        private FacebookData _navn1;
         private ObservableCollection<FacebookData> _infoData = new ObservableCollection<FacebookData>();
         private ObservableCollection<FacebookData> _feedData = new ObservableCollection<FacebookData>();
 
@@ -71,8 +72,8 @@ namespace TuristAppV5.Viewmodel
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
-                /*MessageDialog fbError = new MessageDialog("Kunne ikke connecte til Facebook API", "Ups! Der skete en fejl");
+                /*throw new Exception(ex.Message);
+                MessageDialog fbError = new MessageDialog("Kunne ikke connecte til Facebook API", "Ups! Der skete en fejl");
                 fbError.ShowAsync();*/
             }
         }

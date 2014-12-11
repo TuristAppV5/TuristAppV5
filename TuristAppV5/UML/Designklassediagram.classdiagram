@@ -170,6 +170,11 @@
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="b499ef29-75a3-4dc1-8c9d-31a60a9b66e6" name="LoadFacebookData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="40714163-719c-45c4-ac2c-c50d14b742f1" />
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
