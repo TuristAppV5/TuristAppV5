@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="9c66ffe4-466d-44bc-844d-08731444e316" name="UseCase" linkedPackageId="763278da-c5c4-4117-a73a-cbea6b5e6b48" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9c66ffe4-466d-44bc-844d-08731444e316" name="UseCase" linkedPackageId="763278da-c5c4-4117-a73a-cbea6b5e6b48" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="22e5624d-6485-4869-803d-dcf8c191ee16" name="Bruger" isAbstract="false" isLeaf="false">
         <elementDefinition Id="e8578da9-ac3a-4c57-806b-33f808212078" />
         <targetEnds>
           <association Id="c9d5a6a0-39d5-49ce-82a9-c9540607885d" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Facebook feed" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="18c5b167-adc0-426b-a628-926f5d57c532" LastKnownName="Facebook feed" />
+            <useCaseMoniker Id="18c5b167-adc0-426b-a628-926f5d57c532" LastKnownName="Læs Facebook Feed" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="a0536679-dd10-4f52-bb85-9b21f5dbbdb5" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -69,11 +69,27 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="e1ea183b-b558-42a2-9c8c-65f408983543" />
           </association>
+          <association Id="1fccaebc-c50e-4214-809a-9d2cb87a59e2" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Clear to-do liste" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5c54705b-f1a5-4e81-8949-972305ff47f4" LastKnownName="Clear to-do liste" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6191d469-d8fe-4159-b39c-a5d611233bde" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b38ba24c-8cf2-443c-a083-073df8d0c06a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="55fafb9b-96ea-4d00-8539-8fc6bb8a899b" name="Clear to-do liste" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a54774db-699c-427d-8316-2ae28813de65" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="694c1ad9-5a8c-410a-87c8-c0fd80da663f" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="18c5b167-adc0-426b-a628-926f5d57c532" name="Facebook feed" isAbstract="false" isLeaf="false">
+      <useCase Id="18c5b167-adc0-426b-a628-926f5d57c532" name="Læs Facebook Feed" isAbstract="false" isLeaf="false">
         <elementDefinition Id="7373385d-b48f-4347-8ba6-f506a52de1e8" />
       </useCase>
     </useCaseModelRootHasTypes>
@@ -97,7 +113,7 @@
         <elementDefinition Id="7f41a4df-1182-4a43-a2e9-e31ca06d6ce5" />
         <targetEnds>
           <association Id="43fa126b-e8ef-4a27-8562-930eef079140" isDerived="false" sourceEndRoleName="Facebook API" targetEndRoleName="Facebook feed" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="18c5b167-adc0-426b-a628-926f5d57c532" LastKnownName="Facebook feed" />
+            <useCaseMoniker Id="18c5b167-adc0-426b-a628-926f5d57c532" LastKnownName="Læs Facebook Feed" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="e3284bd6-2034-47b3-80d6-b87cdc2c5e44" name="Facebook API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -137,6 +153,11 @@
           </association>
         </targetEnds>
       </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5c54705b-f1a5-4e81-8949-972305ff47f4" name="Clear to-do liste" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a97658b0-9787-43ad-8d6e-4b07975de041" />
+      </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="763278da-c5c4-4117-a73a-cbea6b5e6b48" name="UML">

@@ -29,8 +29,8 @@ namespace TuristAppV5.Viewmodel
         private RelayCommand _tilfoejToDoListeCommand;
         private RelayCommand _sletToDoListeCommand;
 
-        private static ObservableCollection<FacebookData> _infoData = new ObservableCollection<FacebookData>();
-        private static ObservableCollection<FacebookData> _feedData = new ObservableCollection<FacebookData>();
+        private ObservableCollection<FacebookData> _infoData = new ObservableCollection<FacebookData>();
+        private ObservableCollection<FacebookData> _feedData = new ObservableCollection<FacebookData>();
 
         public MainViewmodel()
         {
@@ -63,7 +63,7 @@ namespace TuristAppV5.Viewmodel
                 dynamic infoData = await accessToken.GetTaskAsync("visitroskilde");
                 InfoData.Add(new FacebookData { Navn = infoData["name"], Om = infoData["about"], Kilde = infoData["cover"]["source"], Telefon = infoData["phone"], Hjemmeside = infoData["website"], Likes = infoData["likes"].ToString() });
 
-                dynamic feedData = await accessToken.GetTaskAsync("visitroskilde/feed?limit=10");
+                dynamic feedData = await accessToken.GetTaskAsync("visitroskilde/feed?limit=3");
                 foreach (dynamic item in feedData["data"])
                 {
                     FeedData.Add(new FacebookData { Billede = item["picture"], Besked = item["message"], Dato = "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") });
@@ -80,13 +80,13 @@ namespace TuristAppV5.Viewmodel
 
 
         #region GetSet Metoder
-        public static ObservableCollection<FacebookData> InfoData
+        public ObservableCollection<FacebookData> InfoData
         {
             get { return _infoData; }
             set { _infoData = value; }
         }
 
-        public static ObservableCollection<FacebookData> FeedData
+        public ObservableCollection<FacebookData> FeedData
         {
             get { return _feedData; }
             set { _feedData = value; }

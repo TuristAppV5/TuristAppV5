@@ -25,9 +25,9 @@
         </Grid.Background>
         <Grid HorizontalAlignment="Left" Margin="20,20,0,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100*"/>
-                <RowDefinition Height="190*"/>
-                <RowDefinition Height="455*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="190"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="60" TextWrapping="Wrap" Text="#VisitRoskilde" VerticalAlignment="Top" Foreground="White"/>
             <GridView Foreground="White" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}" Grid.Row="1">
@@ -40,7 +40,7 @@
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
-            <GridView x:FieldModifier="public" x:Name="kategoriListeGridView2" ItemsSource="{Binding SelectedKategori.Kategoriliste}" Grid.Row="2" Margin="10,0,0,0" Width="940" HorizontalAlignment="Left">
+            <GridView x:Name="kategoriListeGridView2" ItemsSource="{Binding SelectedKategori.Kategoriliste}" Grid.Row="2" Margin="10,0,0,0" Width="940" HorizontalAlignment="Left">
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -53,7 +53,7 @@
                 </GridView.ItemTemplate>
             </GridView>
         </Grid>
-        <Grid Margin="1010,150,10,20">
+        <Grid Margin="1010,120,10,20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="177*"/>
                 <ColumnDefinition Width="176*"/>
