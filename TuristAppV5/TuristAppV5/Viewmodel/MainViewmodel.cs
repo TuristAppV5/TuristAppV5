@@ -78,7 +78,6 @@ namespace TuristAppV5.Viewmodel
         }
 
 
-
         #region GetSet Metoder
 
         public ObservableCollection<FacebookData> InfoData
