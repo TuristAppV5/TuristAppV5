@@ -39,11 +39,11 @@
         <classShapeMoniker Id="4fc38b90-c8cc-4103-a83d-07a46b1c0c13" />
       </nodes>
     </associationConnector>
-    <classShape Id="5cc6a756-1c95-4c1a-868f-c75d198577dc" absoluteBounds="2.375, 2.5, 2.375, 2.3437499403953552" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+    <classShape Id="5cc6a756-1c95-4c1a-868f-c75d198577dc" absoluteBounds="2.375, 2.375, 2.375, 2.3437499403953552" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
       <classMoniker Id="3959f382-6c35-411f-a764-add2ec1981d1" LastKnownName="FacebookData" />
       <nestedChildShapes>
-        <AttributeElementListCompartment Id="47622345-0f05-4cea-ab34-844422f504a7" absoluteBounds="2.39, 2.89, 2.3449999999999998, 1.6425780728459358" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-        <OperationElementListCompartment Id="68508784-4a98-48b4-9e3e-3cc83289a584" absoluteBounds="2.39, 4.5425780728459362, 2.3449999999999998, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <AttributeElementListCompartment Id="47622345-0f05-4cea-ab34-844422f504a7" absoluteBounds="2.39, 2.765, 2.3449999999999998, 1.6425780728459358" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="68508784-4a98-48b4-9e3e-3cc83289a584" absoluteBounds="2.39, 4.4175780728459362, 2.3449999999999998, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
