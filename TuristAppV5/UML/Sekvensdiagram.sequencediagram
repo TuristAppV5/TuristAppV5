@@ -84,16 +84,16 @@
               <lifelineMoniker Id="fab5f1f5-ce45-48fa-8008-4bf1ac36e864" LastKnownName=": Kommentar" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="12dd0d94-583c-44d3-a36e-b4e80981e4c2" name="MessageOccurrenceSpecification14">
-            <elementDefinition Id="b5066b9a-a5ba-4e2f-a705-cd12c43ec763" />
-            <covered>
-              <lifelineMoniker Id="a479cc0d-0261-47c0-bfdc-7f798df0017d" LastKnownName=": TilfoejKommentarHandler" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="f013e126-b022-4a99-a3e2-bbd77001f11d" name="MessageOccurrenceSpecification13">
             <elementDefinition Id="605ec660-cbc7-47a8-b1b8-bb0340bc9511" />
             <covered>
               <lifelineMoniker Id="fab5f1f5-ce45-48fa-8008-4bf1ac36e864" LastKnownName=": Kommentar" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="12dd0d94-583c-44d3-a36e-b4e80981e4c2" name="MessageOccurrenceSpecification14">
+            <elementDefinition Id="b5066b9a-a5ba-4e2f-a705-cd12c43ec763" />
+            <covered>
+              <lifelineMoniker Id="a479cc0d-0261-47c0-bfdc-7f798df0017d" LastKnownName=": TilfoejKommentarHandler" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="eb9961c4-9da3-401d-a10d-0a441f779833" name="ExecutionOccurrenceSpecification8">
