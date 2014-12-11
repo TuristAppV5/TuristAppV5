@@ -67,10 +67,10 @@ namespace TuristAppV5.View
             {
                 Geoposition pos = await _geolocator.GetGeopositionAsync();
                 Location location = new Location(pos.Coordinate.Latitude, pos.Coordinate.Longitude);
-                Pushpin mylocationPushpin = new Pushpin();
-                mylocationPushpin.Background = new SolidColorBrush(Colors.Red);
-                MapLayer.SetPosition(mylocationPushpin, new Location(location));
-                Map.Children.Add(mylocationPushpin);
+                Pushpin gpsPushpin = new Pushpin();
+                gpsPushpin.Background = new SolidColorBrush(Colors.Red);
+                MapLayer.SetPosition(gpsPushpin, new Location(location));
+                Map.Children.Add(gpsPushpin);
             }
             catch (Exception)
             {
