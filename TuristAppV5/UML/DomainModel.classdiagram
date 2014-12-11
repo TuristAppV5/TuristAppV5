@@ -147,18 +147,10 @@
           </property>
           <property Id="a7edb33b-59c3-440c-9118-ad945885bfec" name="Telefon" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="c1cc564d-5d92-404e-a85e-c77d8898352d" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="6eec8a93-2fb5-4608-98d0-29451dcad320" LastKnownName="string" />
-            </type_NamedElement>
           </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="6eec8a93-2fb5-4608-98d0-29451dcad320" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
-        <elementDefinition Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff" />
-      </referencedType>
-    </packageHasNamedElement>
   </packagedElements>
   <package Id="9725e454-5a9a-483c-8f0a-b308ac43aa86" name="UML">
     <elementDefinition Id="1539725e-b34f-495c-9541-1330806be40c" />
