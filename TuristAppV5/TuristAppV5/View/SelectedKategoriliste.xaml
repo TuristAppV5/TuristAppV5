@@ -76,7 +76,6 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <TextBlock Margin="10,0,0,10" TextWrapping="Wrap" FontSize="16">
-				<Run Text="Beskrivelse: "/>
 				<Run Text="{Binding SelectedKategoriliste.Beskrivelse}"/>
             </TextBlock>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20">
