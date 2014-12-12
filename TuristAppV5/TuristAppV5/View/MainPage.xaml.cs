@@ -51,46 +51,5 @@ namespace TuristAppV5
             }
 
         }
-
-        /*private async void LoadFacebookData()
-        {
-            try
-            {
-                var fb = new FacebookClient("722191401190090|zV8YHfAogIsAsGHsE8TOZWIY_0g");
-                dynamic result = await fb.GetTaskAsync("visitroskilde");
-                dynamic name = result["name"];
-                dynamic about = result["about"];
-                dynamic phone = result["phone"];
-                dynamic website = result["website"];
-                dynamic likes = result["likes"].ToString();
-                dynamic source = result["cover"]["source"];
-
-                facebookName.Text = name;
-                facebookAbout.Text = about;
-                facebookPhone.Text = "Telefon: " + phone;
-                facebookWebsite.Text = "Hjemmeside: " + website;
-                facebookLikes.Text = likes + " synes godt om";
-                facebookSource.Source = new BitmapImage(new Uri(source));
-
-                dynamic result1 = await fb.GetTaskAsync("visitroskilde/feed?limit=10&offset=3");
-                dynamic data = result1["data"];
-
-                foreach (dynamic item in data)
-                {
-                    //facebookPicture.Source = new BitmapImage(new Uri(item["picture"]));
-                    MainViewmodel.GroupData.Add(new FacebookData { Message = item["message"], Picture = item["picture"] }); //+= name + "\n" + item["message"] + "\n" + "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") + "\n\n\n";
-
-
-
-                    //FacebookData.Friends.Add(new Friend { Name = (string)friend["name"], id = (string)friend["id"], PictureUri = new Uri(string.Format("https://graph.facebook.com/{0}/picture?type={1}&access_token={2}", (string)friend["id"], "square", App.AccessToken)) });
-                }
-            }
-            catch (Exception ex)
-            {
-                //throw new Exception(ex.Message);
-                MessageDialog fbError = new MessageDialog("Ups! Der skete en fejl", "Kunne ikke connecte til Facebook API");
-                fbError.ShowAsync();
-            }
-        }*/
     }
 }
