@@ -115,7 +115,7 @@
                 </ListView.ItemTemplate>
             </ListView>
             <Image Source="{Binding SelectedKategoriliste.Billede}" Stretch="UniformToFill" Margin="10,10,10,6" Grid.Column="1"/>
-            <maps:Map x:Name="Map" ZoomLevel="13" Credentials="AhVIFAhaFsdkLTO5W_zBuQRA29ly0ZMwfR1mx_jqnW2QVYH4WQEmtWayB25cA7Aq" Margin="0,0,10,0" Grid.Row="1" Culture="da" Grid.ColumnSpan="2" Loaded="Map_Loaded" >
+            <maps:Map x:Name="Map" ZoomLevel="11" Credentials="AhVIFAhaFsdkLTO5W_zBuQRA29ly0ZMwfR1mx_jqnW2QVYH4WQEmtWayB25cA7Aq" Margin="0,0,10,0" Grid.Row="1" Culture="da" Grid.ColumnSpan="2" Loaded="Map_Loaded" >
                 <maps:Map.Center>
                     <maps:Location Latitude="55.641910" Longitude="12.087845" />
                 </maps:Map.Center>

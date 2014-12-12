@@ -137,6 +137,7 @@
     <None Include="TuristAppV5_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\badge.scale-180.png" />
     <Content Include="Assets\bg.jpg" />
     <Content Include="Assets\eat.png" />
     <Content Include="Assets\elgiganten.jpg" />
@@ -153,6 +154,8 @@
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\splash.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\square150150.png" />
+    <Content Include="Assets\square3030.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\thumbs_up-100.png" />
     <Content Include="Assets\Vigen.jpg" />
