@@ -66,14 +66,14 @@
       </nodes>
     </returnMessageConnector>
     <lifelineShape Id="b019dda6-e064-4b92-bd75-74f6b0ae2f49" absoluteBounds="5.916666666666667, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="5ff663c0-70d1-4559-a447-8e11daffdd2f" LastKnownName=": Kategoriliste" />
+      <lifelineMoniker Id="5ff663c0-70d1-4559-a447-8e11daffdd2f" LastKnownName=": KommentarList" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="5ed3ebc0-c177-4e55-867e-798702878d38" absoluteBounds="5.463525783220927, 0.6, 1.0562817668914795, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="5ff663c0-70d1-4559-a447-8e11daffdd2f" LastKnownName=": Kategoriliste" />
+        <umlLifelineHeadShape Id="5ed3ebc0-c177-4e55-867e-798702878d38" absoluteBounds="5.389551173845927, 0.6, 1.2042309856414795, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="5ff663c0-70d1-4559-a447-8e11daffdd2f" LastKnownName=": KommentarList" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="7f6c930f-6902-40f6-8b2b-118ef662ee42" absoluteBounds="5.916666666666667, 1, 0, 7">
-          <lifelineMoniker Id="5ff663c0-70d1-4559-a447-8e11daffdd2f" LastKnownName=": Kategoriliste" />
+          <lifelineMoniker Id="5ff663c0-70d1-4559-a447-8e11daffdd2f" LastKnownName=": KommentarList" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="d5d03841-7b58-40ce-afdc-a33904669625" absoluteBounds="5.916666666666667, 5.1687499999999993, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="11922fa6-84b4-4e3f-be27-3564690c2f7c" LastKnownName="BehaviorExecutionSpecification5" />
