@@ -74,7 +74,7 @@ namespace TuristAppV5.View
             }
             catch (Exception)
             {
-                MessageDialog mapError = new MessageDialog("Ups! Der skete en fejl!", "Kunne ikke finde din placering på kortet");
+                MessageDialog mapError = new MessageDialog("Kunne ikke finde din placering på kortet", "Ups! Der skete en fejl!");
                 mapError.ShowAsync();
             }
 
