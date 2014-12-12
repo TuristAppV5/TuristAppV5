@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="419a1996-95ec-4669-9932-6a9e72a7014f" name="Designklassediagram" linkedPackageId="6de5bce1-1c77-4c3d-a88d-97cf79ca3246" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="419a1996-95ec-4669-9932-6a9e72a7014f" name="Designklassediagram" linkedPackageId="6de5bce1-1c77-4c3d-a88d-97cf79ca3246" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="fc103502-73d9-4fce-ac23-92db002ac52d" name="View">
@@ -231,12 +231,6 @@
                   <elementDefinition Id="6bcd3b2e-a35f-4e2a-9e2d-664f9e98fd99" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="aa74f1f3-5547-4c94-96ea-4ccfc4ef0579" LastKnownName="string" />
-                  </type_NamedElement>
-                </property>
-                <property Id="bb23fc78-3680-4148-925f-f1921bff72c4" name="_mainViewmodel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="a979f969-5bfa-4ff3-a4f8-b8ba7369ca7c" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="e834b684-77ea-4ceb-9bc6-3cb1c4ba7181" LastKnownName="MainViewmodel" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -685,11 +679,6 @@
     <packageHasNamedElement>
       <referencedType Id="de72c221-641b-4ece-8ba4-02cc6ac72759" name="ObservableCollection&lt;ObservableCollection&lt;Kategoriliste&gt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;ObservableCollection&lt;Kategoriliste&gt;&gt;">
         <elementDefinition Id="59cf27f7-9a79-4773-ad4b-dca7e1bba4b1" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="e834b684-77ea-4ceb-9bc6-3cb1c4ba7181" name="MainViewmodel" isAbstract="false" isLeaf="false" cachedFullName="UML::Viewmodel::MainViewmodel">
-        <elementDefinition Id="01ed6848-a04c-4a5e-96b0-b8fabdd724c5" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

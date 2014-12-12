@@ -62,31 +62,31 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="55"/>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="150"/>
                 <RowDefinition Height="40"/>
+                <RowDefinition Height="90"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="125*"/>
-                <RowDefinition Height="5*"/>
+                <RowDefinition Height="144*"/>
+                <RowDefinition Height="7*"/>
             </Grid.RowDefinitions>
             <TextBlock FontSize="40" TextWrapping="Wrap" Text="Facebook Info" Grid.ColumnSpan="2" Margin="0,-5,0,0"/>
             <!--<Button Background="#FF3B3B89" x:Name="facebook" Content="Facebook" HorizontalAlignment="Stretch" Margin="1,7,3,0" Grid.Row="1" VerticalAlignment="Top" Height="71" Width="349" Click="facebook_Click"/>-->
             <TextBlock Grid.Row="1" TextWrapping="Wrap" FontSize="30" Text="{Binding InfoData[0].Navn}" Grid.ColumnSpan="2"/>
             <TextBlock Grid.Row="2" TextWrapping="Wrap" FontSize="16" Text="{Binding InfoData[0].Om}" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             <Image Stretch="UniformToFill" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,0,0,10" Source="{Binding InfoData[0].Kilde}"/>
-            <TextBlock Grid.Row="4" TextWrapping="Wrap" FontSize="20" Grid.ColumnSpan="2">
+            <TextBlock Grid.Row="4" TextWrapping="Wrap" FontSize="15" Grid.ColumnSpan="2">
                 <Run Text="Telefon: "/>
                 <Run Text="{Binding InfoData[0].Telefon}"/>
             </TextBlock>
-            <TextBlock Grid.Row="4" TextWrapping="Wrap" FontSize="20" Grid.Column="1">
+            <TextBlock Grid.Row="4" TextWrapping="Wrap" FontSize="15" Grid.Column="1">
                 <Run Text="Hjemmeside: "/>
                 <Run  Text="{Binding InfoData[0].Hjemmeside}"/>
             </TextBlock>
-            <TextBlock Grid.Row="5" FontSize="40" TextWrapping="Wrap" Margin="77,6,0,0" Grid.ColumnSpan="2">
+            <TextBlock Grid.Row="5" FontSize="40" TextWrapping="Wrap" Margin="91,23,0,0" Grid.ColumnSpan="2">
                 <Run Text="{Binding InfoData[0].Likes}"/>
                 <Run Text="synes godt om"/>
             </TextBlock>
-            <Image Source="../Assets/thumbs_up-100.png" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top"/>
+            <Image Source="../Assets/thumbs_up-100.png" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Height="75" Width="72"/>
 
             <TextBlock FontSize="40" TextWrapping="Wrap" Text="Facebook Feed" Grid.ColumnSpan="2" Margin="0,10,0,0" Grid.Row="6"/>
             <ListView Grid.Row="7" Grid.ColumnSpan="2" ItemsSource="{Binding FeedData}" Grid.RowSpan="2">
