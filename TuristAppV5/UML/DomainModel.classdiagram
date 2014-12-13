@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="7e5fd967-08fe-4eb7-8f46-224bbb0c8ed8" name="DomainModel" linkedPackageId="9725e454-5a9a-483c-8f0a-b308ac43aa86" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7e5fd967-08fe-4eb7-8f46-224bbb0c8ed8" name="DomainModel" linkedPackageId="9725e454-5a9a-483c-8f0a-b308ac43aa86" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="3d50ff8f-847b-4119-be6c-83ad5df40809" name="Kategori" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -130,9 +130,6 @@
           <property Id="8634b60b-cd84-4b71-bfa3-2ee68ad6555c" name="Dato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="2b61b0b3-0c1c-4c66-bbfb-f27fdefc4e83" />
           </property>
-          <property Id="cc1feb74-029b-4a9c-82da-e1b734047d49" name="Hjemmeside" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="9d006fee-c0fc-4430-bfda-328fdd4f12a2" />
-          </property>
           <property Id="4fe3be7e-2fa3-4199-8a39-8bd95c6376f5" name="Kilde" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="0d6c8e95-fbc1-4de8-bda3-e6cc8bf90906" />
           </property>
@@ -144,9 +141,6 @@
           </property>
           <property Id="d7231682-9b89-4dce-8b43-6e23fa8de65b" name="Om" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="494881bf-be1d-4621-8608-b9008316f08c" />
-          </property>
-          <property Id="a7edb33b-59c3-440c-9118-ad945885bfec" name="Telefon" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="c1cc564d-5d92-404e-a85e-c77d8898352d" />
           </property>
         </ownedAttributesInternal>
       </class>

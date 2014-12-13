@@ -61,7 +61,7 @@ namespace TuristAppV5.Viewmodel
             {
                 FacebookClient accessToken = new FacebookClient("722191401190090|zV8YHfAogIsAsGHsE8TOZWIY_0g");
                 dynamic infoData = await accessToken.GetTaskAsync("visitroskilde");
-                InfoData.Add(new FacebookData { Navn = infoData["name"], Om = infoData["about"], Kilde = infoData["cover"]["source"], Telefon = infoData["phone"], Hjemmeside = infoData["website"], Likes = infoData["likes"].ToString() });
+                InfoData.Add(new FacebookData { Navn = infoData["name"], Om = infoData["about"], Kilde = infoData["cover"]["source"], Likes = infoData["likes"].ToString() });
 
                 dynamic feedData = await accessToken.GetTaskAsync("visitroskilde/feed?limit=3&fields=message, picture, created_time");
                 foreach (dynamic item in feedData["data"])

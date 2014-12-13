@@ -11,14 +11,11 @@ namespace TuristAppV5.Model
         private string _navn;
         private string _om;
         private string _kilde;
-        private string _telefon;
-        private string _hjemmeside;
         private string _likes;
 
         private string _billede;
         private string _besked;
         private string _dato;
-
 
         #region GetSet Metoder
 
@@ -38,18 +35,6 @@ namespace TuristAppV5.Model
         {
             get { return _kilde; }
             set { _kilde = value; }
-        }
-
-        public string Telefon
-        {
-            get { return _telefon; }
-            set { _telefon = value; }
-        }
-
-        public string Hjemmeside
-        {
-            get { return _hjemmeside; }
-            set { _hjemmeside = value; }
         }
 
         public string Likes

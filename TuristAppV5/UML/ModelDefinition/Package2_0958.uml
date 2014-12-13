@@ -470,42 +470,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="ab3d50f9-4c01-43f3-a3c6-1244b8cebc99"
-            name="_telefon"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
-                LastKnownName="string"
-                LastKnownLocation="Package1_0958.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="93397d6b-298e-4081-b96d-27c2f3f1da6f"
-            name="_hjemmeside"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="9eedb815-605c-4d8f-9444-608d1a6bd0ff"
-                LastKnownName="string"
-                LastKnownLocation="Package1_0958.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="ca675dc9-0420-4793-b84a-b5490e88c21a"
             name="_likes"
             isLeaf="false"
