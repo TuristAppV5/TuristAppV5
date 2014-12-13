@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="419a1996-95ec-4669-9932-6a9e72a7014f" name="Designklassediagram" linkedPackageId="6de5bce1-1c77-4c3d-a88d-97cf79ca3246" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="419a1996-95ec-4669-9932-6a9e72a7014f" name="Designklassediagram" linkedPackageId="6de5bce1-1c77-4c3d-a88d-97cf79ca3246" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="fc103502-73d9-4fce-ac23-92db002ac52d" name="View">
@@ -530,18 +530,6 @@
                 </property>
                 <property Id="b09ea0cb-0a5e-44f7-af99-b92a84c92b3a" name="_kilde" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="f289e9ae-be0f-43c5-9c90-b5ccc8b17f45" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="aa74f1f3-5547-4c94-96ea-4ccfc4ef0579" LastKnownName="string" />
-                  </type_NamedElement>
-                </property>
-                <property Id="45ca4a3c-c575-4a79-93df-596486f742d6" name="_telefon" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="ab3d50f9-4c01-43f3-a3c6-1244b8cebc99" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="aa74f1f3-5547-4c94-96ea-4ccfc4ef0579" LastKnownName="string" />
-                  </type_NamedElement>
-                </property>
-                <property Id="f6be19bc-8f71-4b07-bed5-500a76cc07a9" name="_hjemmeside" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="93397d6b-298e-4081-b96d-27c2f3f1da6f" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="aa74f1f3-5547-4c94-96ea-4ccfc4ef0579" LastKnownName="string" />
                   </type_NamedElement>
