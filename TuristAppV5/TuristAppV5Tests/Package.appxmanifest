@@ -17,7 +17,6 @@
   <Applications>
     <Application Id="vstest.executionengine.App" Executable="vstest.executionengine.appcontainer.exe" EntryPoint="vstest.executionengine.App">
       <m2:VisualElements DisplayName="NoUIEntryPoints" Description="vstest.executionengine.App" BackgroundColor="#0084FF" ForegroundText="light" Square150x150Logo="Images\UnitTestLogo.png" Square30x30Logo="Images\UnitTestSmallLogo.png">
-        <m2:LockScreen Notification="" BadgeLogo="Images\BadgeLogo.png" />
         <m2:SplashScreen Image="Images\UnitTestSplashScreen.png" />
       </m2:VisualElements>
     </Application>
