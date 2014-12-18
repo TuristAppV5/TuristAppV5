@@ -63,10 +63,11 @@ namespace TuristAppV5.Viewmodel
                 dynamic infoData = await accessToken.GetTaskAsync("visitroskilde");
                 InfoData.Add(new FacebookData { Navn = infoData["name"], Om = infoData["about"], Kilde = infoData["cover"]["source"], Likes = infoData["likes"].ToString() });
 
-                dynamic feedData = await accessToken.GetTaskAsync("visitroskilde/feed?limit=3&fields=message, picture, created_time");
+                dynamic feedData = await accessToken.GetTaskAsync("visitroskilde/feed?limit=3&offset=1&fields=message, picture, created_time");
                 foreach (dynamic item in feedData["data"])
                 {
                     FeedData.Add(new FacebookData { Billede = item["picture"], Besked = item["message"], Dato = "Skrevet d. " + DateTime.Parse(item["created_time"]).ToString("dd/MM-yyyy") });
+
                 }
             }
             catch (Exception ex)
