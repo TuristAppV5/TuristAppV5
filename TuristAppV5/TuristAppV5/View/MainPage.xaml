@@ -12,6 +12,7 @@
         <CommandBar>
             <CommandBar.PrimaryCommands>
                 <AppBarButton Icon="View" Label="Vælg" Click="AppBarButton_Click"/>
+                <AppBarButton Icon="Clear" Label="Clear to-do liste" Command="{Binding SletToDoListeCommand}"/>
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
@@ -24,11 +25,11 @@
         </Grid.Background>
         <Grid HorizontalAlignment="Left" Margin="20,20,0,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100*"/>
-                <RowDefinition Height="190*"/>
-                <RowDefinition Height="455*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="190"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="60" TextWrapping="Wrap" Text="#VisitRoskilde" VerticalAlignment="Top" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,16,0,0" FontSize="60" TextWrapping="Wrap" Text="#VisitRoskilde" VerticalAlignment="Top" Foreground="White" Height="70"/>
             <GridView Foreground="White" ItemsSource="{Binding KategoriCollection}" SelectedItem="{Binding SelectedKategori, Mode=TwoWay}" Grid.Row="1">
                 <GridView.ItemTemplate>
                     <DataTemplate>
@@ -39,7 +40,7 @@
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
-            <GridView x:Name="kategoriListeGridView2" ItemsSource="{Binding SelectedKategori.Kategoriliste}" Grid.Row="2" Margin="10,0,0,0" Width="940" HorizontalAlignment="Left">
+            <GridView x:Name="kategoriListeGridView2" ItemsSource="{Binding SelectedKategori.Kategoriliste}" Grid.Row="2" Margin="0,0,0,0" HorizontalAlignment="Left">
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -51,33 +52,67 @@
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
+            <Image Source="../Assets/thumbs_up-100.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="65" Margin="635,9,0,0"/>
+            <TextBlock FontSize="40" TextWrapping="Wrap" Margin="733,37,13,26">
+            	<Run Text="{Binding InfoData[0].Likes}"/>
+                <Run Text=" Likes"/>
+            </TextBlock>
         </Grid>
-        <Grid Margin="1010,150,10,20">
+        <Grid Margin="1010,120,10,20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="177*"/>
                 <ColumnDefinition Width="176*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="80"/>
-                <RowDefinition Height="40"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="114*"/>
+                <RowDefinition Height="5*"/>
             </Grid.RowDefinitions>
-            <TextBlock FontSize="40" TextWrapping="Wrap" Text="Facebook Info" Grid.ColumnSpan="2" Margin="0,-5,0,0"/>
-            <!--<Button Background="#FF3B3B89" x:Name="facebook" Content="Facebook" HorizontalAlignment="Stretch" Margin="1,7,3,0" Grid.Row="1" VerticalAlignment="Top" Height="71" Width="349" Click="facebook_Click"/>-->
-            <TextBlock x:Name="facebookName" Grid.Row="1" TextWrapping="Wrap" FontSize="30" Text="name" Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="facebookAbout" Grid.Row="2" TextWrapping="Wrap" FontSize="16" Text="about" Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="facebookPhone" Grid.Row="3" TextWrapping="Wrap" FontSize="16" Text="phone" Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="facebookWebsite" Grid.Row="3" TextWrapping="Wrap" FontSize="16" Text="website" Grid.Column="1"/>
-            <TextBlock x:Name="facebookLikes" Grid.Row="4" FontSize="30" TextWrapping="Wrap" Text="likes"/>
+            <Border Grid.ColumnSpan="2" Background="#ed6b06">
+                <TextBlock FontSize="40" TextWrapping="Wrap" Text="Facebook Info" Margin="10,3,10,0" HorizontalAlignment="Center"/>
+            </Border>
+            <TextBlock Grid.Row="1" TextWrapping="Wrap" FontSize="30" Text="{Binding InfoData[0].Navn}" Grid.ColumnSpan="2" Margin="0,10,0,0"/>
+            <TextBlock Grid.Row="2" TextWrapping="Wrap" FontSize="16" Text="{Binding InfoData[0].Om}" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <Image Stretch="UniformToFill" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,0,0,10" Source="{Binding InfoData[0].Kilde}"/>
+            <!--<TextBlock Grid.Row="4" TextWrapping="Wrap" FontSize="15" Grid.ColumnSpan="2">
+                <Run Text="Telefon: "/>
+                <Run Text="{Binding InfoData[0].Telefon}"/>
+            </TextBlock>
+            <TextBlock Grid.Row="4" TextWrapping="Wrap" FontSize="15" Grid.Column="1">
+                <Run Text="Hjemmeside: "/>
+                <Run  Text="{Binding InfoData[0].Hjemmeside}"/>
+            </TextBlock>-->
 
-            <TextBlock FontSize="40" TextWrapping="Wrap" Text="Facebook Feed" Grid.ColumnSpan="2" Margin="0,49,0,0" Grid.Row="4" Grid.RowSpan="2"/>
-            <ScrollViewer Margin="0,0,10,0" Grid.Row="6" Grid.ColumnSpan="2">
-                <TextBlock x:Name="facebookMessage" FontSize="16" Margin="0,0,40,0" />
-            </ScrollViewer>
+            <Border Grid.ColumnSpan="2" Grid.Row="5" Background="#ed6b06">
+                <TextBlock FontSize="40" TextWrapping="Wrap" Text="Facebook Feed" Margin="10,3,10,0" HorizontalAlignment="Center"/>
+            </Border>
+            <ListView Margin="0,10,0,0" Grid.Row="6" Grid.ColumnSpan="2" ItemsSource="{Binding FeedData}" Grid.RowSpan="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="3"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontSize="30" Text="Visitroskilde" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+                            <Image Source="{Binding Billede}" VerticalAlignment="Top" Margin="0 0 15 0" Grid.Row="1" />
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Besked}" Grid.Column="1" Grid.Row="1" Margin="0,0,0,30" />
+                            <TextBlock Text="{Binding Dato}" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" FontStyle="Italic"/>
+                            <Border Background="#ed6b06" Grid.Row="2" Grid.ColumnSpan="2" />
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </Grid>
     </Grid>
 </Page>

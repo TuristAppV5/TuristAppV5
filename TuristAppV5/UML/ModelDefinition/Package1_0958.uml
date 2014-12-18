@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="d800172d-39f6-43ea-9245-ce80794c6d13"
   name="Viewmodel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -208,7 +208,7 @@
             Id="b437506c-c3f5-4a7d-8156-956432405f13"
             isDerived="false"
             sourceEndRoleName="TilfoejToDoListeCommand"
-            targetEndRoleName="RelayCommand"
+            targetEndRoleName=""
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -232,7 +232,83 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="10e2cb3c-c036-4feb-8724-4fb9650d5bc3"
-                  name="RelayCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="35c888ff-356b-4901-9c8d-78d1acf7f61e"
+            isDerived="false"
+            sourceEndRoleName="MainViewmodel"
+            targetEndRoleName="FacebookData"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b16dcc78-ac96-4e23-9680-950077b3f945"
+              LastKnownName="FacebookData"
+              LastKnownLocation="Package2_0958.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="22cd8af5-19ea-462f-a584-271ba588050c"
+                  name="MainViewmodel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ead99bb-10f6-4be8-aa1f-1acb5e710de2"
+                  name="FacebookData"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d7743cce-79cd-496e-ace7-942105bb439c"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="SletToDoListeCommand"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="daf716d5-6d99-4691-939c-36baf082ab54"
+              LastKnownName="RelayCommand"
+              LastKnownLocation="Package1_0958.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ebb4c6c3-d73b-4679-a8c7-1651511a43eb"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5a846dda-027c-4a1f-b06f-ecebacce384f"
+                  name="SletToDoListeCommand"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -280,7 +356,52 @@
                 LastKnownLocation="Package1_0958.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="e4e439dc-d529-41c2-b029-4ebf585eab6a"
+            name="_infoData"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="976e4989-b60c-4ebe-bef4-1e09389bfaab"
+                LastKnownName="ObservableCollection&lt;FacebookData&gt;"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bc3944ee-070e-4bbe-a9dc-c4e26c7ddc31"
+            name="_feedData"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="976e4989-b60c-4ebe-bef4-1e09389bfaab"
+                LastKnownName="ObservableCollection&lt;FacebookData&gt;"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="40714163-719c-45c4-ac2c-c50d14b742f1"
+            name="LoadFacebookData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -295,7 +416,7 @@
             Id="a725402a-2ebe-42df-a5f5-fea7880b8582"
             isDerived="false"
             sourceEndRoleName="TilfoejKommentarHandler"
-            targetEndRoleName="LoadKategorilisteAsync"
+            targetEndRoleName="Persistence"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -319,46 +440,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="0f6dba5b-dcb7-42a9-9080-f483e7e3f95d"
-                  name="LoadKategorilisteAsync"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="a6767889-fbcd-436f-b05f-5929d354ba2e"
-            isDerived="false"
-            sourceEndRoleName="TilfoejKommentarHandler"
-            targetEndRoleName="SaveKategorilisteAsync"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="389afba4-0f4e-44bd-95dd-b99de51f975b"
-              LastKnownName="PersistenceFacade"
-              LastKnownLocation="Package1_0958.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="f1e4d03c-9dfc-40ba-8af8-c78f63b096d0"
-                  name="TilfoejKommentarHandler"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="1e2bf54b-6beb-44c6-8afe-bcc874ca95ec"
-                  name="SaveKategorilisteAsync"
+                  name="Persistence"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -436,24 +518,16 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="6d024de2-2a2f-4773-890a-ee782c56e409"
-            name="SaveKategorilisteAsync"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="1fc66768-9686-4f1f-88b0-dbbe30b51a60"
-            name="LoadKategorilisteAsync"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="645c6c78-1c81-47aa-bb63-586a0759e28d"
             name="TilfoejToDoListe"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="eab50972-f73d-4396-b02f-2e02874c0d8e"
+            name="SletToDoListe"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -530,6 +604,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b905edd6-a858-4fdb-bb58-03386e2bca09"
+            isDerived="false"
+            sourceEndRoleName="SingletonViewmodel"
+            targetEndRoleName="Kategoriliste"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ea89e621-555b-4110-98b6-a67d2994dd70"
+              LastKnownName="Kategoriliste"
+              LastKnownLocation="Package2_0958.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90e26b00-9c37-4749-aa5a-b8ab2c1c5a31"
+                  name="SingletonViewmodel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ab95eeaa-e0f4-4279-af3e-0a59e8eb8531"
+                  name="Kategoriliste"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="ca6a9073-5002-4e21-aa85-d05c7610c336"
@@ -657,6 +772,24 @@
                 LastKnownLocation="Package1_0958.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="f9c4f9fd-feac-4f62-8c50-7d68191eaa27"
+            name="_collectionOfCollectionForJson"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="59cf27f7-9a79-4773-ad4b-dca7e1bba4b1"
+                LastKnownName="ObservableCollection&lt;ObservableCollection&lt;Kategoriliste&gt;&gt;"
+                LastKnownLocation="Package1_0958.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -672,7 +805,7 @@
             Id="2644827c-6809-4e05-ace8-cd3f234fd201"
             name="SaveKategorilisteAsJsonAsync"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
@@ -680,7 +813,7 @@
             Id="95bf3adc-8a26-4a1f-ae1c-f8484cdef8c4"
             name="LoadKategorilisteFromJsonAsync"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
@@ -688,7 +821,7 @@
             Id="822d4b5e-061b-4f56-848a-d808f4f4ee1e"
             name="SerializeKategorilisteFileAsync"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
@@ -696,7 +829,7 @@
             Id="238cf675-38eb-4708-a1ad-f067c459ed4d"
             name="DeSerializeKategorilisteFileAsync"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
@@ -712,6 +845,16 @@
       <undefinedType
         Id="129edc27-e540-41da-9edd-ba93ae08ba7b"
         name="DateTime" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="976e4989-b60c-4ebe-bef4-1e09389bfaab"
+        name="ObservableCollection&lt;FacebookData&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="59cf27f7-9a79-4773-ad4b-dca7e1bba4b1"
+        name="ObservableCollection&lt;ObservableCollection&lt;Kategoriliste&gt;&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

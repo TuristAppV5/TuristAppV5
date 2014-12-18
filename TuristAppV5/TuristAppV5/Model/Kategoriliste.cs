@@ -10,7 +10,7 @@ namespace TuristAppV5.Model
         {
             private string _navn;
             private string _telefon;
-            private string _book;
+            private string _hjemmeside;
             private double _breddegrad;
             private double _laengdegrad;
             private string _billede;
@@ -31,10 +31,10 @@ namespace TuristAppV5.Model
                 set { _telefon = value; }
             }
 
-            public string Book
+            public string Hjemmeside
             {
-                get { return _book; }
-                set { _book = value; }
+                get { return _hjemmeside; }
+                set { _hjemmeside = value; }
             }
 
             public double Laengdegrad
@@ -78,19 +78,19 @@ namespace TuristAppV5.Model
             {
                 return _navn;
             }
-            public Kategoriliste(string navn, string telefon, string book, double breddegrad, double laengdegrad, string billede, string beskrivelse, string aabningstider)
+            public Kategoriliste(string navn, string telefon, string hjemmeside, double breddegrad, double laengdegrad, string billede, string beskrivelse, string aabningstider)
             {
                 _navn = navn;
                 _telefon = telefon;
-                _book = book;
+                _hjemmeside = hjemmeside;
                 _breddegrad = breddegrad;
                 _laengdegrad = laengdegrad;
                 _billede = billede;
                 _beskrivelse = beskrivelse;
                 _aabningstider = aabningstider;
                 _kommentarList = new List<Kommentar>();
-                _kommentarList.Add(new Kommentar(new DateTime(2014, 9, 10), "Daniel Winther", "Dette er en kommentartekssdjfnsdkfnskjfnksjdfnsdsdkfsdt"));
+                _kommentarList.Add(new Kommentar(new DateTime(2014, 9, 10), "Daniel Winther", "Super fedt at være med til!"));
+                _kommentarList.Add(new Kommentar(new DateTime(2014, 12, 12), "Jacob Balling", "Meget skuffet, vil gerne have pengene refunderet..."));
             }
-
         }
 }

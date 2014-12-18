@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="7e5fd967-08fe-4eb7-8f46-224bbb0c8ed8" name="DomainModel" linkedPackageId="9725e454-5a9a-483c-8f0a-b308ac43aa86" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7e5fd967-08fe-4eb7-8f46-224bbb0c8ed8" name="DomainModel" linkedPackageId="9725e454-5a9a-483c-8f0a-b308ac43aa86" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="3d50ff8f-847b-4119-be6c-83ad5df40809" name="Kategori" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -113,6 +113,34 @@
           </property>
           <property Id="f7f7ce83-c46b-4acd-8650-6934a30ec2a6" name="Dato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="442bde2d-7bfb-4612-bbc0-ab1d46e84501" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3959f382-6c35-411f-a764-add2ec1981d1" name="FacebookData" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="87412d11-6e76-4ca3-8e4e-51a5f0d1d718" />
+        <ownedAttributesInternal>
+          <property Id="0772f0a6-9634-4a30-a8aa-149768e79e49" name="Besked" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1e64da81-32c3-4a15-a59a-0f103edba048" />
+          </property>
+          <property Id="43310f8b-53c9-478d-b96e-a488e05b19c7" name="Billede" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cd2793e9-33b1-4b2c-9013-f4791f7270b6" />
+          </property>
+          <property Id="8634b60b-cd84-4b71-bfa3-2ee68ad6555c" name="Dato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2b61b0b3-0c1c-4c66-bbfb-f27fdefc4e83" />
+          </property>
+          <property Id="4fe3be7e-2fa3-4199-8a39-8bd95c6376f5" name="Kilde" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0d6c8e95-fbc1-4de8-bda3-e6cc8bf90906" />
+          </property>
+          <property Id="136784f2-ca62-43fd-b50a-e98008e58644" name="Likes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0e672bc5-da97-4004-9ba4-d8b64e8f7c96" />
+          </property>
+          <property Id="aab4a3f3-6e05-4226-bee6-e52608cc0553" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3c42fa07-b86e-4107-b629-773afc54ef88" />
+          </property>
+          <property Id="d7231682-9b89-4dce-8b43-6e23fa8de65b" name="Om" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="494881bf-be1d-4621-8608-b9008316f08c" />
           </property>
         </ownedAttributesInternal>
       </class>

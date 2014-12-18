@@ -123,6 +123,7 @@
     <None Include="TuristAppV5Tests_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\BadgeLogo.scale-180.png" />
     <Content Include="Images\UnitTestLogo.scale-100.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
